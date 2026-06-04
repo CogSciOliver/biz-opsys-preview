@@ -6,7 +6,7 @@
 @import "./stat.css";
 @import "./status.css";
 
-.genesis-shell {
+.shell {
 	min-height: 100vh;
 	background: var(--background);
 	color: var(--foreground);
@@ -83,12 +83,12 @@ a {
 	display: grid;
 	grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
 	gap: 1.25rem;
-	padding: clamp(1rem, 4vw, 3rem);
+	padding: clamp(1rem, 4vw, 2rem);
+	background: var(--background);
 }
 
 .app-sidebar,
-.page-panel,
-.card {
+.page-panel {
 	background: var(--card);
 	color: var(--card-foreground);
 	border: 1px solid var(--border);
@@ -140,14 +140,8 @@ a {
 	margin-bottom: 2rem;
 }
 
-.page-heading h1 {
+.page-heading {
 	max-width: 780px;
-	margin: 0;
-	font-family: var(--font-heading);
-	font-size: clamp(2.4rem, 5vw, 4rem);
-	font-weight: 500;
-	line-height: 0.98;
-	letter-spacing: -0.06em;
 }
 
 .page-heading p {

@@ -44,7 +44,7 @@ function JoinPage() {
 				</DashboardCard>
 
 				<DashboardCard eyebrow="Lead preview" title="What staff would see">
-					<ul className="genesis-list">
+					<ul className="list">
 						<TrialLeadCard lead={featuredLead} />
 						<li>
 							<div>

@@ -2,6 +2,7 @@
 .button-secondary,
 .button-inverse,
 .button-outline,
+.button-hollow,
 .button-ghost,
 .button-destructive,
 .button-link {
@@ -133,7 +134,7 @@
 .button-secondary:focus-visible,
 .button-inverse:focus-visible,
 .button-outline:focus-visible,
-.button-hollow :focus-visible,
+.button-hollow:focus-visible,
 .button-ghost:focus-visible,
 .button-destructive:focus-visible,
 .button-link:focus-visible {

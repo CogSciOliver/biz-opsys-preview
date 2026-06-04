@@ -45,10 +45,10 @@ function StyleGuidePage() {
 					</p>
 
 					<div className="hero-actions">
-						<Link to="/" className="button-secondary">
+						<Link to="/" className="button-inverse">
 							Demo hub
 						</Link>
-						<Link to="/website" className="button-inverse">
+						<Link to="/website" className="button-primary">
 							Public site
 						</Link>
 					</div>
@@ -82,6 +82,15 @@ function StyleGuidePage() {
 						<Link to="/website/events" className="button-link">
 							Link treatment
 						</Link>
+						<Link to="/join" className="button-inverse">
+								Inverse
+							</Link>
+							<Link to="/website" className="button-secondary">
+								Hero secondary
+							</Link>
+							<Link to="/" className="button-hollow">
+								Hollow
+							</Link>
 						<ThemeToggle />
 					</div>
 				</DashboardCard>
@@ -114,9 +123,7 @@ function StyleGuidePage() {
 							<Link to="/join" className="button-inverse">
 								Inverse
 							</Link>
-							<Link to="/website" className="button-secondary">
-								Hero secondary
-							</Link>
+						
 							<Link to="/" className="button-hollow">
 								Hollow
 							</Link>

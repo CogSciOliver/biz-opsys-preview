@@ -9,17 +9,17 @@
 	text-transform: uppercase;
 }
 
-
 .card {
 	padding: 1.25rem;
+	background: var(--card);
+	color: var(--card-foreground);
+	border: 1px solid var(--border);
+	box-shadow: 0 1px 5px  var(--shadow);
 }
 
 .card h2,
 .card h3 {
 	margin: 0 0 0.7rem;
-	font-family: var(--font-heading);
-	font-weight: 600;
-	letter-spacing: -0.03em;
 }
 
 .card p {

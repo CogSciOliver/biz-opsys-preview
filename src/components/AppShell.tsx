@@ -21,7 +21,7 @@ export function AppShell({
 	variant = "public",
 }: AppShellProps) {
 	return (
-		<div className={`genesis-shell genesis-shell--${variant}`}>
+		<div className={`shell shell--${variant}`}>
 			<PrototypeNotice />
 
 			<header className="app-header">

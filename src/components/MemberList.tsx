@@ -17,7 +17,7 @@ export function MemberList({
 	showLastCheckIn = false,
 }: MemberListProps) {
 	return (
-		<ul className="genesis-list">
+		<ul className="list">
 			{members.map((member) => (
 				<li key={member.id}>
 					<div>

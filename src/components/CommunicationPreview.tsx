@@ -11,7 +11,7 @@ type CommunicationPreviewProps = {
 
 export function CommunicationPreview({ messages }: CommunicationPreviewProps) {
 	return (
-		<ul className="genesis-list">
+		<ul className="list">
 			{messages.map((message) => (
 				<li key={message.id}>
 					<div>

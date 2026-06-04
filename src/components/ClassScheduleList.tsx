@@ -14,7 +14,7 @@ type ClassScheduleListProps = {
 
 export function ClassScheduleList({ classes }: ClassScheduleListProps) {
 	return (
-		<ul className="genesis-list">
+		<ul className="list">
 			{classes.map((classItem) => (
 				<ClassScheduleCard classItem={classItem} key={classItem.id} />
 			))}

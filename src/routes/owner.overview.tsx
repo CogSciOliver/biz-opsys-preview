@@ -21,8 +21,8 @@ function OwnerOverviewPage() {
 		<AppShell
 			variant="owner"
 			eyebrow="Owner dashboard"
-			title="See the business without digging through five systems."
-			description="This page previews the executive layer: revenue, retention, trial pipeline, billing flags, and communication readiness."
+			title="Business Health"
+			description="See the business without digging through five systems. This page previews the executive layer: revenue, retention, trial pipeline, billing flags, and communication readiness."
 		>
 			<div className="grid-3">
 				{ownerMetrics.map((metric) => (

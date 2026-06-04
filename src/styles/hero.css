@@ -12,21 +12,13 @@
 	border: 1px solid color-mix(in oklch, var(--primary) 60%, black);
 	border-radius: var(--radius);
 	box-shadow: none;
+	color: var(--lite-text);
 }
 
 .hero-card .card-kicker,
 .hero-card h2,
 .hero-card p {
 	color: var(--primary-foreground);
-}
-
-.hero-card h2 {
-	margin: 0;
-	font-family: var(--font-heading);
-	font-size: clamp(1.9rem, 4vw, 3.4rem);
-	font-weight: 500;
-	line-height: 1;
-	letter-spacing: -0.05em;
 }
 
 .hero-actions {

@@ -13,7 +13,7 @@ type BillingSummaryProps = {
 
 export function BillingSummary({ payments }: BillingSummaryProps) {
 	return (
-		<ul className="genesis-list">
+		<ul className="list">
 			{payments.map((payment) => (
 				<li key={payment.id}>
 					<div>

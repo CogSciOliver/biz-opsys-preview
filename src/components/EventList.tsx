@@ -12,7 +12,7 @@ type EventListProps = {
 
 export function EventList({ events }: EventListProps) {
 	return (
-		<ul className="genesis-list">
+		<ul className="list">
 			{events.map((event) => (
 				<li key={event.id}>
 					<div>

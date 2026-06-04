@@ -1,24 +1,24 @@
 .stat-stack {
 	display: grid;
-	gap: 0.75rem;
+	gap: 1rem;
 }
 
 .stat-card {
 	padding: 1rem;
-	background: color-mix(in oklch, var(--primary-foreground) 10%, transparent);
-	border: 1px solid
-		color-mix(in oklch, var(--primary-foreground) 20%, transparent);
-	border-radius: var(--radius);
+	background: color-mix(in oklch, currentColor 8%, transparent);
+	border: 1px solid color-mix(in oklch, currentColor 28%, transparent);
+	color: inherit;
 }
 
 .stat-card strong {
 	display: block;
-	color: var(--primary-foreground);
+	color: inherit;
 	font-size: 1.65rem;
 	font-weight: 700;
 }
 
 .stat-card span {
-	color: color-mix(in oklch, var(--primary-foreground) 82%, transparent);
+	color: inherit;
+	opacity: 0.82;
 	font-size: 0.85rem;
 }

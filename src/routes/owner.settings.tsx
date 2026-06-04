@@ -64,7 +64,7 @@ function OwnerSettingsPage() {
 					eyebrow="Configurable areas"
 					title="What the owner could control"
 				>
-					<ul className="genesis-list">
+					<ul className="list">
 						{settingGroups.map((group) => (
 							<li key={group.name}>
 								<div>

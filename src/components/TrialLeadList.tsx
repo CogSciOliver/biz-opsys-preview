@@ -16,7 +16,7 @@ export function TrialLeadList({
 	showNextStep = false,
 }: TrialLeadListProps) {
 	return (
-		<ul className="genesis-list">
+		<ul className="list">
 			{leads.map((lead) => (
 				<TrialLeadCard key={lead.id} lead={lead} showNextStep={showNextStep} />
 			))}

@@ -180,8 +180,8 @@ export const demoEvents = [
 ];
 
 export const ownerMetrics = [
-	{ label: "Monthly recurring revenue", value: "$28.4k", trend: "+8.2%" },
-	{ label: "Trial conversion", value: "62%", trend: "+4.5%" },
+	{ label: "Monthly recurring revenue", value: "$83.4k", trend: "+8.2%" },
+	{ label: "Trial conversion", value: "72%", trend: "+4.5%" },
 	{ label: "Past-due accounts", value: "7", trend: "-3 this week" },
 	{ label: "Average attendance", value: "74%", trend: "+6.1%" },
 ];

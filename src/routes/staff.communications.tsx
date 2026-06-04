@@ -30,7 +30,7 @@ function StaffCommunicationsPage() {
 					title="Communication pipeline"
 					description="Draft, approve, schedule, and send messages from the same operating system that tracks classes and members."
 				>
-					<ul className="genesis-list">
+					<ul className="list">
 						<li>
 							<div>
 								<strong>Draft</strong>
