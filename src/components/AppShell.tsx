@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { demoBusiness } from "../data/demoBusiness";
 import { PrototypeNotice } from "./PrototypeNotice";
 import { RoleNav } from "./RoleNav";
+import { ThemeToggle } from "./ThemeToggle";
 
 type AppShellProps = {
 	children: ReactNode;
@@ -33,9 +34,15 @@ export function AppShell({
 				</Link>
 
 				<div className="app-header-actions">
-					<Link to="/website">Public site</Link>
-					<Link to="/staff/check-in">Staff</Link>
-					<Link to="/owner/overview">Owner</Link>
+					<Link to="/website">Public View</Link>
+					<span aria-hidden="true">|</span>
+					<Link to="/member/dashboard">Member View</Link>
+					<span aria-hidden="true">|</span>
+					<Link to="/staff/check-in">Staff View</Link>
+					<span aria-hidden="true">|</span>
+					<Link to="/owner/overview">Owner View</Link>
+					<span aria-hidden="true">|</span>
+					<ThemeToggle />
 				</div>
 			</header>
 

@@ -28,7 +28,7 @@ function StaffDashboardPage() {
 			title="Staff Dashboard"
 			description="A daily operations view for classes, leads, attendance, and front-desk priorities."
 		>
-			<div className="genesis-grid-3">
+			<div className="grid-3">
 				{staffMetrics.map((metric) => (
 					<MetricCard
 						key={metric.label}
@@ -39,7 +39,7 @@ function StaffDashboardPage() {
 				))}
 			</div>
 
-			<div className="genesis-grid" style={{ marginTop: "1rem" }}>
+			<div className="grid" style={{ marginTop: "1rem" }}>
 				<DashboardCard
 					eyebrow="Next class"
 					title={demoClasses[0].name}

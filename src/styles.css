@@ -45,7 +45,7 @@ body {
   --chart-3: oklch(0.577 0.245 27.325);
   --chart-4: oklch(0.505 0.213 27.518);
   --chart-5: oklch(0.444 0.177 26.899);
-  --radius: 0.625rem;
+  --radius: 0.05rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.577 0.245 27.325);
@@ -54,6 +54,10 @@ body {
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+/* Global Stable Vars no matter light or dark mode*/
+  --lite-text: oklch(1 0 0);
+  --lite-fill: oklch(0.922 0 0);
 }
 
 .dark {
@@ -143,4 +147,30 @@ body {
   html {
     @apply font-sans;
   }
+  h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply font-heading text-foreground;
+}
+
+h1 {
+	@apply text-5xl font-medium tracking-wider;
+}
+
+h2 {
+	@apply text-3xl font-semibold tracking-wider;
+}
+
+h3 {
+	@apply text-lg font-semibold tracking-wider uppercase;
+}
+
+h4,
+h5,
+h6 {
+	@apply text-base font-semibold tracking-wider uppercase;
+}
 }

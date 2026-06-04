@@ -24,7 +24,7 @@ function OwnerOverviewPage() {
 			title="See the business without digging through five systems."
 			description="This page previews the executive layer: revenue, retention, trial pipeline, billing flags, and communication readiness."
 		>
-			<div className="genesis-grid-3">
+			<div className="grid-3">
 				{ownerMetrics.map((metric) => (
 					<MetricCard
 						key={metric.label}
@@ -35,7 +35,7 @@ function OwnerOverviewPage() {
 				))}
 			</div>
 
-			<div className="genesis-grid" style={{ marginTop: "1rem" }}>
+			<div className="grid" style={{ marginTop: "1rem" }}>
 				<DashboardCard
 					eyebrow="Billing watchlist"
 					title="Membership revenue"

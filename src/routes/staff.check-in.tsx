@@ -20,7 +20,7 @@ function StaffCheckInPage() {
 			title="Check students in fast."
 			description="A front-desk and mat-side preview for attendance, trial visitors, member status, and class capacity."
 		>
-			<div className="genesis-grid">
+			<div className="grid">
 				<CheckInKiosk activeClass={activeClass} checkedInCount={14} />
 
 				<DashboardCard eyebrow="Member lookup" title="Recent check-ins">

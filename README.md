@@ -48,7 +48,35 @@ pnpm lint
 pnpm format
 pnpm check
 ```
+---
+### pnpm check 
+means: Check the repo and tell me what is wrong.
 
+But this:
+pnpm exec biome check --write src/components/AppShell.tsx
+means: Check this file and automatically fix safe things like formatting and import order.
+
+In this case, Biome was not asking you to rewrite logic. It was saying: These files need semicolons, import sorting, indentation, and line wrapping.
+
+So --write lets Biome make those boring mechanical edits for you.
+
+The safe workflow is:
+pnpm exec biome check --write src/components/AppShell.tsx src/components/ThemeToggle.tsx src/routes/style-guide.tsx src/styles/button.css src/styles/card.css src/styles/genesis.css
+pnpm check
+git diff
+
+### So when you run:
+
+pnpm exec biome check --write
+
+you are saying:
+
+Use this project’s installed Biome tool.
+Check the code.
+Format it.
+Sort imports.
+Apply safe lint fixes.
+---
 
 ## Deploy with Nitro
 

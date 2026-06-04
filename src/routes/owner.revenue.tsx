@@ -17,7 +17,7 @@ function OwnerRevenuePage() {
 			title="Revenue"
 			description="A revenue view for membership performance, payment flags, recurring revenue, and plan health."
 		>
-			<div className="genesis-grid-3">
+			<div className="grid-3">
 				{ownerMetrics.slice(0, 3).map((metric) => (
 					<MetricCard
 						key={metric.label}

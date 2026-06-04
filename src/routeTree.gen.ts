@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WebsiteRouteImport } from './routes/website'
+import { Route as StyleGuideRouteImport } from './routes/style-guide'
 import { Route as JoinRouteImport } from './routes/join'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as WebsiteScheduleRouteImport } from './routes/website.schedule'
@@ -31,6 +32,11 @@ import { Route as DemoClerkRouteImport } from './routes/demo/clerk'
 const WebsiteRoute = WebsiteRouteImport.update({
   id: '/website',
   path: '/website',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StyleGuideRoute = StyleGuideRouteImport.update({
+  id: '/style-guide',
+  path: '/style-guide',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JoinRoute = JoinRouteImport.update({
@@ -122,6 +128,7 @@ const DemoClerkRoute = DemoClerkRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/join': typeof JoinRoute
+  '/style-guide': typeof StyleGuideRoute
   '/website': typeof WebsiteRouteWithChildren
   '/demo/clerk': typeof DemoClerkRoute
   '/member/billing': typeof MemberBillingRoute
@@ -142,6 +149,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/join': typeof JoinRoute
+  '/style-guide': typeof StyleGuideRoute
   '/website': typeof WebsiteRouteWithChildren
   '/demo/clerk': typeof DemoClerkRoute
   '/member/billing': typeof MemberBillingRoute
@@ -163,6 +171,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/join': typeof JoinRoute
+  '/style-guide': typeof StyleGuideRoute
   '/website': typeof WebsiteRouteWithChildren
   '/demo/clerk': typeof DemoClerkRoute
   '/member/billing': typeof MemberBillingRoute
@@ -185,6 +194,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/join'
+    | '/style-guide'
     | '/website'
     | '/demo/clerk'
     | '/member/billing'
@@ -205,6 +215,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/join'
+    | '/style-guide'
     | '/website'
     | '/demo/clerk'
     | '/member/billing'
@@ -225,6 +236,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/join'
+    | '/style-guide'
     | '/website'
     | '/demo/clerk'
     | '/member/billing'
@@ -246,6 +258,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   JoinRoute: typeof JoinRoute
+  StyleGuideRoute: typeof StyleGuideRoute
   WebsiteRoute: typeof WebsiteRouteWithChildren
   DemoClerkRoute: typeof DemoClerkRoute
   MemberBillingRoute: typeof MemberBillingRoute
@@ -268,6 +281,13 @@ declare module '@tanstack/react-router' {
       path: '/website'
       fullPath: '/website'
       preLoaderRoute: typeof WebsiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/style-guide': {
+      id: '/style-guide'
+      path: '/style-guide'
+      fullPath: '/style-guide'
+      preLoaderRoute: typeof StyleGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/join': {
@@ -410,6 +430,7 @@ const WebsiteRouteWithChildren =
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   JoinRoute: JoinRoute,
+  StyleGuideRoute: StyleGuideRoute,
   WebsiteRoute: WebsiteRouteWithChildren,
   DemoClerkRoute: DemoClerkRoute,
   MemberBillingRoute: MemberBillingRoute,

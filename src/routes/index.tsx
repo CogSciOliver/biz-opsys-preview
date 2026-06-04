@@ -28,10 +28,10 @@ function IndexPage() {
 					</p>
 
 					<div className="hero-actions">
-						<Link to="/website" className="button-secondary">
+						<Link to="/website" className="button-inverse">
 							Start with public site
 						</Link>
-						<Link to="/owner/overview" className="button-primary">
+						<Link to="/owner/overview" className="button-inverse">
 							View owner dashboard
 						</Link>
 					</div>
@@ -40,7 +40,7 @@ function IndexPage() {
 				<HeroStats stats={demoBusiness.stats} />
 			</div>
 
-			<div className="genesis-grid" style={{ marginTop: "1rem" }}>
+			<div className="grid" style={{ marginTop: "1rem" }}>
 				<DashboardCard
 					eyebrow="Public experience"
 					title="Website, memberships, schedule, and events"
@@ -86,7 +86,7 @@ function IndexPage() {
 				/>
 			</div>
 
-			<div className="genesis-grid-3" style={{ marginTop: "1rem" }}>
+			<div className="grid-3" style={{ marginTop: "1rem" }}>
 				{ownerMetrics.slice(0, 3).map((metric) => (
 					<MetricCard
 						key={metric.label}

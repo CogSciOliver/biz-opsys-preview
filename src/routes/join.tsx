@@ -19,7 +19,7 @@ function JoinPage() {
 			title="Book a first class without calling the front desk."
 			description="This page previews the kind of guided trial flow Genesis could use to turn website visitors into scheduled intro students."
 		>
-			<div className="genesis-grid">
+			<div className="grid">
 				<DashboardCard eyebrow="Static form preview" title="Trial request">
 					<div className="fake-form">
 						<div className="fake-field">

@@ -20,7 +20,7 @@ function MemberDashboardPage() {
 			title="Member Dashboard"
 			description="A member home screen for classes, membership status, announcements, and family training rhythm."
 		>
-			<div className="genesis-grid">
+			<div className="grid">
 				<DashboardCard
 					eyebrow="Membership"
 					title={`Welcome back, ${member.name}`}
@@ -46,7 +46,7 @@ function MemberDashboardPage() {
 				/>
 			</div>
 
-			<div className="genesis-grid" style={{ marginTop: "1rem" }}>
+			<div className="grid" style={{ marginTop: "1rem" }}>
 				<DashboardCard eyebrow="Recommended classes" title="This week">
 					<ClassScheduleList classes={demoClasses.slice(0, 3)} />
 				</DashboardCard>

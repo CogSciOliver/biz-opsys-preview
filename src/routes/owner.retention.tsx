@@ -35,7 +35,7 @@ function OwnerRetentionPage() {
 			title="Retention"
 			description="A retention view for attendance signals, churn risk, family engagement, and student milestones."
 		>
-			<div className="genesis-grid-3">
+			<div className="grid-3">
 				{retentionMetrics.map((metric) => (
 					<MetricCard
 						key={metric.label}

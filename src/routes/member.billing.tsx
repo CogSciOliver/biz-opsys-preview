@@ -19,7 +19,7 @@ function MemberBillingPage() {
 			title="Billing"
 			description="A member-facing billing view that makes plan status, payment history, and account health clear."
 		>
-			<div className="genesis-grid">
+			<div className="grid">
 				<DashboardCard
 					eyebrow="Current plan"
 					title={member.plan}

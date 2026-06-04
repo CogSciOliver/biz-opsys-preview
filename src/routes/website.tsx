@@ -37,7 +37,7 @@ function WebsitePage() {
 				<HeroStats stats={demoBusiness.stats} />
 			</div>
 
-			<div className="genesis-grid" style={{ marginTop: "1rem" }}>
+			<div className="grid" style={{ marginTop: "1rem" }}>
 				<DashboardCard
 					eyebrow="Featured classes"
 					title="Classes for the whole family"

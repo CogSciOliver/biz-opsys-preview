@@ -43,7 +43,7 @@ function OwnerSettingsPage() {
 			title="Settings"
 			description="A future owner control center for business details, staff roles, trial flows, schedule rules, and brand settings."
 		>
-			<div className="genesis-grid">
+			<div className="grid">
 				<DashboardCard
 					eyebrow="Business"
 					title={demoBusiness.name}

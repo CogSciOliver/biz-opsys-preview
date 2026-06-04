@@ -1,0 +1,12 @@
+.status-pill {
+	display: inline-flex;
+	align-items: center;
+	width: fit-content;
+	padding: 0.25rem 0.6rem;
+	background: var(--secondary);
+	color: var(--secondary-foreground);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	font-size: 0.75rem;
+	font-weight: 600;
+}

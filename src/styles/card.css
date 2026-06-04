@@ -1,0 +1,28 @@
+.card-title {
+	font-size: var(--text-lg, 1.125rem);
+	line-height: var(
+		--tw-leading,
+		var(--text-lg--line-height, calc(1.75 / 1.125))
+	);
+	font-weight: var(--font-weight-semibold, 600);
+	letter-spacing: var(--tracking-wider, 0.05em);
+	text-transform: uppercase;
+}
+
+
+.card {
+	padding: 1.25rem;
+}
+
+.card h2,
+.card h3 {
+	margin: 0 0 0.7rem;
+	font-family: var(--font-heading);
+	font-weight: 600;
+	letter-spacing: -0.03em;
+}
+
+.card p {
+	color: var(--muted-foreground);
+	line-height: 1.6;
+}

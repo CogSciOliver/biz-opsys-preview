@@ -35,7 +35,7 @@ function WebsiteMembershipsPage() {
 			title="Memberships"
 			description="A simple public pricing page that helps families understand the best path before they ever talk to staff."
 		>
-			<div className="genesis-grid-3">
+			<div className="grid-3">
 				{membershipPlans.map((plan) => (
 					<DashboardCard
 						key={plan.name}

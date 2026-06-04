@@ -16,7 +16,7 @@ function StaffCommunicationsPage() {
 			title="Communications"
 			description="A message center preview for trial follow-ups, member reminders, event announcements, and owner-approved broadcasts."
 		>
-			<div className="genesis-grid">
+			<div className="grid">
 				<DashboardCard
 					eyebrow="Message center"
 					title="Ready-to-send communications"

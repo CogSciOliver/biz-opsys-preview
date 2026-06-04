@@ -6,9 +6,9 @@ type MetricCardProps = {
 
 export function MetricCard({ label, value, trend }: MetricCardProps) {
 	return (
-		<section className="genesis-card">
+		<section className="card">
 			<p className="card-kicker">{label}</p>
-			<h2>{value}</h2>
+			<h2 className="card-title">{value}</h2>
 			{trend ? <p>{trend}</p> : null}
 		</section>
 	);

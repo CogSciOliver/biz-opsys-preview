@@ -1,0 +1,23 @@
+.fake-form {
+	display: grid;
+	gap: 0.9rem;
+}
+
+.fake-field {
+	display: grid;
+	gap: 0.35rem;
+}
+
+.fake-field .fake-label {
+	font-size: 0.8rem;
+	font-weight: 600;
+	color: var(--muted-foreground);
+}
+
+.fake-field div {
+	padding: 0.9rem 1rem;
+	background: var(--muted);
+	color: var(--muted-foreground);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+}

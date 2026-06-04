@@ -1,0 +1,142 @@
+.button-primary,
+.button-secondary,
+.button-inverse,
+.button-outline,
+.button-ghost,
+.button-destructive,
+.button-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 2.5rem;
+	padding: 0 1rem;
+	border-radius: var(--radius);
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	line-height: 1;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.button-primary {
+	background: var(--primary);
+	color: var(--lite-text);
+	border: 1px solid var(--primary);
+}
+
+.button-primary:hover {
+	background: var(--primary);
+	color: var(--lite-text);
+}
+
+.button-inverse {
+	background: var(--lite-text);
+	color: var(--primary);
+	border: 1px solid var(--lite-text);
+}
+
+.button-inverse:hover {
+	background: var(--lite-text);
+	color: var(--primary);
+}
+
+.button-secondary {
+	background: var(--secondary);
+	color: var(--secondary-foreground);
+	border: 1px solid var(--border);
+}
+
+.button-secondary:hover {
+	background: var(--accent);
+	color: var(--accent-foreground);
+}
+
+.button-outline {
+	background: transparent;
+	color: var(--foreground);
+	border: 1px solid var(--border);
+}
+
+.button-outline:hover {
+	background: var(--accent);
+	color: var(--accent-foreground);
+}
+
+.button-hollow {
+	background: transparent;
+	color: var(--lite-text);
+	border: 1px solid var(--lite-fill);
+}
+
+.button-hollow:hover {
+	background: var(--accent);
+	color: var(--accent-foreground);
+}
+
+.button-ghost {
+	background: transparent;
+	color: var(--foreground);
+	border: 1px solid transparent;
+}
+
+.button-ghost:hover {
+	background: var(--accent);
+	color: var(--accent-foreground);
+}
+
+.button-destructive {
+	background: var(--destructive);
+	color: var(--lite-text);
+	border: 1px solid var(--destructive);
+}
+
+.button-destructive:hover {
+	background: var(--destructive);
+	color: var(--lite-text);
+}
+
+.button-link {
+	min-height: auto;
+	padding: 0;
+	background: transparent;
+	color: var(--primary);
+	border: 0;
+}
+
+.button-link:hover {
+	color: var(--primary);
+	text-decoration: underline;
+	text-underline-offset: 0.25rem;
+}
+
+.theme-toggle {
+	display: inline-grid;
+	width: 1.75rem;
+	height: 1.75rem;
+	place-items: center;
+	padding: 0;
+	background: transparent;
+	color: var(--muted-foreground);
+	border: 0;
+	border-radius: var(--radius);
+	cursor: pointer;
+}
+
+.theme-toggle:hover {
+	color: var(--foreground);
+	background: var(--accent);
+}
+
+.theme-toggle:focus-visible,
+.button-primary:focus-visible,
+.button-secondary:focus-visible,
+.button-inverse:focus-visible,
+.button-outline:focus-visible,
+.button-hollow :focus-visible,
+.button-ghost:focus-visible,
+.button-destructive:focus-visible,
+.button-link:focus-visible {
+	outline: 2px solid var(--ring);
+	outline-offset: 2px;
+}

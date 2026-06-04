@@ -16,9 +16,9 @@ export function DashboardCard({
 	footer,
 }: DashboardCardProps) {
 	return (
-		<section className="genesis-card">
+		<section className="card">
 			{eyebrow ? <p className="card-kicker">{eyebrow}</p> : null}
-			<h2>{title}</h2>
+			<h2 className="card-title">{title}</h2>
 			{description ? <p>{description}</p> : null}
 			{children}
 			{footer ? <div className="hero-actions">{footer}</div> : null}
