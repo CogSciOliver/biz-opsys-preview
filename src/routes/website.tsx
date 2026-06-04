@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { AppShell } from "../components/AppShell";
+import { ClassScheduleCard } from "../components/ClassScheduleCard";
+import { DashboardCard } from "../components/DashboardCard";
 import { demoBusiness, demoClasses, demoEvents } from "../data/demoBusiness";
 
 export const Route = createFileRoute("/website")({
@@ -41,28 +43,18 @@ function WebsitePage() {
 			</div>
 
 			<div className="genesis-grid" style={{ marginTop: "1rem" }}>
-				<section className="genesis-card">
-					<p className="card-kicker">Featured classes</p>
-					<h2>Classes for the whole family</h2>
+				<DashboardCard
+					eyebrow="Featured classes"
+					title="Classes for the whole family"
+				>
 					<ul className="genesis-list">
 						{demoClasses.slice(0, 3).map((classItem) => (
-							<li key={classItem.id}>
-								<div>
-									<strong>{classItem.name}</strong>
-									<br />
-									<span>
-										{classItem.audience} • {classItem.days} • {classItem.time}
-									</span>
-								</div>
-								<span className="status-pill">{classItem.level}</span>
-							</li>
+							<ClassScheduleCard classItem={classItem} key={classItem.id} />
 						))}
 					</ul>
-				</section>
+				</DashboardCard>
 
-				<section className="genesis-card">
-					<p className="card-kicker">Community</p>
-					<h2>Upcoming gym moments</h2>
+				<DashboardCard eyebrow="Community" title="Upcoming gym moments">
 					<ul className="genesis-list">
 						{demoEvents.map((event) => (
 							<li key={event.id}>
@@ -77,7 +69,7 @@ function WebsitePage() {
 							</li>
 						))}
 					</ul>
-				</section>
+				</DashboardCard>
 			</div>
 		</AppShell>
 	);

@@ -1,5 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { AppShell } from "../components/AppShell";
+import { BillingSummary } from "../components/BillingSummary";
+import { CommunicationPreview } from "../components/CommunicationPreview";
+import { DashboardCard } from "../components/DashboardCard";
+import { MetricCard } from "../components/MetricCard";
+import { TrialLeadCard } from "../components/TrialLeadCard";
 import {
 	demoMessages,
 	demoPayments,
@@ -21,73 +26,43 @@ function OwnerOverviewPage() {
 		>
 			<div className="genesis-grid-3">
 				{ownerMetrics.map((metric) => (
-					<section className="genesis-card" key={metric.label}>
-						<p className="card-kicker">{metric.label}</p>
-						<h2>{metric.value}</h2>
-						<p>{metric.trend}</p>
-					</section>
+					<MetricCard
+						key={metric.label}
+						label={metric.label}
+						value={metric.value}
+						trend={metric.trend}
+					/>
 				))}
 			</div>
 
 			<div className="genesis-grid" style={{ marginTop: "1rem" }}>
-				<section className="genesis-card">
-					<p className="card-kicker">Billing watchlist</p>
-					<h2>Membership revenue</h2>
-					<ul className="genesis-list">
-						{demoPayments.map((payment) => (
-							<li key={payment.id}>
-								<div>
-									<strong>{payment.member}</strong>
-									<br />
-									<span>
-										{payment.plan} • {payment.date}
-									</span>
-								</div>
-								<span>{payment.status}</span>
-							</li>
-						))}
-					</ul>
-					<div className="hero-actions">
+				<DashboardCard
+					eyebrow="Billing watchlist"
+					title="Membership revenue"
+					footer={
 						<Link to="/owner/revenue" className="button-primary">
 							View revenue
 						</Link>
-					</div>
-				</section>
+					}
+				>
+					<BillingSummary payments={demoPayments} />
+				</DashboardCard>
 
-				<section className="genesis-card">
-					<p className="card-kicker">Sales pipeline</p>
-					<h2>Trial leads</h2>
+				<DashboardCard eyebrow="Sales pipeline" title="Trial leads">
 					<ul className="genesis-list">
 						{demoTrialLeads.map((lead) => (
-							<li key={lead.id}>
-								<div>
-									<strong>{lead.name}</strong>
-									<br />
-									<span>{lead.interest}</span>
-								</div>
-								<span>{lead.status}</span>
-							</li>
+							<TrialLeadCard key={lead.id} lead={lead} />
 						))}
 					</ul>
-				</section>
+				</DashboardCard>
 			</div>
 
-			<section className="genesis-card" style={{ marginTop: "1rem" }}>
-				<p className="card-kicker">Communications</p>
-				<h2>Messages ready for staff or owner approval</h2>
-				<ul className="genesis-list">
-					{demoMessages.map((message) => (
-						<li key={message.id}>
-							<div>
-								<strong>{message.title}</strong>
-								<br />
-								<span>{message.audience}</span>
-							</div>
-							<span>{message.status}</span>
-						</li>
-					))}
-				</ul>
-			</section>
+			<DashboardCard
+				eyebrow="Communications"
+				title="Messages ready for staff or owner approval"
+			>
+				<CommunicationPreview messages={demoMessages} />
+			</DashboardCard>
 		</AppShell>
 	);
 }

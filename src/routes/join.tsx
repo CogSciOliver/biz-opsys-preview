@@ -1,13 +1,16 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { AppShell } from "../components/AppShell";
-import { demoClasses, demoTrialLeads } from "../data/demoBusiness";
+import { createFileRoute } from "@tanstack/react-router"
+import { ClassScheduleCard } from "../components/ClassScheduleCard"
+import { DashboardCard } from "../components/DashboardCard"
+import { TrialLeadCard } from "../components/TrialLeadCard"
+import { AppShell } from "../components/AppShell"
+import { demoClasses, demoTrialLeads } from "../data/demoBusiness"
 
 export const Route = createFileRoute("/join")({
 	component: JoinPage,
-});
+})
 
 function JoinPage() {
-	const featuredLead = demoTrialLeads[0];
+	const featuredLead = demoTrialLeads[0]
 
 	return (
 		<AppShell
@@ -17,10 +20,7 @@ function JoinPage() {
 			description="This page previews the kind of guided trial flow Genesis could use to turn website visitors into scheduled intro students."
 		>
 			<div className="genesis-grid">
-				<section className="genesis-card">
-					<p className="card-kicker">Static form preview</p>
-					<h2>Trial request</h2>
-
+				<DashboardCard eyebrow="Static form preview" title="Trial request">
 					<div className="fake-form">
 						<div className="fake-field">
 							<span className="fake-label">Name</span>
@@ -41,20 +41,11 @@ function JoinPage() {
 							<div>Choose from available intro-friendly classes</div>
 						</div>
 					</div>
-				</section>
+				</DashboardCard>
 
-				<section className="genesis-card">
-					<p className="card-kicker">Lead preview</p>
-					<h2>What staff would see</h2>
+				<DashboardCard eyebrow="Lead preview" title="What staff would see">
 					<ul className="genesis-list">
-						<li>
-							<div>
-								<strong>{featuredLead.name}</strong>
-								<br />
-								<span>{featuredLead.interest}</span>
-							</div>
-							<span className="status-pill">{featuredLead.status}</span>
-						</li>
+						<TrialLeadCard lead={featuredLead} />
 						<li>
 							<div>
 								<strong>Next step</strong>
@@ -63,26 +54,21 @@ function JoinPage() {
 							</div>
 						</li>
 					</ul>
-				</section>
+				</DashboardCard>
 			</div>
 
-			<section className="genesis-card" style={{ marginTop: "1rem" }}>
-				<p className="card-kicker">Available trial-friendly classes</p>
-				<ul className="genesis-list">
-					{demoClasses.slice(0, 3).map((classItem) => (
-						<li key={classItem.id}>
-							<div>
-								<strong>{classItem.name}</strong>
-								<br />
-								<span>
-									{classItem.audience} • {classItem.days} • {classItem.time}
-								</span>
-							</div>
-							<span>{classItem.spots} spots</span>
-						</li>
-					))}
-				</ul>
-			</section>
+			<div style={{ marginTop: "1rem" }}>
+				<DashboardCard
+					eyebrow="Available trial-friendly classes"
+					title="Intro-ready schedule"
+				>
+					<ul className="genesis-list">
+						{demoClasses.slice(0, 3).map((classItem) => (
+							<ClassScheduleCard classItem={classItem} key={classItem.id} />
+						))}
+					</ul>
+				</DashboardCard>
+			</div>
 		</AppShell>
-	);
+	)
 }
