@@ -15,7 +15,6 @@ todos.json
 
 # local env files
 .env
-.env.*
 .env.local
+.env.*
 !.env.example
-.env.example
