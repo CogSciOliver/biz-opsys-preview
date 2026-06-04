@@ -1,5 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { AppShell } from "../components/AppShell";
+import { ClassScheduleList } from "../components/ClassScheduleList";
+import { DashboardCard } from "../components/DashboardCard";
+import { demoClasses } from "../data/demoBusiness";
 
 export const Route = createFileRoute("/member/classes")({
 	component: MemberClassesPage,
@@ -11,13 +14,20 @@ function MemberClassesPage() {
 			variant="member"
 			eyebrow="Member portal"
 			title="My Classes"
-			description="Preview page for booked classes, recommended classes, attendance, and family schedule visibility."
+			description="A member schedule view for booked classes, recommended sessions, and family training planning."
 		>
-			<section className="genesis-card">
-				<p className="card-kicker">Coming next</p>
-				<h2>Class list</h2>
-				<p>This route is wired and ready for member class scheduling.</p>
-			</section>
+			<DashboardCard
+				eyebrow="Class plan"
+				title="Recommended this week"
+				description="This preview gives members one place to understand where they fit into the weekly schedule."
+				footer={
+					<Link to="/website/schedule" className="button-primary">
+						View full schedule
+					</Link>
+				}
+			>
+				<ClassScheduleList classes={demoClasses} />
+			</DashboardCard>
 		</AppShell>
 	);
 }

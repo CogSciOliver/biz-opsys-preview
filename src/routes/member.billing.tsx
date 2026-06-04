@@ -1,23 +1,47 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AppShell } from "../components/AppShell";
+import { BillingSummary } from "../components/BillingSummary";
+import { DashboardCard } from "../components/DashboardCard";
+import { MemberStatusBadge } from "../components/MemberStatusBadge";
+import { demoMembers, demoPayments } from "../data/demoBusiness";
 
 export const Route = createFileRoute("/member/billing")({
 	component: MemberBillingPage,
 });
 
 function MemberBillingPage() {
+	const member = demoMembers[0];
+
 	return (
 		<AppShell
 			variant="member"
 			eyebrow="Member portal"
 			title="Billing"
-			description="Preview page for plan status, payment history, and membership renewal visibility."
+			description="A member-facing billing view that makes plan status, payment history, and account health clear."
 		>
-			<section className="genesis-card">
-				<p className="card-kicker">Coming next</p>
-				<h2>Billing summary</h2>
-				<p>This route is wired and ready for member billing preview cards.</p>
-			</section>
+			<div className="genesis-grid">
+				<DashboardCard
+					eyebrow="Current plan"
+					title={member.plan}
+					description={`${member.name} • Last check-in: ${member.lastCheckIn}`}
+				>
+					<MemberStatusBadge status={member.status} />
+				</DashboardCard>
+
+				<DashboardCard
+					eyebrow="Next payment"
+					title="$219"
+					description="Upcoming family membership renewal preview."
+				>
+					<MemberStatusBadge status="Scheduled" />
+				</DashboardCard>
+			</div>
+
+			<div style={{ marginTop: "1rem" }}>
+				<DashboardCard eyebrow="Payment history" title="Recent payments">
+					<BillingSummary payments={demoPayments.slice(0, 2)} />
+				</DashboardCard>
+			</div>
 		</AppShell>
 	);
 }

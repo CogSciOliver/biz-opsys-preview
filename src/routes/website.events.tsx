@@ -1,5 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { AppShell } from "../components/AppShell";
+import { DashboardCard } from "../components/DashboardCard";
+import { EventList } from "../components/EventList";
+import { demoEvents } from "../data/demoBusiness";
 
 export const Route = createFileRoute("/website/events")({
 	component: WebsiteEventsPage,
@@ -11,16 +14,20 @@ function WebsiteEventsPage() {
 			variant="public"
 			eyebrow="Public website"
 			title="Events"
-			description="Preview page for open mats, family events, belt testing, seminars, and community days."
+			description="A public events page for open mats, family intro days, belt testing, and community moments."
 		>
-			<section className="genesis-card">
-				<p className="card-kicker">Coming next</p>
-				<h2>Event cards</h2>
-				<p>
-					This route is wired. Next we can show event registration previews and
-					member-only event calls to action.
-				</p>
-			</section>
+			<DashboardCard
+				eyebrow="Upcoming events"
+				title="Give the gym a living calendar"
+				description="Events become part of the sales and retention system instead of being scattered across posts, texts, and memory."
+				footer={
+					<Link to="/join" className="button-primary">
+						Ask about visiting
+					</Link>
+				}
+			>
+				<EventList events={demoEvents} />
+			</DashboardCard>
 		</AppShell>
 	);
 }

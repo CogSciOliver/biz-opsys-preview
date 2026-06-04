@@ -1,16 +1,16 @@
-import { createFileRoute } from "@tanstack/react-router"
-import { ClassScheduleCard } from "../components/ClassScheduleCard"
-import { DashboardCard } from "../components/DashboardCard"
-import { TrialLeadCard } from "../components/TrialLeadCard"
-import { AppShell } from "../components/AppShell"
-import { demoClasses, demoTrialLeads } from "../data/demoBusiness"
+import { createFileRoute } from "@tanstack/react-router";
+import { AppShell } from "../components/AppShell";
+import { ClassScheduleList } from "../components/ClassScheduleList";
+import { DashboardCard } from "../components/DashboardCard";
+import { TrialLeadCard } from "../components/TrialLeadCard";
+import { demoClasses, demoTrialLeads } from "../data/demoBusiness";
 
 export const Route = createFileRoute("/join")({
 	component: JoinPage,
-})
+});
 
 function JoinPage() {
-	const featuredLead = demoTrialLeads[0]
+	const featuredLead = demoTrialLeads[0];
 
 	return (
 		<AppShell
@@ -62,13 +62,9 @@ function JoinPage() {
 					eyebrow="Available trial-friendly classes"
 					title="Intro-ready schedule"
 				>
-					<ul className="genesis-list">
-						{demoClasses.slice(0, 3).map((classItem) => (
-							<ClassScheduleCard classItem={classItem} key={classItem.id} />
-						))}
-					</ul>
+					<ClassScheduleList classes={demoClasses.slice(0, 3)} />
 				</DashboardCard>
 			</div>
 		</AppShell>
-	)
+	);
 }

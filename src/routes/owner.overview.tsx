@@ -4,7 +4,7 @@ import { BillingSummary } from "../components/BillingSummary";
 import { CommunicationPreview } from "../components/CommunicationPreview";
 import { DashboardCard } from "../components/DashboardCard";
 import { MetricCard } from "../components/MetricCard";
-import { TrialLeadCard } from "../components/TrialLeadCard";
+import { TrialLeadList } from "../components/TrialLeadList";
 import {
 	demoMessages,
 	demoPayments,
@@ -49,20 +49,18 @@ function OwnerOverviewPage() {
 				</DashboardCard>
 
 				<DashboardCard eyebrow="Sales pipeline" title="Trial leads">
-					<ul className="genesis-list">
-						{demoTrialLeads.map((lead) => (
-							<TrialLeadCard key={lead.id} lead={lead} />
-						))}
-					</ul>
+					<TrialLeadList leads={demoTrialLeads} />
 				</DashboardCard>
 			</div>
 
-			<DashboardCard
-				eyebrow="Communications"
-				title="Messages ready for staff or owner approval"
-			>
-				<CommunicationPreview messages={demoMessages} />
-			</DashboardCard>
+			<div style={{ marginTop: "1rem" }}>
+				<DashboardCard
+					eyebrow="Communications"
+					title="Messages ready for staff or owner approval"
+				>
+					<CommunicationPreview messages={demoMessages} />
+				</DashboardCard>
+			</div>
 		</AppShell>
 	);
 }

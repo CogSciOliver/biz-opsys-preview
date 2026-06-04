@@ -1,17 +1,17 @@
-import { createFileRoute } from "@tanstack/react-router"
-import { AppShell } from "../components/AppShell"
-import { CheckInKiosk } from "../components/CheckInKiosk"
-import { DashboardCard } from "../components/DashboardCard"
-import { MemberStatusBadge } from "../components/MemberStatusBadge"
-import { TrialLeadCard } from "../components/TrialLeadCard"
-import { demoClasses, demoMembers, demoTrialLeads } from "../data/demoBusiness"
+import { createFileRoute } from "@tanstack/react-router";
+import { AppShell } from "../components/AppShell";
+import { CheckInKiosk } from "../components/CheckInKiosk";
+import { DashboardCard } from "../components/DashboardCard";
+import { MemberList } from "../components/MemberList";
+import { TrialLeadList } from "../components/TrialLeadList";
+import { demoClasses, demoMembers, demoTrialLeads } from "../data/demoBusiness";
 
 export const Route = createFileRoute("/staff/check-in")({
 	component: StaffCheckInPage,
-})
+});
 
 function StaffCheckInPage() {
-	const activeClass = demoClasses[1]
+	const activeClass = demoClasses[1];
 
 	return (
 		<AppShell
@@ -24,20 +24,7 @@ function StaffCheckInPage() {
 				<CheckInKiosk activeClass={activeClass} checkedInCount={14} />
 
 				<DashboardCard eyebrow="Member lookup" title="Recent check-ins">
-					<ul className="genesis-list">
-						{demoMembers.map((member) => (
-							<li key={member.id}>
-								<div>
-									<strong>{member.name}</strong>
-									<br />
-									<span>
-										{member.plan} • {member.belt}
-									</span>
-								</div>
-								<MemberStatusBadge status={member.status} />
-							</li>
-						))}
-					</ul>
+					<MemberList members={demoMembers} />
 				</DashboardCard>
 			</div>
 
@@ -46,13 +33,9 @@ function StaffCheckInPage() {
 					eyebrow="Trial visitors"
 					title="People staff should greet intentionally"
 				>
-					<ul className="genesis-list">
-						{demoTrialLeads.map((lead) => (
-							<TrialLeadCard key={lead.id} lead={lead} showNextStep />
-						))}
-					</ul>
+					<TrialLeadList leads={demoTrialLeads} showNextStep />
 				</DashboardCard>
 			</div>
 		</AppShell>
-	)
+	);
 }

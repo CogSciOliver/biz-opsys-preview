@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AppShell } from "../components/AppShell";
+import { DashboardCard } from "../components/DashboardCard";
+import { MemberList } from "../components/MemberList";
+import { demoMembers } from "../data/demoBusiness";
 
 export const Route = createFileRoute("/staff/members")({
 	component: StaffMembersPage,
@@ -11,13 +14,15 @@ function StaffMembersPage() {
 			variant="staff"
 			eyebrow="Staff tools"
 			title="Members"
-			description="Preview page for member search, student profiles, plan status, and attendance notes."
+			description="A staff member directory preview for student lookup, plan status, belt level, and attendance context."
 		>
-			<section className="genesis-card">
-				<p className="card-kicker">Coming next</p>
-				<h2>Member directory</h2>
-				<p>This route is wired and ready for member profile previews.</p>
-			</section>
+			<DashboardCard
+				eyebrow="Directory"
+				title="Member profiles"
+				description="In the real system, this would become searchable and filterable. For the prototype, it shows the shape of the staff workflow."
+			>
+				<MemberList members={demoMembers} showLastCheckIn />
+			</DashboardCard>
 		</AppShell>
 	);
 }
