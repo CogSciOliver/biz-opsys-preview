@@ -48,7 +48,7 @@ function StyleGuidePage() {
 						<Link to="/" className="button-inverse">
 							Demo hub
 						</Link>
-						<Link to="/website" className="button-primary">
+						<Link to="/website" className="button-hollow">
 							Public site
 						</Link>
 					</div>

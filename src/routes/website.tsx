@@ -25,10 +25,10 @@ function WebsitePage() {
 					<p>{demoBusiness.heroText}</p>
 
 					<div className="hero-actions">
-						<Link to="/join" className="button-secondary">
+						<Link to="/join" className="button-inverse">
 							Book a trial class
 						</Link>
-						<Link to="/website/schedule" className="button-primary">
+						<Link to="/website/schedule" className="button-hollow">
 							View schedule
 						</Link>
 					</div>

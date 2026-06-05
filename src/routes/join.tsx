@@ -16,8 +16,8 @@ function JoinPage() {
 		<AppShell
 			variant="public"
 			eyebrow="Trial class signup"
-			title="Book a first class without calling the front desk."
-			description="This page previews the kind of guided trial flow Genesis could use to turn website visitors into scheduled intro students."
+			title="Book your first class"
+			description="Without calling the front desk, preview the kind of guided trial flow Genesis could use to turn website visitors into scheduled intro students."
 		>
 			<div className="grid">
 				<DashboardCard eyebrow="Static form preview" title="Trial request">
