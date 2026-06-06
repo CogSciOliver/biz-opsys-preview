@@ -1,5 +1,4 @@
 @import "./button.css";
-@import "./card.css";
 @import "./form.css";
 @import "./hero.css";
 @import "./list.css";
@@ -104,8 +103,7 @@ a {
 }
 
 .sidebar-label,
-.eyebrow,
-.card-kicker {
+.eyebrow{
 	margin: 0 0 0.75rem;
 	color: var(--accent);
 	font-size: 0.75rem;
@@ -163,19 +161,6 @@ a {
 	gap: 1rem;
 }
 
-
-.kiosk-panel {
-	padding: 1.25rem;
-	background: var(--foreground);
-	color: var(--background);
-	border: 1px solid var(--border);
-	border-radius: var(--radius);
-}
-
-.kiosk-panel p,
-.kiosk-panel span {
-	color: color-mix(in oklch, var(--background) 75%, transparent);
-}
 
 .theme-toggle {
 	display: inline-grid;

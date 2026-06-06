@@ -15,7 +15,7 @@
 	color: var(--lite-text);
 }
 
-.hero-card .card-kicker,
+.hero-card,
 .hero-card h2,
 .hero-card p {
 	color: var(--primary-foreground);

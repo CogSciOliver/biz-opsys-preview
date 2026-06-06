@@ -34,7 +34,7 @@ export const demoClasses = [
 		days: "Tuesday",
 		time: "6:00 PM",
 		level: "All levels",
-		spots: 6,
+		spots: 21,
 	},
 	{
 		id: "adult-fundamentals",

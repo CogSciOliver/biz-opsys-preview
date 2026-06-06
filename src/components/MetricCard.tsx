@@ -1,3 +1,11 @@
+import {
+	Card,
+	CardDescription,
+	CardHeader,
+	CardKicker,
+	CardTitle,
+} from "@/components/ui/card";
+
 type MetricCardProps = {
 	label: string;
 	value: string;
@@ -6,10 +14,12 @@ type MetricCardProps = {
 
 export function MetricCard({ label, value, trend }: MetricCardProps) {
 	return (
-		<section className="card">
-			<p className="card-kicker">{label}</p>
-			<h2 className="card-title">{value}</h2>
-			{trend ? <p>{trend}</p> : null}
-		</section>
+		<Card size="sm">
+			<CardHeader>
+				<CardKicker>{label}</CardKicker>
+				<CardTitle>{value}</CardTitle>
+				{trend ? <CardDescription>{trend}</CardDescription> : null}
+			</CardHeader>
+		</Card>
 	);
 }
