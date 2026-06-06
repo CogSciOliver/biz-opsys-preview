@@ -11,15 +11,17 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WebsiteRouteImport } from './routes/website'
 import { Route as StyleGuideRouteImport } from './routes/style-guide'
+import { Route as StartDemoRouteImport } from './routes/start-demo'
 import { Route as JoinRouteImport } from './routes/join'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as WebsiteScheduleRouteImport } from './routes/website.schedule'
 import { Route as WebsiteMembershipsRouteImport } from './routes/website.memberships'
 import { Route as WebsiteEventsRouteImport } from './routes/website.events'
+import { Route as StaffSettingsRouteImport } from './routes/staff.settings'
 import { Route as StaffMembersRouteImport } from './routes/staff.members'
 import { Route as StaffDashboardRouteImport } from './routes/staff.dashboard'
-import { Route as StaffCommunicationsRouteImport } from './routes/staff.communications'
 import { Route as StaffCheckInRouteImport } from './routes/staff.check-in'
+import { Route as StaffAnnouncementsRouteImport } from './routes/staff.announcements'
 import { Route as OwnerSettingsRouteImport } from './routes/owner.settings'
 import { Route as OwnerRevenueRouteImport } from './routes/owner.revenue'
 import { Route as OwnerRetentionRouteImport } from './routes/owner.retention'
@@ -28,6 +30,10 @@ import { Route as MemberDashboardRouteImport } from './routes/member.dashboard'
 import { Route as MemberClassesRouteImport } from './routes/member.classes'
 import { Route as MemberBillingRouteImport } from './routes/member.billing'
 import { Route as DemoClerkRouteImport } from './routes/demo/clerk'
+import { Route as StaffCreateScheduleRouteImport } from './routes/staff.create.schedule'
+import { Route as StaffCreateMembershipRouteImport } from './routes/staff.create.membership'
+import { Route as StaffCreateEventRouteImport } from './routes/staff.create.event'
+import { Route as StaffCreateClassesRouteImport } from './routes/staff.create.classes'
 
 const WebsiteRoute = WebsiteRouteImport.update({
   id: '/website',
@@ -37,6 +43,11 @@ const WebsiteRoute = WebsiteRouteImport.update({
 const StyleGuideRoute = StyleGuideRouteImport.update({
   id: '/style-guide',
   path: '/style-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StartDemoRoute = StartDemoRouteImport.update({
+  id: '/start-demo',
+  path: '/start-demo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const JoinRoute = JoinRouteImport.update({
@@ -64,6 +75,11 @@ const WebsiteEventsRoute = WebsiteEventsRouteImport.update({
   path: '/events',
   getParentRoute: () => WebsiteRoute,
 } as any)
+const StaffSettingsRoute = StaffSettingsRouteImport.update({
+  id: '/staff/settings',
+  path: '/staff/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const StaffMembersRoute = StaffMembersRouteImport.update({
   id: '/staff/members',
   path: '/staff/members',
@@ -74,14 +90,14 @@ const StaffDashboardRoute = StaffDashboardRouteImport.update({
   path: '/staff/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
-const StaffCommunicationsRoute = StaffCommunicationsRouteImport.update({
-  id: '/staff/communications',
-  path: '/staff/communications',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const StaffCheckInRoute = StaffCheckInRouteImport.update({
   id: '/staff/check-in',
   path: '/staff/check-in',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StaffAnnouncementsRoute = StaffAnnouncementsRouteImport.update({
+  id: '/staff/announcements',
+  path: '/staff/announcements',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OwnerSettingsRoute = OwnerSettingsRouteImport.update({
@@ -124,10 +140,31 @@ const DemoClerkRoute = DemoClerkRouteImport.update({
   path: '/demo/clerk',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StaffCreateScheduleRoute = StaffCreateScheduleRouteImport.update({
+  id: '/staff/create/schedule',
+  path: '/staff/create/schedule',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StaffCreateMembershipRoute = StaffCreateMembershipRouteImport.update({
+  id: '/staff/create/membership',
+  path: '/staff/create/membership',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StaffCreateEventRoute = StaffCreateEventRouteImport.update({
+  id: '/staff/create/event',
+  path: '/staff/create/event',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StaffCreateClassesRoute = StaffCreateClassesRouteImport.update({
+  id: '/staff/create/classes',
+  path: '/staff/create/classes',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/join': typeof JoinRoute
+  '/start-demo': typeof StartDemoRoute
   '/style-guide': typeof StyleGuideRoute
   '/website': typeof WebsiteRouteWithChildren
   '/demo/clerk': typeof DemoClerkRoute
@@ -138,17 +175,23 @@ export interface FileRoutesByFullPath {
   '/owner/retention': typeof OwnerRetentionRoute
   '/owner/revenue': typeof OwnerRevenueRoute
   '/owner/settings': typeof OwnerSettingsRoute
+  '/staff/announcements': typeof StaffAnnouncementsRoute
   '/staff/check-in': typeof StaffCheckInRoute
-  '/staff/communications': typeof StaffCommunicationsRoute
   '/staff/dashboard': typeof StaffDashboardRoute
   '/staff/members': typeof StaffMembersRoute
+  '/staff/settings': typeof StaffSettingsRoute
   '/website/events': typeof WebsiteEventsRoute
   '/website/memberships': typeof WebsiteMembershipsRoute
   '/website/schedule': typeof WebsiteScheduleRoute
+  '/staff/create/classes': typeof StaffCreateClassesRoute
+  '/staff/create/event': typeof StaffCreateEventRoute
+  '/staff/create/membership': typeof StaffCreateMembershipRoute
+  '/staff/create/schedule': typeof StaffCreateScheduleRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/join': typeof JoinRoute
+  '/start-demo': typeof StartDemoRoute
   '/style-guide': typeof StyleGuideRoute
   '/website': typeof WebsiteRouteWithChildren
   '/demo/clerk': typeof DemoClerkRoute
@@ -159,18 +202,24 @@ export interface FileRoutesByTo {
   '/owner/retention': typeof OwnerRetentionRoute
   '/owner/revenue': typeof OwnerRevenueRoute
   '/owner/settings': typeof OwnerSettingsRoute
+  '/staff/announcements': typeof StaffAnnouncementsRoute
   '/staff/check-in': typeof StaffCheckInRoute
-  '/staff/communications': typeof StaffCommunicationsRoute
   '/staff/dashboard': typeof StaffDashboardRoute
   '/staff/members': typeof StaffMembersRoute
+  '/staff/settings': typeof StaffSettingsRoute
   '/website/events': typeof WebsiteEventsRoute
   '/website/memberships': typeof WebsiteMembershipsRoute
   '/website/schedule': typeof WebsiteScheduleRoute
+  '/staff/create/classes': typeof StaffCreateClassesRoute
+  '/staff/create/event': typeof StaffCreateEventRoute
+  '/staff/create/membership': typeof StaffCreateMembershipRoute
+  '/staff/create/schedule': typeof StaffCreateScheduleRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/join': typeof JoinRoute
+  '/start-demo': typeof StartDemoRoute
   '/style-guide': typeof StyleGuideRoute
   '/website': typeof WebsiteRouteWithChildren
   '/demo/clerk': typeof DemoClerkRoute
@@ -181,19 +230,25 @@ export interface FileRoutesById {
   '/owner/retention': typeof OwnerRetentionRoute
   '/owner/revenue': typeof OwnerRevenueRoute
   '/owner/settings': typeof OwnerSettingsRoute
+  '/staff/announcements': typeof StaffAnnouncementsRoute
   '/staff/check-in': typeof StaffCheckInRoute
-  '/staff/communications': typeof StaffCommunicationsRoute
   '/staff/dashboard': typeof StaffDashboardRoute
   '/staff/members': typeof StaffMembersRoute
+  '/staff/settings': typeof StaffSettingsRoute
   '/website/events': typeof WebsiteEventsRoute
   '/website/memberships': typeof WebsiteMembershipsRoute
   '/website/schedule': typeof WebsiteScheduleRoute
+  '/staff/create/classes': typeof StaffCreateClassesRoute
+  '/staff/create/event': typeof StaffCreateEventRoute
+  '/staff/create/membership': typeof StaffCreateMembershipRoute
+  '/staff/create/schedule': typeof StaffCreateScheduleRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/join'
+    | '/start-demo'
     | '/style-guide'
     | '/website'
     | '/demo/clerk'
@@ -204,17 +259,23 @@ export interface FileRouteTypes {
     | '/owner/retention'
     | '/owner/revenue'
     | '/owner/settings'
+    | '/staff/announcements'
     | '/staff/check-in'
-    | '/staff/communications'
     | '/staff/dashboard'
     | '/staff/members'
+    | '/staff/settings'
     | '/website/events'
     | '/website/memberships'
     | '/website/schedule'
+    | '/staff/create/classes'
+    | '/staff/create/event'
+    | '/staff/create/membership'
+    | '/staff/create/schedule'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/join'
+    | '/start-demo'
     | '/style-guide'
     | '/website'
     | '/demo/clerk'
@@ -225,17 +286,23 @@ export interface FileRouteTypes {
     | '/owner/retention'
     | '/owner/revenue'
     | '/owner/settings'
+    | '/staff/announcements'
     | '/staff/check-in'
-    | '/staff/communications'
     | '/staff/dashboard'
     | '/staff/members'
+    | '/staff/settings'
     | '/website/events'
     | '/website/memberships'
     | '/website/schedule'
+    | '/staff/create/classes'
+    | '/staff/create/event'
+    | '/staff/create/membership'
+    | '/staff/create/schedule'
   id:
     | '__root__'
     | '/'
     | '/join'
+    | '/start-demo'
     | '/style-guide'
     | '/website'
     | '/demo/clerk'
@@ -246,18 +313,24 @@ export interface FileRouteTypes {
     | '/owner/retention'
     | '/owner/revenue'
     | '/owner/settings'
+    | '/staff/announcements'
     | '/staff/check-in'
-    | '/staff/communications'
     | '/staff/dashboard'
     | '/staff/members'
+    | '/staff/settings'
     | '/website/events'
     | '/website/memberships'
     | '/website/schedule'
+    | '/staff/create/classes'
+    | '/staff/create/event'
+    | '/staff/create/membership'
+    | '/staff/create/schedule'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   JoinRoute: typeof JoinRoute
+  StartDemoRoute: typeof StartDemoRoute
   StyleGuideRoute: typeof StyleGuideRoute
   WebsiteRoute: typeof WebsiteRouteWithChildren
   DemoClerkRoute: typeof DemoClerkRoute
@@ -268,10 +341,15 @@ export interface RootRouteChildren {
   OwnerRetentionRoute: typeof OwnerRetentionRoute
   OwnerRevenueRoute: typeof OwnerRevenueRoute
   OwnerSettingsRoute: typeof OwnerSettingsRoute
+  StaffAnnouncementsRoute: typeof StaffAnnouncementsRoute
   StaffCheckInRoute: typeof StaffCheckInRoute
-  StaffCommunicationsRoute: typeof StaffCommunicationsRoute
   StaffDashboardRoute: typeof StaffDashboardRoute
   StaffMembersRoute: typeof StaffMembersRoute
+  StaffSettingsRoute: typeof StaffSettingsRoute
+  StaffCreateClassesRoute: typeof StaffCreateClassesRoute
+  StaffCreateEventRoute: typeof StaffCreateEventRoute
+  StaffCreateMembershipRoute: typeof StaffCreateMembershipRoute
+  StaffCreateScheduleRoute: typeof StaffCreateScheduleRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -288,6 +366,13 @@ declare module '@tanstack/react-router' {
       path: '/style-guide'
       fullPath: '/style-guide'
       preLoaderRoute: typeof StyleGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/start-demo': {
+      id: '/start-demo'
+      path: '/start-demo'
+      fullPath: '/start-demo'
+      preLoaderRoute: typeof StartDemoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/join': {
@@ -325,6 +410,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WebsiteEventsRouteImport
       parentRoute: typeof WebsiteRoute
     }
+    '/staff/settings': {
+      id: '/staff/settings'
+      path: '/staff/settings'
+      fullPath: '/staff/settings'
+      preLoaderRoute: typeof StaffSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/staff/members': {
       id: '/staff/members'
       path: '/staff/members'
@@ -339,18 +431,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof StaffDashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/staff/communications': {
-      id: '/staff/communications'
-      path: '/staff/communications'
-      fullPath: '/staff/communications'
-      preLoaderRoute: typeof StaffCommunicationsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/staff/check-in': {
       id: '/staff/check-in'
       path: '/staff/check-in'
       fullPath: '/staff/check-in'
       preLoaderRoute: typeof StaffCheckInRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/staff/announcements': {
+      id: '/staff/announcements'
+      path: '/staff/announcements'
+      fullPath: '/staff/announcements'
+      preLoaderRoute: typeof StaffAnnouncementsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/owner/settings': {
@@ -409,6 +501,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DemoClerkRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/staff/create/schedule': {
+      id: '/staff/create/schedule'
+      path: '/staff/create/schedule'
+      fullPath: '/staff/create/schedule'
+      preLoaderRoute: typeof StaffCreateScheduleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/staff/create/membership': {
+      id: '/staff/create/membership'
+      path: '/staff/create/membership'
+      fullPath: '/staff/create/membership'
+      preLoaderRoute: typeof StaffCreateMembershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/staff/create/event': {
+      id: '/staff/create/event'
+      path: '/staff/create/event'
+      fullPath: '/staff/create/event'
+      preLoaderRoute: typeof StaffCreateEventRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/staff/create/classes': {
+      id: '/staff/create/classes'
+      path: '/staff/create/classes'
+      fullPath: '/staff/create/classes'
+      preLoaderRoute: typeof StaffCreateClassesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -430,6 +550,7 @@ const WebsiteRouteWithChildren =
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   JoinRoute: JoinRoute,
+  StartDemoRoute: StartDemoRoute,
   StyleGuideRoute: StyleGuideRoute,
   WebsiteRoute: WebsiteRouteWithChildren,
   DemoClerkRoute: DemoClerkRoute,
@@ -440,10 +561,15 @@ const rootRouteChildren: RootRouteChildren = {
   OwnerRetentionRoute: OwnerRetentionRoute,
   OwnerRevenueRoute: OwnerRevenueRoute,
   OwnerSettingsRoute: OwnerSettingsRoute,
+  StaffAnnouncementsRoute: StaffAnnouncementsRoute,
   StaffCheckInRoute: StaffCheckInRoute,
-  StaffCommunicationsRoute: StaffCommunicationsRoute,
   StaffDashboardRoute: StaffDashboardRoute,
   StaffMembersRoute: StaffMembersRoute,
+  StaffSettingsRoute: StaffSettingsRoute,
+  StaffCreateClassesRoute: StaffCreateClassesRoute,
+  StaffCreateEventRoute: StaffCreateEventRoute,
+  StaffCreateMembershipRoute: StaffCreateMembershipRoute,
+  StaffCreateScheduleRoute: StaffCreateScheduleRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

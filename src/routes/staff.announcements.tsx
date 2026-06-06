@@ -4,7 +4,7 @@ import { CommunicationPreview } from "../components/CommunicationPreview";
 import { DashboardCard } from "../components/DashboardCard";
 import { demoMessages } from "../data/demoBusiness";
 
-export const Route = createFileRoute("/staff/communications")({
+export const Route = createFileRoute("/staff/announcements")({
 	component: StaffCommunicationsPage,
 });
 
@@ -13,13 +13,13 @@ function StaffCommunicationsPage() {
 		<AppShell
 			variant="staff"
 			eyebrow="Staff tools"
-			title="Communications"
+			title="Announcements"
 			description="A message center preview for trial follow-ups, member reminders, event announcements, and owner-approved broadcasts."
 		>
 			<div className="grid">
 				<DashboardCard
 					eyebrow="Message center"
-					title="Ready-to-send communications"
+					title="Ready-to-send New/Scheduled Announcement"
 					description="Staff can see what needs attention without hunting through texts, inboxes, or social posts."
 				>
 					<CommunicationPreview messages={demoMessages} />

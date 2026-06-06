@@ -1,0 +1,610 @@
+.genesis-public {
+	--genesis-black: rgb(6, 6, 6);
+	--genesis-ink: rgb(16, 16, 16);
+	--genesis-paper: rgb(246, 246, 243);
+	--genesis-white: rgb(255, 255, 255);
+	--genesis-red: rgb(224, 0, 12);
+	--genesis-red-dark: rgb(160, 0, 8);
+	--genesis-muted: rgb(188, 188, 188);
+	--genesis-line: rgba(255, 255, 255, 0.18);
+
+	min-height: 100vh;
+	background:
+		radial-gradient(circle at top left, rgba(224, 0, 12, 0.18), transparent 28rem),
+		linear-gradient(180deg, var(--genesis-black), var(--genesis-ink));
+	color: var(--genesis-white);
+	font-family:
+		Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+		sans-serif;
+}
+
+.genesis-public a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.genesis-public__header {
+	position: sticky;
+	top: 0;
+	z-index: 20;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	gap: 2rem;
+	padding: 1rem clamp(1rem, 4vw, 4rem);
+	background: rgba(6, 6, 6, 0.92);
+	border-bottom: 1px solid var(--genesis-line);
+	backdrop-filter: blur(16px);
+}
+
+.genesis-public__brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.genesis-public__brand strong {
+	display: block;
+	font-size: 0.95rem;
+	line-height: 1;
+}
+
+.genesis-public__brand small {
+	display: block;
+	margin-top: 0.25rem;
+	color: var(--genesis-muted);
+	font-size: 0.68rem;
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+.genesis-public__mark {
+	display: grid;
+	width: 2.4rem;
+	height: 2.4rem;
+	place-items: center;
+	background: var(--genesis-red);
+	color: var(--genesis-white);
+	font-weight: 900;
+}
+
+.genesis-public__nav {
+	display: flex;
+	justify-content: center;
+	gap: clamp(1rem, 3vw, 2.5rem);
+	font-size: 0.78rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+}
+
+.genesis-public__nav a {
+	color: rgba(255, 255, 255, 0.78);
+}
+
+.genesis-public__nav a:hover {
+	color: var(--genesis-white);
+}
+
+.genesis-public__trial-link,
+.genesis-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 3rem;
+	padding: 0 1.25rem;
+	border: 1px solid transparent;
+	font-size: 0.78rem;
+	font-weight: 950;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+}
+
+.genesis-public__trial-link,
+.genesis-button--primary {
+	background: var(--genesis-red);
+	color: var(--genesis-white);
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.genesis-button--ghost {
+	border-color: rgba(255, 255, 255, 0.42);
+	color: var(--genesis-white);
+}
+
+.genesis-button--dark {
+	background: var(--genesis-black);
+	color: var(--genesis-white);
+}
+
+.genesis-hero {
+	position: relative;
+	display: grid;
+	grid-template-columns: minmax(0, 0.85fr) minmax(20rem, 1.15fr);
+	gap: clamp(2rem, 5vw, 5rem);
+	min-height: 760px;
+	padding: clamp(3rem, 7vw, 7rem) clamp(1rem, 4vw, 4rem);
+	overflow: hidden;
+	border-bottom: 1px solid var(--genesis-line);
+}
+
+.genesis-hero::before {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	content: "";
+	background:
+		linear-gradient(115deg, rgba(224, 0, 12, 0.22), transparent 22%),
+		repeating-linear-gradient(
+			-18deg,
+			rgba(255, 255, 255, 0.05) 0,
+			rgba(255, 255, 255, 0.05) 1px,
+			transparent 1px,
+			transparent 9px
+		);
+	opacity: 0.55;
+	pointer-events: none;
+}
+
+.genesis-hero::after {
+	position: absolute;
+	right: -8rem;
+	bottom: -5rem;
+	width: 34rem;
+	height: 12rem;
+	content: "";
+	background: var(--genesis-red);
+	clip-path: polygon(0 55%, 100% 0, 100% 48%, 5% 100%);
+	opacity: 0.9;
+	pointer-events: none;
+}
+
+.genesis-hero__copy,
+.genesis-hero__media {
+	position: relative;
+	z-index: 1;
+}
+
+.genesis-hero__copy {
+	align-self: center;
+	max-width: 48rem;
+}
+
+.genesis-kicker {
+	margin: 0 0 0.85rem;
+	color: var(--genesis-red);
+	font-size: 0.78rem;
+	font-weight: 950;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+}
+
+.genesis-hero h1 {
+	max-width: 44rem;
+	margin: 0;
+	font-size: clamp(4.6rem, 11vw, 10.5rem);
+	font-weight: 1000;
+	line-height: 0.82;
+	text-transform: uppercase;
+	letter-spacing: -0.08em;
+}
+
+.genesis-hero h1 span {
+	display: block;
+	color: var(--genesis-red);
+}
+
+.genesis-hero__line {
+	max-width: 28rem;
+	margin: 1.5rem 0 0;
+	color: rgba(255, 255, 255, 0.9);
+	font-size: clamp(1.05rem, 2vw, 1.35rem);
+	font-weight: 850;
+	line-height: 1.35;
+	text-transform: uppercase;
+}
+
+.genesis-hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-top: 2rem;
+}
+
+.genesis-hero__story {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.7rem;
+	margin-top: 1.5rem;
+	color: rgba(255, 255, 255, 0.82);
+	font-size: 0.8rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+}
+
+.genesis-play {
+	display: grid;
+	width: 2.65rem;
+	height: 2.65rem;
+	place-items: center;
+	border: 1px solid rgba(255, 255, 255, 0.6);
+	border-radius: 999px;
+}
+
+.genesis-play::before {
+	display: block;
+	width: 0;
+	height: 0;
+	margin-left: 0.2rem;
+	content: "";
+	border-top: 0.4rem solid transparent;
+	border-bottom: 0.4rem solid transparent;
+	border-left: 0.62rem solid var(--genesis-white);
+}
+
+.genesis-hero__media {
+	display: flex;
+	align-items: stretch;
+	min-height: 520px;
+}
+
+.genesis-media-card,
+.genesis-path-card__media,
+.genesis-culture-panel div {
+	position: relative;
+	display: flex;
+	align-items: end;
+	width: 100%;
+	min-height: 100%;
+	padding: 1rem;
+	overflow: hidden;
+	background:
+		linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.16)),
+		repeating-linear-gradient(
+			-28deg,
+			rgba(6, 6, 6, 0.14) 0,
+			rgba(6, 6, 6, 0.14) 1px,
+			transparent 1px,
+			transparent 8px
+		);
+	color: var(--genesis-black);
+	border: 1px solid rgba(255, 255, 255, 0.26);
+	box-shadow: inset 0 0 0 999px rgba(255, 255, 255, 0.02);
+}
+
+.genesis-media-card::before,
+.genesis-path-card__media::before,
+.genesis-culture-panel div::before {
+	position: absolute;
+	inset: auto -10% 6% -10%;
+	height: 34%;
+	content: "";
+	background: var(--genesis-red);
+	clip-path: polygon(0 60%, 100% 12%, 100% 62%, 0 100%);
+}
+
+.genesis-media-card::after,
+.genesis-path-card__media::after,
+.genesis-culture-panel div::after {
+	position: absolute;
+	inset: 0;
+	content: "";
+	background:
+		radial-gradient(circle at 20% 20%, rgba(6, 6, 6, 0.18), transparent 24%),
+		linear-gradient(180deg, transparent 35%, rgba(6, 6, 6, 0.82));
+	pointer-events: none;
+}
+
+.genesis-media-card--hero {
+	min-height: 100%;
+	padding: clamp(1rem, 3vw, 2rem);
+	border: 2px solid rgba(255, 255, 255, 0.36);
+}
+
+.genesis-media-card p,
+.genesis-media-card strong,
+.genesis-media-card span,
+.genesis-path-card__media span,
+.genesis-culture-panel div span {
+	position: relative;
+	z-index: 1;
+}
+
+.genesis-media-card p {
+	margin: 0 0 0.4rem;
+	color: var(--genesis-red);
+	font-size: 0.75rem;
+	font-weight: 950;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+}
+
+.genesis-media-card strong {
+	display: block;
+	max-width: 32rem;
+	color: var(--genesis-white);
+	font-size: clamp(1.5rem, 3.4vw, 3rem);
+	font-weight: 1000;
+	line-height: 0.95;
+	text-transform: uppercase;
+}
+
+.genesis-media-card span {
+	display: block;
+	max-width: 28rem;
+	margin-top: 0.8rem;
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 0.88rem;
+	line-height: 1.45;
+}
+
+.genesis-section,
+.genesis-first-win,
+.genesis-culture,
+.genesis-system-bridge {
+	padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 4vw, 4rem);
+}
+
+.genesis-section--paths {
+	background: var(--genesis-paper);
+	color: var(--genesis-black);
+}
+
+.genesis-section__heading {
+	max-width: 56rem;
+	margin: 0 auto 2rem;
+	text-align: center;
+}
+
+.genesis-section__heading h2,
+.genesis-first-win h2,
+.genesis-culture h2,
+.genesis-system-bridge h2 {
+	margin: 0;
+	font-size: clamp(2rem, 5vw, 4rem);
+	font-weight: 1000;
+	line-height: 0.95;
+	text-transform: uppercase;
+	letter-spacing: -0.055em;
+}
+
+.genesis-path-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 1rem;
+	max-width: 78rem;
+	margin: 0 auto;
+}
+
+.genesis-path-card {
+	display: grid;
+	min-height: 28rem;
+	background: var(--genesis-black);
+	color: var(--genesis-white);
+	border: 1px solid rgba(6, 6, 6, 0.18);
+	box-shadow: 0 1.2rem 3rem rgba(6, 6, 6, 0.16);
+}
+
+.genesis-path-card__media {
+	min-height: 17rem;
+	border: 0;
+}
+
+.genesis-path-card__media span,
+.genesis-culture-panel div span {
+	color: rgba(255, 255, 255, 0.82);
+	font-size: 0.72rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+}
+
+.genesis-path-card__body {
+	padding: 1.25rem;
+}
+
+.genesis-path-card h3,
+.genesis-step h3,
+.genesis-culture-panel h3 {
+	margin: 0;
+	font-size: clamp(1.5rem, 2.2vw, 2rem);
+	font-weight: 1000;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.genesis-path-card p,
+.genesis-step p {
+	margin: 0.55rem 0 0;
+	color: rgba(255, 255, 255, 0.72);
+	font-weight: 750;
+	line-height: 1.35;
+}
+
+.genesis-path-card strong {
+	display: inline-block;
+	margin-top: 1rem;
+	color: var(--genesis-red);
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+}
+
+.genesis-first-win {
+	background:
+		linear-gradient(180deg, var(--genesis-black), rgb(11, 11, 11)),
+		repeating-linear-gradient(
+			0deg,
+			rgba(255, 255, 255, 0.04) 0,
+			rgba(255, 255, 255, 0.04) 1px,
+			transparent 1px,
+			transparent 7px
+		);
+	color: var(--genesis-white);
+}
+
+.genesis-step-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 1rem;
+	max-width: 74rem;
+	margin: 0 auto;
+}
+
+.genesis-step {
+	min-height: 13rem;
+	padding: 1.5rem;
+	background: rgba(255, 255, 255, 0.055);
+	border: 1px solid var(--genesis-line);
+}
+
+.genesis-step span {
+	display: block;
+	margin-bottom: 2rem;
+	color: var(--genesis-red);
+	font-size: 0.8rem;
+	font-weight: 1000;
+	letter-spacing: 0.14em;
+}
+
+.genesis-culture {
+	background:
+		linear-gradient(135deg, rgba(224, 0, 12, 0.82), rgba(6, 6, 6, 0.92)),
+		var(--genesis-red);
+	color: var(--genesis-white);
+}
+
+.genesis-section__heading--light .genesis-kicker {
+	color: var(--genesis-white);
+}
+
+.genesis-culture-strip {
+	display: grid;
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+	gap: 0.75rem;
+	max-width: 84rem;
+	margin: 0 auto;
+}
+
+.genesis-culture-panel {
+	background: var(--genesis-black);
+	border: 1px solid rgba(255, 255, 255, 0.22);
+	transform: skewX(-3deg);
+}
+
+.genesis-culture-panel > * {
+	transform: skewX(3deg);
+}
+
+.genesis-culture-panel div {
+	min-height: 13rem;
+	border: 0;
+}
+
+.genesis-culture-panel h3 {
+	padding: 1rem;
+	font-size: 1rem;
+	text-align: center;
+}
+
+.genesis-system-bridge {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	gap: 2rem;
+	align-items: center;
+	background: var(--genesis-paper);
+	color: var(--genesis-black);
+}
+
+.genesis-system-bridge > div:first-child {
+	max-width: 54rem;
+}
+
+.genesis-system-bridge p:last-child {
+	max-width: 46rem;
+	margin: 1rem 0 0;
+	color: rgba(6, 6, 6, 0.72);
+	font-size: 1rem;
+	font-weight: 650;
+	line-height: 1.55;
+}
+
+.genesis-system-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	justify-content: end;
+}
+
+@media (max-width: 980px) {
+	.genesis-public__header {
+		grid-template-columns: 1fr auto;
+	}
+
+	.genesis-public__nav {
+		display: none;
+	}
+
+	.genesis-hero {
+		grid-template-columns: 1fr;
+		min-height: auto;
+	}
+
+	.genesis-hero__media {
+		min-height: 420px;
+	}
+
+	.genesis-path-grid,
+	.genesis-step-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.genesis-culture-strip {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.genesis-system-bridge {
+		grid-template-columns: 1fr;
+	}
+
+	.genesis-system-actions {
+		justify-content: start;
+	}
+}
+
+@media (max-width: 640px) {
+	.genesis-public__header {
+		padding: 0.85rem 1rem;
+	}
+
+	.genesis-public__trial-link {
+		display: none;
+	}
+
+	.genesis-hero {
+		padding-top: 3rem;
+	}
+
+	.genesis-hero h1 {
+		font-size: clamp(4rem, 22vw, 6rem);
+	}
+
+	.genesis-path-grid,
+	.genesis-step-grid,
+	.genesis-culture-strip {
+		grid-template-columns: 1fr;
+	}
+
+	.genesis-path-card {
+		min-height: 24rem;
+	}
+
+	.genesis-hero__actions,
+	.genesis-system-actions {
+		flex-direction: column;
+		align-items: stretch;
+	}
+}

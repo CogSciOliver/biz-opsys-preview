@@ -21,9 +21,20 @@ export function RoleNav({ variant = "public" }: RoleNavProps) {
 				<Link to="/staff/dashboard">Dashboard</Link>
 				<Link to="/staff/check-in">Check-in</Link>
 				<Link to="/staff/members">Members</Link>
-				<Link to="/staff/communications">Communications</Link>
+				<Link to="/staff/announcements">Announcements</Link>
+				<Link to="/staff/create/event">Create Event</Link>
+				<Link to="/staff/create/membership">Create Membership</Link>
+				<Link to="/staff/create/schedule">Schedule</Link>
+				<Link to="/staff/settings">Settings</Link>
+				{/* <Link to="/staff/reports">Reports</Link> */}
+				{/* <Link to="/staff/analytics">Analytics</Link> */}
+				{/* <Link to="/staff/retention">Retention</Link> */}
+				{/* <Link to="/staff/feedback">Feedback</Link> */}
+				{/* <Link to="/staff/tasks">Tasks</Link> */}
+				{/* <Link to="/staff/lead-management">Lead Management</Link> */}
 			</nav>
 		);
+
 	}
 
 	if (variant === "owner") {
