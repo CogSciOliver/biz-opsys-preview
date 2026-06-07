@@ -34,7 +34,6 @@ export function RoleNav({ variant = "public" }: RoleNavProps) {
 				{/* <Link to="/staff/lead-management">Lead Management</Link> */}
 			</nav>
 		);
-
 	}
 
 	if (variant === "owner") {

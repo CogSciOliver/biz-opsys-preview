@@ -21,7 +21,8 @@ function StaffCheckInPage() {
 			description="A front-desk and mat-side preview for attendance, trial visitors, member status, and class capacity."
 		>
 			<p className="button-primary" style={{ marginBottom: "1rem" }}>
-				!!! DEV CREATE: mock check-in workflow with member signed up list, waitlist, and trial lead list. 
+				!!! DEV CREATE: mock check-in workflow with member signed up list,
+				waitlist, and trial lead list.
 			</p>
 			<div className="grid">
 				<CheckInKiosk activeClass={activeClass} checkedInCount={3} />

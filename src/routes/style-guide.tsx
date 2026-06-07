@@ -83,14 +83,14 @@ function StyleGuidePage() {
 							Link treatment
 						</Link>
 						<Link to="/join" className="button-inverse">
-								Inverse
-							</Link>
-							<Link to="/website" className="button-secondary">
-								Hero secondary
-							</Link>
-							<Link to="/" className="button-hollow">
-								Hollow
-							</Link>
+							Inverse
+						</Link>
+						<Link to="/website" className="button-secondary">
+							Hero secondary
+						</Link>
+						<Link to="/" className="button-hollow">
+							Hollow
+						</Link>
 						<ThemeToggle />
 					</div>
 				</DashboardCard>
@@ -123,7 +123,7 @@ function StyleGuidePage() {
 							<Link to="/join" className="button-inverse">
 								Inverse
 							</Link>
-						
+
 							<Link to="/" className="button-hollow">
 								Hollow
 							</Link>

@@ -16,7 +16,9 @@ function StaffMembersPage() {
 			title="Members"
 			description="A staff member directory preview for student lookup, plan status, belt level, and attendance context."
 		>
-			<p className="button-primary">!!! DEV CREATE: MEMBER SEARCH BY NAME, SORT BY, FILTER BY </p>
+			<p className="button-primary">
+				!!! DEV CREATE: MEMBER SEARCH BY NAME, SORT BY, FILTER BY{" "}
+			</p>
 			<DashboardCard
 				eyebrow="Directory"
 				title="Member profiles"

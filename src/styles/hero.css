@@ -12,7 +12,6 @@
 	border: 1px solid color-mix(in oklch, var(--primary) 60%, black);
 	border-radius: var(--radius);
 	box-shadow: none;
-	color: var(--lite-text);
 }
 
 .hero-card,

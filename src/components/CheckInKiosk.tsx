@@ -20,13 +20,7 @@ type CheckInKioskProps = {
 	checkedInCount: number;
 };
 
-function KioskStat({
-	value,
-	label,
-}: {
-	value: number;
-	label: string;
-}) {
+function KioskStat({ value, label }: { value: number; label: string }) {
 	return (
 		<div className="bg-background/10 p-4 ring-1 ring-background/15">
 			<strong className="block text-3xl font-bold leading-none text-background">

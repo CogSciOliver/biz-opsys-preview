@@ -1,9 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router"
-import "../styles/index.css"
+import { createFileRoute, Link } from "@tanstack/react-router";
+import "../styles/index.css";
 
 export const Route = createFileRoute("/")({
 	component: GenesisPublicLanding,
-})
+});
 
 const audiencePaths = [
 	{
@@ -30,7 +30,7 @@ const audiencePaths = [
 		cta: "Book a first visit",
 		visualBrief: "Black and white wrestlers drilling takedowns",
 	},
-]
+];
 
 const firstWinSteps = [
 	{
@@ -53,7 +53,7 @@ const firstWinSteps = [
 		title: "Keep showing up",
 		line: "The mat changes you.",
 	},
-]
+];
 
 const culturePanels = [
 	{
@@ -76,13 +76,44 @@ const culturePanels = [
 		title: "Growth",
 		visualBrief: "Mexican child smiling after class",
 	},
-]
+];
+
+const heroImages = [
+	{
+		src: "/images/hero/bjj-kid.webp",
+		alt: "bjj kids",
+	},
+	{
+		src: "/images/hero/bjj-man.webp",
+		alt: "bjj men",
+	},
+	{
+		src: "/images/hero/bjj-woman.webp",
+		alt: "bjj moms",
+	},
+	{
+		src: "/images/hero/bjj-dad.webp",
+		alt: "bjj dads",
+	},
+	{
+		src: "/images/hero/bjj-teen.webp",
+		alt: "bjj teens",
+	},
+	{
+		src: "/images/hero/bjj-teach.webp",
+		alt: "bjj teachers",
+	},
+];
 
 function GenesisPublicLanding() {
 	return (
 		<main className="genesis-public">
 			<header className="genesis-public__header">
-				<Link to="/" className="genesis-public__brand" aria-label="Genesis Jiu Jitsu home">
+				<Link
+					to="/"
+					className="genesis-public__brand"
+					aria-label="Genesis Jiu Jitsu home"
+				>
 					<span className="genesis-public__mark">G</span>
 					<span>
 						<strong>Genesis</strong>
@@ -90,7 +121,10 @@ function GenesisPublicLanding() {
 					</span>
 				</Link>
 
-				<nav className="genesis-public__nav" aria-label="Public website navigation">
+				<nav
+					className="genesis-public__nav"
+					aria-label="Public website navigation"
+				>
 					<Link to="/website">About</Link>
 					<Link to="/website/memberships">Classes</Link>
 					<Link to="/website/schedule">Schedule</Link>
@@ -103,21 +137,41 @@ function GenesisPublicLanding() {
 			</header>
 
 			<section className="genesis-hero" aria-labelledby="genesis-hero-title">
+				<div className="genesis-hero__reel" aria-hidden="true">
+					{heroImages.map((image, index) => (
+						<img
+							key={image.src}
+							src={image.src}
+							alt={image.alt}
+							className={`genesis-hero__frame genesis-hero__frame--${index + 1}`}
+						/>
+					))}
+				</div>
+
+				<div className="genesis-hero__shade" aria-hidden="true" />
+
 				<div className="genesis-hero__copy">
-					<p className="genesis-kicker">Family jiu jitsu starts here</p>
-					<h1 id="genesis-hero-title">
-						Step onto
-						<span>the mat.</span>
+					<h1 id="genesis-hero-title" className="genesis-hero-title">
+						<span className="genesis-hero-title__top">Step</span>
+						<span className="genesis-hero-title__middle">onto the</span>
+						<span className="genesis-hero-title__bottom">mat.</span>
 					</h1>
 					<p className="genesis-hero__line">
-						Confidence. Discipline. Family. Built together.
+						Confidence. Discipline. Family. <br />
+						Built together.
 					</p>
-
+					<p className="genesis-kicker">Family jiu jitsu starts here</p>
 					<div className="genesis-hero__actions">
-						<Link to="/website/trial-class" className="genesis-button genesis-button--primary">
+						<Link
+							to="/website/trial-class"
+							className="genesis-button genesis-button--primary"
+						>
 							Book a trial class
 						</Link>
-						<Link to="/website/schedule" className="genesis-button genesis-button--ghost">
+						<Link
+							to="/website/schedule"
+							className="genesis-button genesis-button--ghost"
+						>
 							Find your first class
 						</Link>
 					</div>
@@ -127,20 +181,12 @@ function GenesisPublicLanding() {
 						<span>Watch their first step</span>
 					</div>
 				</div>
-
-				<div className="genesis-hero__media" aria-label="Graphic novel style hero image placeholder">
-					<div className="genesis-media-card genesis-media-card--hero">
-						<p>Hero visual slot</p>
-						<strong>Black coach · Mexican child · Indian parent · White parent</strong>
-						<span>
-							Graphic-novel BJJ scene, mat-level, black/white/red, cinematic first-class
-							moment.
-						</span>
-					</div>
-				</div>
 			</section>
 
-			<section className="genesis-section genesis-section--paths" aria-labelledby="paths-title">
+			<section
+				className="genesis-section genesis-section--paths"
+				aria-labelledby="paths-title"
+			>
 				<div className="genesis-section__heading">
 					<p className="genesis-kicker">Choose your path</p>
 					<h2 id="paths-title">One mat. Every starting point.</h2>
@@ -170,7 +216,9 @@ function GenesisPublicLanding() {
 			<section className="genesis-first-win" aria-labelledby="first-win-title">
 				<div className="genesis-section__heading">
 					<p className="genesis-kicker">Your first win</p>
-					<h2 id="first-win-title">Every journey starts before you feel ready.</h2>
+					<h2 id="first-win-title">
+						Every journey starts before you feel ready.
+					</h2>
 				</div>
 
 				<div className="genesis-step-grid">
@@ -207,13 +255,17 @@ function GenesisPublicLanding() {
 					<p className="genesis-kicker">Built behind the journey</p>
 					<h2 id="system-title">The software keeps the culture moving.</h2>
 					<p>
-						Trial requests, class schedules, check-ins, billing views, member journeys,
-						announcements, and owner clarity — all connected behind the scenes.
+						Trial requests, class schedules, check-ins, billing views, member
+						journeys, announcements, and owner clarity — all connected behind
+						the scenes.
 					</p>
 				</div>
 
 				<div className="genesis-system-actions">
-					<Link to="/check-in" className="genesis-button genesis-button--primary">
+					<Link
+						to="/check-in"
+						className="genesis-button genesis-button--primary"
+					>
 						View check-in flow
 					</Link>
 					<Link to="/owner" className="genesis-button genesis-button--dark">
@@ -222,5 +274,5 @@ function GenesisPublicLanding() {
 				</div>
 			</section>
 		</main>
-	)
+	);
 }

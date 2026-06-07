@@ -103,7 +103,7 @@ a {
 }
 
 .sidebar-label,
-.eyebrow{
+.eyebrow {
 	margin: 0 0 0.75rem;
 	color: var(--accent);
 	font-size: 0.75rem;
@@ -160,7 +160,6 @@ a {
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 1rem;
 }
-
 
 .theme-toggle {
 	display: inline-grid;

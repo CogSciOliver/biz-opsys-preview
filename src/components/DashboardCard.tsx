@@ -30,17 +30,13 @@ export function DashboardCard({
 			<CardHeader>
 				{eyebrow ? <CardKicker>{eyebrow}</CardKicker> : null}
 				<CardTitle>{title}</CardTitle>
-				{description ? (
-					<CardDescription>{description}</CardDescription>
-				) : null}
+				{description ? <CardDescription>{description}</CardDescription> : null}
 			</CardHeader>
 
 			{children ? <CardContent>{children}</CardContent> : null}
 
 			{footer ? (
-				<CardFooter className="flex-wrap gap-3">
-					{footer}
-				</CardFooter>
+				<CardFooter className="flex-wrap gap-3">{footer}</CardFooter>
 			) : null}
 		</Card>
 	);
