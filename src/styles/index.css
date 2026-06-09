@@ -397,11 +397,14 @@ h3 {
 			transparent 1px,
 			transparent 8px
 		),
-		radial-gradient(circle at 12% 8%, rgba(255, 255, 255, 1), transparent 100rem),
+		radial-gradient(
+			circle at 12% 8%,
+			rgba(255, 255, 255, 1),
+			transparent 100rem
+		),
 		var(--heritage-muted);
 	color: var(--heritage-white);
 }
-
 
 .heritage-culture-strip {
 	display: grid;
@@ -709,8 +712,11 @@ h3 {
 	gap: clamp(1.5rem, 4vw, 4rem);
 	align-items: start;
 	padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 4vw, 4rem);
-	background:
-		linear-gradient(135deg, rgba(224, 0, 12, 0.42), rgba(6, 6, 6, 0.92));
+	background: linear-gradient(
+		135deg,
+		rgba(224, 0, 12, 0.42),
+		rgba(6, 6, 6, 0.92)
+	);
 	color: var(--heritage-white);
 	border-top: 1px solid var(--heritage-line);
 	border-bottom: 1px solid var(--heritage-line);
@@ -719,7 +725,6 @@ h3 {
 .heritage-beginner__copy {
 	max-width: 42rem;
 }
-
 
 .heritage-beginner__copy p:last-child {
 	margin: 1rem 0 0;
@@ -740,11 +745,7 @@ h3 {
 	min-height: 14rem;
 	padding: 1.25rem;
 	overflow: hidden;
-	background: linear-gradient(
-		180deg,
-		rgba(6, 6, 6, 0.82),
-		rgba(6, 6, 6, 0.35)
-	);
+	background: linear-gradient(180deg, rgba(6, 6, 6, 0.82), rgba(6, 6, 6, 0.35));
 	border: 0.03px solid var(--heritage-line);
 }
 
@@ -761,7 +762,7 @@ h3 {
 .heritage-beginner-card h3 {
 	margin: 0;
 	font-size: clamp(1.35rem, 2.5vw, 2rem);
-	
+
 	line-height: 1;
 	text-transform: uppercase;
 }
@@ -800,7 +801,7 @@ h3 {
 		radial-gradient(circle at 12% 8%, rgba(6, 6, 6, 0.12), transparent 18rem),
 		var(--heritage-paper);
 	color: var(--heritage-black);
-	
+
 	border-bottom: 0.42rem solid var(--heritage-black);
 }
 
@@ -841,10 +842,6 @@ h3 {
 	margin: 0 auto 1rem;
 	text-align: center;
 }
-
-
-
-
 
 .heritage-path-grid {
 	position: relative;
@@ -990,7 +987,7 @@ h3 {
 		padding-top: 2rem;
 	}
 
-	 h2 {
+	h2 {
 		font-size: clamp(3.1rem, 17vw, 5rem);
 	}
 

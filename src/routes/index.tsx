@@ -233,7 +233,10 @@ function HeritagePublicLanding() {
 			>
 				<div className="heritage-section-heading">
 					<p className="heritage-kicker">Choose your path</p>
-					<h2 id="paths-title">One mat. <br/>Many starting points.</h2>
+					<h2 id="paths-title">
+						One mat. <br />
+						Many starting points.
+					</h2>
 				</div>
 
 				<div className="heritage-path-grid">
