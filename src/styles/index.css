@@ -22,8 +22,8 @@
 		"Segoe UI", sans-serif;
 }
 
-h2, h3 {
-
+h2,
+h3 {
 	transform: skewX(-7deg);
 	font-family: var(--heritage-display);
 }
@@ -319,8 +319,6 @@ h2, h3 {
 	color: var(--heritage-white);
 	border: 1px solid var(--heritage-black);
 }
-
-
 
 .heritage-path-card__media span,
 .heritage-culture-panel div span {
@@ -846,7 +844,6 @@ h2, h3 {
 
 .heritage-path-card:hover {
 	transform: translateY(-0.15rem);
-	
 }
 
 .heritage-path-card__media {
@@ -869,7 +866,7 @@ h2, h3 {
 	min-height: 14rem;
 	object-fit: cover;
 	object-position: top;
-	filter: grayscale(.4) contrast(1.5) brightness(1.08);
+	filter: grayscale(0.4) contrast(1.5) brightness(1.08);
 	transform: scale(1);
 }
 
