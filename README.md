@@ -61,7 +61,7 @@ In this case, Biome was not asking you to rewrite logic. It was saying: These fi
 So --write lets Biome make those boring mechanical edits for you.
 
 The safe workflow is:
-pnpm exec biome check --write src/components/AppShell.tsx src/components/ThemeToggle.tsx src/routes/style-guide.tsx src/styles/button.css src/styles/card.css src/styles/genesis.css
+pnpm exec biome check --write src/components/AppShell.tsx src/components/ThemeToggle.tsx src/routes/style-guide.tsx src/styles/button.css src/styles/card.css src/styles/heritage.css
 pnpm check
 git diff
 

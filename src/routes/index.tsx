@@ -2,33 +2,37 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import "../styles/index.css";
 
 export const Route = createFileRoute("/")({
-	component: GenesisPublicLanding,
+	component: HeritagePublicLanding,
 });
 
 const audiencePaths = [
 	{
 		title: "Kids",
-		line: "Confidence they carry home.",
+		line: "Confidence, focus, and courage built one class at a time.",
 		cta: "Find kids classes",
-		visualBrief: "Black child beginner in gi, confident stance",
+		img: "/images/classes/kids-class.avif",
+		classURL: "/website/classes/kids",
 	},
 	{
 		title: "Adults",
-		line: "Start where you are. Build from there.",
+		line: "Get stronger, calmer, and harder to shake.",
 		cta: "See adult training",
-		visualBrief: "Mexican adult beginner tying belt before class",
+		img: "/images/classes/adult-class.avif",
+		classURL: "/website/classes/adults",
 	},
 	{
-		title: "Families",
-		line: "Train together. Grow together.",
-		cta: "Explore family paths",
-		visualBrief: "Indian family in gis on the mat together",
+		title: "Homeschoolers",
+		line: "A real-world mat for movement, discipline, and connection.",
+		cta: "Explore homeschool paths",
+		img: "/images/classes/homeschool-class.avif",
+		classURL: "/website/classes/homeschool",
 	},
 	{
-		title: "Wrestlers",
-		line: "Pressure. Control. Win.",
+		title: "Female Only",
+		line: "Train with confidence, control, and room to grow.",
 		cta: "Book a first visit",
-		visualBrief: "Black and white wrestlers drilling takedowns",
+		img: "/images/classes/female-class.avif",
+		classURL: "/website/classes/female-only",
 	},
 ];
 
@@ -105,105 +109,150 @@ const heroImages = [
 	},
 ];
 
-function GenesisPublicLanding() {
+const beginnerQuestions = [
+	{
+		question: "Is this beginner friendly?",
+		answer:
+			"Yes. You can start without knowing the moves, the rules, or the language of jiu jitsu.",
+		cta: "Book a trial",
+		to: "/website/trial-class",
+	},
+	{
+		question: "Can my child try first?",
+		answer:
+			"Yes. A trial class lets your child feel the room, meet the coach, and step on the mat before joining.",
+		cta: "Start with kids",
+		to: "/website/memberships",
+	},
+	{
+		question: "What should we wear?",
+		answer:
+			"Comfortable athletic clothes are enough for a first visit. The team can guide you from there.",
+		cta: "See first class",
+		to: "/website/trial-class",
+	},
+	{
+		question: "Can families train here?",
+		answer:
+			"Yes. Kids, adults, teens, and parents can each find a starting point without feeling lost.",
+		cta: "Find classes",
+		to: "/website/schedule",
+	},
+];
+
+function HeritagePublicLanding() {
 	return (
-		<main className="genesis-public">
-			<header className="genesis-public__header">
+		<main className="heritage-public">
+			<header className="heritage-public__header">
 				<Link
 					to="/"
-					className="genesis-public__brand"
-					aria-label="Genesis Jiu Jitsu home"
+					className="heritage-public__brand"
+					aria-label="Heritage Jiu Jitsu home"
 				>
-					<span className="genesis-public__mark">G</span>
+					<span className="heritage-public__mark">H</span>
 					<span>
-						<strong>Genesis</strong>
+						<strong>Heritage</strong>
 						<small>Jiu Jitsu · Burleson, Texas</small>
 					</span>
 				</Link>
 
 				<nav
-					className="genesis-public__nav"
+					className="heritage-public__nav"
 					aria-label="Public website navigation"
 				>
-					<Link to="/website">About</Link>
-					<Link to="/website/memberships">Classes</Link>
-					<Link to="/website/schedule">Schedule</Link>
-					<Link to="/website/events">Events</Link>
+					<Link to="/" hash="classes">
+						Classes
+					</Link>
+					<Link to="/" hash="about">
+						About
+					</Link>
+					<Link to="/website/schedule" hash="classes">
+						Schedule
+					</Link>
+					<Link to="/website/schedule" hash="events">
+						Events
+					</Link>
 				</nav>
 
-				<Link to="/website/trial-class" className="genesis-public__trial-link">
+				<Link to="/website/trial-class" className="heritage-public__trial-link">
 					Book a trial
 				</Link>
 			</header>
 
-			<section className="genesis-hero" aria-labelledby="genesis-hero-title">
-				<div className="genesis-hero__reel" aria-hidden="true">
+			<section className="heritage-hero" aria-labelledby="heritage-hero-title">
+				<div className="heritage-hero__reel" aria-hidden="true">
 					{heroImages.map((image, index) => (
 						<img
 							key={image.src}
 							src={image.src}
 							alt={image.alt}
-							className={`genesis-hero__frame genesis-hero__frame--${index + 1}`}
+							className={`heritage-hero__frame heritage-hero__frame--${index + 1}`}
 						/>
 					))}
 				</div>
 
-				<div className="genesis-hero__shade" aria-hidden="true" />
+				<div className="heritage-hero__shade" aria-hidden="true" />
 
-				<div className="genesis-hero__copy">
-					<h1 id="genesis-hero-title" className="genesis-hero-title">
-						<span className="genesis-hero-title__top">Step</span>
-						<span className="genesis-hero-title__middle">onto the</span>
-						<span className="genesis-hero-title__bottom">mat.</span>
+				<div className="heritage-hero__copy">
+					<h1 id="heritage-hero-title" className="heritage-hero-title">
+						<span className="heritage-hero-title__top">Step</span>
+						<span className="heritage-hero-title__middle">onto the</span>
+						<span className="heritage-hero-title__bottom">mat.</span>
 					</h1>
-					<p className="genesis-hero__line">
+					<p className="heritage-hero__line">
 						Confidence. Discipline. Family. <br />
 						Built together.
 					</p>
-					<p className="genesis-kicker">Family jiu jitsu starts here</p>
-					<div className="genesis-hero__actions">
+					<p className="heritage-kicker">Family jiu jitsu starts here</p>
+					<div className="heritage-hero__actions">
 						<Link
 							to="/website/trial-class"
-							className="genesis-button genesis-button--primary"
+							className="heritage-button heritage-button--primary"
 						>
 							Book a trial class
 						</Link>
 						<Link
 							to="/website/schedule"
-							className="genesis-button genesis-button--ghost"
+							className="heritage-button heritage-button--ghost"
 						>
 							Find your first class
 						</Link>
 					</div>
 
-					<div className="genesis-hero__story">
-						<span className="genesis-play" aria-hidden="true" />
+					<div className="heritage-hero__story">
+						<span className="heritage-play" aria-hidden="true" />
 						<span>Watch their first step</span>
 					</div>
 				</div>
 			</section>
 
 			<section
-				className="genesis-section genesis-section--paths"
+				id="classes"
+				className="heritage-section heritage-section--paths"
 				aria-labelledby="paths-title"
 			>
-				<div className="genesis-section__heading">
-					<p className="genesis-kicker">Choose your path</p>
+				<div className="heritage-section__heading">
+					<p className="heritage-kicker">Choose your path</p>
 					<h2 id="paths-title">One mat. Every starting point.</h2>
 				</div>
 
-				<div className="genesis-path-grid">
+				<div className="heritage-path-grid">
 					{audiencePaths.map((path) => (
 						<Link
 							key={path.title}
-							to="/website/memberships"
-							className="genesis-path-card"
+							to={path.classURL}
+							className="heritage-path-card"
 							aria-label={`${path.title}: ${path.line}`}
 						>
-							<div className="genesis-path-card__media">
-								<span>{path.visualBrief}</span>
+							<div className="heritage-path-card__media">
+								<img
+									src={path.img}
+									alt=""
+									className="heritage-path-card__image"
+									loading="lazy"
+								/>
 							</div>
-							<div className="genesis-path-card__body">
+							<div className="heritage-path-card__body">
 								<h3>{path.title}</h3>
 								<p>{path.line}</p>
 								<strong>{path.cta}</strong>
@@ -213,17 +262,21 @@ function GenesisPublicLanding() {
 				</div>
 			</section>
 
-			<section className="genesis-first-win" aria-labelledby="first-win-title">
-				<div className="genesis-section__heading">
-					<p className="genesis-kicker">Your first win</p>
+			<section
+				id="about"
+				className="heritage-first-win"
+				aria-labelledby="first-win-title"
+			>
+				<div className="heritage-section__heading">
+					<p className="heritage-kicker">Your first win</p>
 					<h2 id="first-win-title">
 						Every journey starts before you feel ready.
 					</h2>
 				</div>
 
-				<div className="genesis-step-grid">
+				<div className="heritage-step-grid">
 					{firstWinSteps.map((step) => (
-						<article key={step.number} className="genesis-step">
+						<article key={step.number} className="heritage-step">
 							<span>{step.number}</span>
 							<h3>{step.title}</h3>
 							<p>{step.line}</p>
@@ -232,15 +285,40 @@ function GenesisPublicLanding() {
 				</div>
 			</section>
 
-			<section className="genesis-culture" aria-labelledby="culture-title">
-				<div className="genesis-section__heading genesis-section__heading--light">
-					<p className="genesis-kicker">Our culture</p>
+			<section className="heritage-beginner" aria-labelledby="beginner-title">
+				<div className="heritage-beginner__copy">
+					<p className="heritage-kicker">Before you walk in</p>
+					<h2 id="beginner-title">Start before you feel ready.</h2>
+					<p>
+						New to jiu jitsu? Good. Most people start here before they feel
+						ready. You do not need to know the moves, be in shape, or have the
+						gear figured out. You need one first class and a place that knows
+						how to help beginners begin.
+					</p>
+				</div>
+
+				<div className="heritage-beginner-grid">
+					{beginnerQuestions.map((item) => (
+						<article key={item.question} className="heritage-beginner-card">
+							<h3>{item.question}</h3>
+							<p>{item.answer}</p>
+							<Link to={item.to} className="heritage-beginner-card__link">
+								{item.cta}
+							</Link>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section className="heritage-culture" aria-labelledby="culture-title">
+				<div className="heritage-section__heading heritage-section__heading--light">
+					<p className="heritage-kicker">Our culture</p>
 					<h2 id="culture-title">More than a gym.</h2>
 				</div>
 
-				<div className="genesis-culture-strip">
+				<div className="heritage-culture-strip">
 					{culturePanels.map((panel) => (
-						<article key={panel.title} className="genesis-culture-panel">
+						<article key={panel.title} className="heritage-culture-panel">
 							<div>
 								<span>{panel.visualBrief}</span>
 							</div>
@@ -250,10 +328,15 @@ function GenesisPublicLanding() {
 				</div>
 			</section>
 
-			<section className="genesis-system-bridge" aria-labelledby="system-title">
+			<section
+				className="heritage-system-bridge"
+				aria-labelledby="system-title"
+			>
 				<div>
-					<p className="genesis-kicker">Built behind the journey</p>
-					<h2 id="system-title">The software keeps the culture moving.</h2>
+					<p className="heritage-kicker">
+						Demo what's Built behind the journey &rarr;
+					</p>
+					<h2 id="system-title">This software keeps the culture moving.</h2>
 					<p>
 						Trial requests, class schedules, check-ins, billing views, member
 						journeys, announcements, and owner clarity — all connected behind
@@ -261,14 +344,14 @@ function GenesisPublicLanding() {
 					</p>
 				</div>
 
-				<div className="genesis-system-actions">
+				<div className="heritage-system-actions">
 					<Link
 						to="/check-in"
-						className="genesis-button genesis-button--primary"
+						className="heritage-button heritage-button--primary"
 					>
 						View check-in flow
 					</Link>
-					<Link to="/owner" className="genesis-button genesis-button--dark">
+					<Link to="/owner" className="heritage-button heritage-button--dark">
 						View owner dashboard
 					</Link>
 				</div>

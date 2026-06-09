@@ -32,7 +32,7 @@ function StyleGuidePage() {
 		<AppShell
 			variant="owner"
 			eyebrow="Design system"
-			title="Genesis prototype style guide"
+			title="Heritage prototype style guide"
 			description="A development-only inspection page for the real app components, button treatments, and visual QA."
 		>
 			<div className="hero-card">
@@ -116,7 +116,7 @@ function StyleGuidePage() {
 						<h2>Buttons on red hero panels</h2>
 						<p>
 							These confirm contrast, hover behavior, and color stability on the
-							red Genesis hero treatment.
+							red Heritage hero treatment.
 						</p>
 
 						<div className="hero-actions">

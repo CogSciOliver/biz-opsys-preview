@@ -17,7 +17,7 @@ function JoinPage() {
 			variant="public"
 			eyebrow="Trial class signup"
 			title="Book your first class"
-			description="Without calling the front desk, preview the kind of guided trial flow Genesis could use to turn website visitors into scheduled intro students."
+			description="Without calling the front desk, preview the kind of guided trial flow Heritage could use to turn website visitors into scheduled intro students."
 		>
 			<div className="grid">
 				<DashboardCard eyebrow="Static form preview" title="Trial request">

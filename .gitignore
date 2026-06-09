@@ -18,3 +18,4 @@ todos.json
 .env.local
 .env.*
 !.env.example
+.vercel

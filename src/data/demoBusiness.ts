@@ -1,14 +1,14 @@
 export const demoBusiness = {
-	name: "Genesis Jiu Jitsu",
-	shortName: "Genesis",
+	name: "Heritage Jiu Jitsu",
+	shortName: "Heritage",
 	location: "Burleson, Texas",
 	phone: "(817) 555-0198",
-	email: "hello@genesisjiujitsu.demo",
+	email: "hello@heritagejiujitsu.demo",
 	website: "burlesonjiujitsu.com",
 	tagline: "Whole-family jiu jitsu in a welcoming, disciplined gym.",
 	heroTitle: "A modern operating system for a family-friendly jiu jitsu gym.",
 	heroText:
-		"Public website, trial signups, member tools, staff check-in, billing visibility, communications, and owner reporting in one branded Genesis experience.",
+		"Public website, trial signups, member tools, staff check-in, billing visibility, communications, and owner reporting in one branded Heritage experience.",
 	stats: [
 		{ label: "Active students", value: "184" },
 		{ label: "Weekly classes", value: "32" },
@@ -137,7 +137,7 @@ export const demoPayments = [
 export const demoMessages = [
 	{
 		id: "msg-001",
-		title: "Welcome to Genesis",
+		title: "Welcome to Heritage",
 		audience: "New trial families",
 		status: "Draft",
 	},

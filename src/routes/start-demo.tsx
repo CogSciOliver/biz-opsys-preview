@@ -14,7 +14,7 @@ function IndexPage() {
 		<AppShell
 			variant="public"
 			eyebrow="Interactive Business Operating System Prototype"
-			title="Genesis Jiu Jitsu demo hub"
+			title="Heritage Jiu Jitsu demo hub"
 			description="A static click-through preview of what a custom business operating system could feel like for the gym, members, staff, and owner."
 		>
 			<div className="hero-card">
@@ -24,7 +24,8 @@ function IndexPage() {
 					<p>
 						This demo connects the public website, trial class signup, member
 						portal, staff tools, check-in flow, billing visibility,
-						communications, and owner reporting into one branded Genesis system.
+						communications, and owner reporting into one branded Heritage
+						system.
 					</p>
 
 					<div className="hero-actions">

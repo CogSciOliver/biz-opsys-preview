@@ -10,7 +10,7 @@ import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import TanStackQueryDevtools from "../integrations/tanstack-query/devtools";
 import appCss from "../styles.css?url";
-import "../styles/genesis.css";
+import "../styles/heritage.css";
 
 interface MyRouterContext {
 	queryClient: QueryClient;

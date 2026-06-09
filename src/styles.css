@@ -200,7 +200,7 @@ h5,
 h6 {
 	@apply text-base font-semibold tracking-wider ;
 }
-.genesis-public {
-	--genesis-display: "Teko", Impact, "Arial Black", sans-serif;
+.heritage-public {
+	--heritage-display: "Teko", Impact, "Arial Black", sans-serif;
 }
 }

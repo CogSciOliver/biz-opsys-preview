@@ -15,7 +15,7 @@ function WebsitePage() {
 		<AppShell
 			variant="public"
 			eyebrow="Public website"
-			title="Genesis Jiu Jitsu"
+			title="Heritage Jiu Jitsu"
 			description="A polished public-facing site preview for families, new students, members, and staff."
 		>
 			<div className="hero-card">
