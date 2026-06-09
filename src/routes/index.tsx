@@ -62,23 +62,23 @@ const firstWinSteps = [
 const culturePanels = [
 	{
 		title: "Discipline",
-		visualBrief: "Mexican and Black kids lined up before class",
+		img: "/images/classes/discipline.avif",
 	},
 	{
 		title: "Respect",
-		visualBrief: "Indian child and white coach fist bumping",
+		img: "/images/classes/respect.avif",
 	},
 	{
 		title: "Community",
-		visualBrief: "Diverse family class group photo",
+		img: "/images/classes/community.avif",
 	},
 	{
 		title: "Courage",
-		visualBrief: "Black adult beginner learning first grip",
+		img: "/images/classes/courage.avif",
 	},
 	{
 		title: "Growth",
-		visualBrief: "Mexican child smiling after class",
+		img: "/images/classes/growth.avif",
 	},
 ];
 
@@ -231,9 +231,9 @@ function HeritagePublicLanding() {
 				className="heritage-section heritage-section--paths"
 				aria-labelledby="paths-title"
 			>
-				<div className="heritage-section__heading">
+				<div className="heritage-section-heading">
 					<p className="heritage-kicker">Choose your path</p>
-					<h2 id="paths-title">One mat. Every starting point.</h2>
+					<h2 id="paths-title">One mat. <br/>Many starting points.</h2>
 				</div>
 
 				<div className="heritage-path-grid">
@@ -267,7 +267,7 @@ function HeritagePublicLanding() {
 				className="heritage-first-win"
 				aria-labelledby="first-win-title"
 			>
-				<div className="heritage-section__heading">
+				<div className="heritage-section-heading-lite">
 					<p className="heritage-kicker">Your first win</p>
 					<h2 id="first-win-title">
 						Every journey starts before you feel ready.
@@ -287,7 +287,7 @@ function HeritagePublicLanding() {
 
 			<section className="heritage-beginner" aria-labelledby="beginner-title">
 				<div className="heritage-beginner__copy">
-					<p className="heritage-kicker">Before you walk in</p>
+					<p className="heritage-kicker-lite">Before you walk in</p>
 					<h2 id="beginner-title">Start before you feel ready.</h2>
 					<p>
 						New to jiu jitsu? Good. Most people start here before they feel
@@ -311,7 +311,7 @@ function HeritagePublicLanding() {
 			</section>
 
 			<section className="heritage-culture" aria-labelledby="culture-title">
-				<div className="heritage-section__heading heritage-section__heading--light">
+				<div className="heritage-section-heading">
 					<p className="heritage-kicker">Our culture</p>
 					<h2 id="culture-title">More than a gym.</h2>
 				</div>
@@ -319,8 +319,13 @@ function HeritagePublicLanding() {
 				<div className="heritage-culture-strip">
 					{culturePanels.map((panel) => (
 						<article key={panel.title} className="heritage-culture-panel">
-							<div>
-								<span>{panel.visualBrief}</span>
+							<div className="heritage-culture-panel__media">
+								<img
+									src={panel.img}
+									alt=""
+									className="heritage-culture-panel__image"
+									loading="lazy"
+								/>
 							</div>
 							<h3>{panel.title}</h3>
 						</article>

@@ -20,7 +20,7 @@ function WebsitePage() {
 		>
 			<div className="hero-card">
 				<div>
-					<p className="card-kicker">Burleson family jiu jitsu</p>
+					<p className="card-kicker">Heritage Jiu Jitsu</p>
 					<h2>{demoBusiness.tagline}</h2>
 					<p>{demoBusiness.heroText}</p>
 
