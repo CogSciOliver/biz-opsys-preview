@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 type ThemeMode = "light" | "dark";
 
-const THEME_STORAGE_KEY = "heritage-theme";
+const THEME_STORAGE_KEY = "raw-body-theme";
 
 function getInitialTheme(): ThemeMode {
 	if (typeof window === "undefined") {

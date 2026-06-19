@@ -1,10 +1,10 @@
 export const demoBusiness = {
-	name: "Heritage Jiu Jitsu",
-	shortName: "Heritage",
+	name: "Raw Body Esstentials",
+	shortName: "Raw Body",
 	location: "Burleson, Texas",
 	phone: "(817) 555-0198",
-	email: "hello@heritagejiujitsu.demo",
-	website: "burlesonjiujitsu.com",
+	email: "hello@rawbodyessentials.com",
+	website: "rawbodyessentials.com",
 	tagline: "Whole-family jiu jitsu in a welcoming, disciplined gym.",
 	heroTitle: "A modern operating system for a family-friendly jiu jitsu gym.",
 	heroText:
