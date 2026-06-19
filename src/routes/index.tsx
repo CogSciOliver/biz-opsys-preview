@@ -5,138 +5,138 @@ export const Route = createFileRoute("/")({
 	component: HeritagePublicLanding,
 });
 
-const audiencePaths = [
+const servicePaths = [
 	{
-		title: "Kids",
-		line: "Confidence, focus, and courage built one class at a time.",
-		cta: "Find kids classes",
-		img: "/images/classes/kids-class.avif",
-		classURL: "/website/classes/kids",
+		title: "Body Sculpting",
+		line: "Non-invasive support for shape, tone, and body goals.",
+		cta: "Explore sculpting",
+		img: "/images/raw-body/body-sculpting.avif",
+		serviceURL: "/website/services/body-sculpting",
 	},
 	{
-		title: "Adults",
-		line: "Get stronger, calmer, and harder to shake.",
-		cta: "See adult training",
-		img: "/images/classes/adult-class.avif",
-		classURL: "/website/classes/adults",
+		title: "Lymphatic Sculpting",
+		line: "Hands-on care for flow, recovery, and a lighter body feel.",
+		cta: "Explore lymphatic care",
+		img: "/images/raw-body/lymphatic-sculpting.avif",
+		serviceURL: "/website/services/lymphatic-sculpting",
 	},
 	{
-		title: "Homeschoolers",
-		line: "A real-world mat for movement, discipline, and connection.",
-		cta: "Explore homeschool paths",
-		img: "/images/classes/homeschool-class.avif",
-		classURL: "/website/classes/homeschool",
+		title: "Massage",
+		line: "Restorative bodywork for tension, calm, and release.",
+		cta: "Explore massage",
+		img: "/images/raw-body/massage.avif",
+		serviceURL: "/website/services/massage",
 	},
 	{
-		title: "Female Only",
-		line: "Train with confidence, control, and room to grow.",
-		cta: "Book a first visit",
-		img: "/images/classes/female-class.avif",
-		classURL: "/website/classes/female-only",
+		title: "Facials",
+		line: "Plant-forward skin rituals for glow, clarity, and care.",
+		cta: "Explore facials",
+		img: "/images/raw-body/facials.avif",
+		serviceURL: "/website/services/facials",
 	},
 ];
 
-const firstWinSteps = [
+const clientJourneySteps = [
 	{
 		number: "01",
-		title: "Walk in",
-		line: "You belong here.",
+		title: "Choose your goal",
+		line: "Sculpt, flow, recover, glow, or reset.",
 	},
 	{
 		number: "02",
-		title: "Learn the basics",
-		line: "Safe. Simple. Solid.",
+		title: "Book a consultation",
+		line: "Phone, text, Zoom, or in-person.",
 	},
 	{
 		number: "03",
-		title: "Feel progress",
-		line: "Confidence grows fast.",
+		title: "Build your ritual",
+		line: "Match treatments with at-home care.",
 	},
 	{
 		number: "04",
-		title: "Keep showing up",
-		line: "The mat changes you.",
+		title: "Return supported",
+		line: "Care continues between appointments.",
 	},
 ];
 
-const culturePanels = [
+const ritualPanels = [
 	{
-		title: "Discipline",
-		img: "/images/classes/discipline.avif",
+		title: "Plant-Based Care",
+		img: "/images/raw-body/plant-based-care.avif",
 	},
 	{
-		title: "Respect",
-		img: "/images/classes/respect.avif",
+		title: "Ancestral Wisdom",
+		img: "/images/raw-body/ancestral-wisdom.avif",
 	},
 	{
-		title: "Community",
-		img: "/images/classes/community.avif",
+		title: "Body Goals",
+		img: "/images/raw-body/body-goals.avif",
 	},
 	{
-		title: "Courage",
-		img: "/images/classes/courage.avif",
+		title: "Skin Rituals",
+		img: "/images/raw-body/skin-rituals.avif",
 	},
 	{
-		title: "Growth",
-		img: "/images/classes/growth.avif",
+		title: "At-Home Tools",
+		img: "/images/raw-body/at-home-tools.avif",
 	},
 ];
 
 const heroImages = [
 	{
-		src: "/images/hero/bjj-kid.webp",
-		alt: "bjj kids",
+		src: "/images/raw-body/hero-taino-arawaks.avif",
+		alt: "Raw Body Essentials body care client in a slate and white spa setting",
 	},
 	{
-		src: "/images/hero/bjj-man.webp",
-		alt: "bjj men",
+		src: "/images/raw-body/hero-trinidad-tobago.avif",
+		alt: "Raw Body Essentials client with natural body oil and botanical care",
 	},
 	{
-		src: "/images/hero/bjj-woman.webp",
-		alt: "bjj moms",
+		src: "/images/raw-body/hero-puerto-rico.avif",
+		alt: "Raw Body Essentials lymphatic sculpting spa editorial",
 	},
 	{
-		src: "/images/hero/bjj-dad.webp",
-		alt: "bjj dads",
+		src: "/images/raw-body/hero-jamaica.avif",
+		alt: "Raw Body Essentials modern Indigenous woman in body care studio",
 	},
 	{
-		src: "/images/hero/bjj-teen.webp",
-		alt: "bjj teens",
+		src: "/images/raw-body/hero-panama-mexico.avif",
+		alt: "Raw Body Essentials plant based skin and body care ritual",
 	},
 	{
-		src: "/images/hero/bjj-teach.webp",
-		alt: "bjj teachers",
+		src: "/images/raw-body/hero-products.avif",
+		alt: "Raw Body Essentials natural body products and at home care tools",
 	},
 ];
 
-const beginnerQuestions = [
+const consultationQuestions = [
 	{
-		question: "Is this beginner friendly?",
+		question: "Not sure where to start?",
 		answer:
-			"Yes. You can start without knowing the moves, the rules, or the language of jiu jitsu.",
-		cta: "Book a trial",
-		to: "/website/trial-class",
+			"Start with a body goals consultation. We can talk through sculpting, lymphatic care, massage, facials, products, and your at-home rhythm.",
+		cta: "Book consultation",
+		to: "/website/consultations",
 	},
 	{
-		question: "Can my child try first?",
+		question: "Can I book by location?",
 		answer:
-			"Yes. A trial class lets your child feel the room, meet the coach, and step on the mat before joining.",
-		cta: "Start with kids",
-		to: "/website/memberships",
+			"Yes. Choose Long Island, NYC, Dallas, Austin, or a touring popup when dates are available.",
+		cta: "See locations",
+		to: "/website/locations",
 	},
 	{
-		question: "What should we wear?",
+		question: "Do you offer at-home care?",
 		answer:
-			"Comfortable athletic clothes are enough for a first visit. The team can guide you from there.",
-		cta: "See first class",
-		to: "/website/trial-class",
+			"Yes. Natural body products, tools, and hair, skin, and nail care can support the ritual between appointments.",
+		cta: "Shop care tools",
+		to: "/website/products",
 	},
 	{
-		question: "Can families train here?",
+		question: "Is this medical treatment?",
 		answer:
-			"Yes. Kids, adults, teens, and parents can each find a starting point without feeling lost.",
-		cta: "Find classes",
-		to: "/website/schedule",
+			"No. Raw Body Essentials offers body care, beauty, massage, sculpting, and wellness-support services. We keep the language honest and non-medical.",
+		cta: "Explore treatments",
+		to: "/website/services",
 	},
 ];
 
@@ -147,36 +147,36 @@ function HeritagePublicLanding() {
 				<Link
 					to="/"
 					className="heritage-public__brand"
-					aria-label="Heritage Jiu Jitsu home"
+					aria-label="Raw Body Essentials home"
 				>
-					<span className="heritage-public__mark">H</span>
-					<span>
-						<strong>Heritage</strong>
-						<small>Jiu Jitsu · Burleson, Texas</small>
-					</span>
+					<span className="heritage-public__mark">R</span>
+<span>
+	<strong>Raw Body Essentials</strong>
+	<small>Body care · Sculpting · Skin rituals</small>
+</span>
 				</Link>
 
 				<nav
 					className="heritage-public__nav"
 					aria-label="Public website navigation"
 				>
-					<Link to="/" hash="classes">
-						Classes
-					</Link>
-					<Link to="/" hash="about">
-						About
-					</Link>
-					<Link to="/website/schedule" hash="classes">
-						Schedule
-					</Link>
-					<Link to="/website/schedule" hash="events">
-						Events
-					</Link>
+					<Link to="/" hash="services">
+	Services
+</Link>
+<Link to="/" hash="about">
+	About
+</Link>
+<Link to="/website/consultations">
+	Consultations
+</Link>
+<Link to="/website/locations">
+	Locations
+</Link>
 				</nav>
 
-				<Link to="/website/trial-class" className="heritage-public__trial-link">
-					Book a trial
-				</Link>
+				<Link to="/website/consultations" className="heritage-public__trial-link">
+	Book consultation
+</Link>
 			</header>
 
 			<section className="heritage-hero" aria-labelledby="heritage-hero-title">
@@ -195,55 +195,60 @@ function HeritagePublicLanding() {
 
 				<div className="heritage-hero__copy">
 					<h1 id="heritage-hero-title" className="heritage-hero-title">
-						<span className="heritage-hero-title__top">Step</span>
-						<span className="heritage-hero-title__middle">onto the</span>
-						<span className="heritage-hero-title__bottom">mat.</span>
-					</h1>
-					<p className="heritage-hero__line">
-						Confidence. Discipline. Family. <br />
-						Built together.
-					</p>
-					<p className="heritage-kicker">Family jiu jitsu starts here</p>
-					<div className="heritage-hero__actions">
-						<Link
-							to="/website/trial-class"
-							className="heritage-button heritage-button--primary"
-						>
-							Book a trial class
-						</Link>
-						<Link
-							to="/website/schedule"
-							className="heritage-button heritage-button--ghost"
-						>
-							Find your first class
-						</Link>
-					</div>
+	<span className="heritage-hero-title__top">Raw</span>
+	<span className="heritage-hero-title__middle">body</span>
+	<span className="heritage-hero-title__bottom">care.</span>
+</h1>
 
-					<div className="heritage-hero__story">
-						<span className="heritage-play" aria-hidden="true" />
-						<span>Watch their first step</span>
-					</div>
+<p className="heritage-hero__line">
+	Body sculpting. Lymphatic care. <br />
+	Skin rituals. At-home support.
+</p>
+
+<p className="heritage-kicker">
+	Modern body care rooted in heritage
+</p>
+
+<div className="heritage-hero__actions">
+	<Link
+		to="/website/consultations"
+		className="heritage-button heritage-button--primary"
+	>
+		Book consultation
+	</Link>
+	<Link
+		to="/website/services"
+		className="heritage-button heritage-button--ghost"
+	>
+		Explore treatments
+	</Link>
+</div>
+
+<div className="heritage-hero__story">
+	<span className="heritage-play" aria-hidden="true" />
+	<span>In studio. In home. In community.</span>
+</div>
 				</div>
 			</section>
 
 			<section
-				id="classes"
-				className="heritage-section heritage-section--paths"
-				aria-labelledby="paths-title"
-			>
+	id="services"
+	className="heritage-section heritage-section--paths"
+	aria-labelledby="paths-title"
+>
 				<div className="heritage-section-heading">
-					<p className="heritage-kicker">Choose your path</p>
-					<h2 id="paths-title">
-						One mat. <br />
-						Many starting points.
-					</h2>
+					<p className="heritage-kicker">Choose your ritual</p>
+<h2 id="paths-title">
+	One body. <br />
+	Many ways to support it.
+</h2>
 				</div>
 
 				<div className="heritage-path-grid">
-					{audiencePaths.map((path) => (
+					{servicePaths.map((path) => (
 						<Link
 							key={path.title}
-							to={path.classURL}
+							to={path.serviceURL}
 							className="heritage-path-card"
 							aria-label={`${path.title}: ${path.line}`}
 						>
@@ -268,17 +273,17 @@ function HeritagePublicLanding() {
 			<section
 				id="about"
 				className="heritage-first-win"
-				aria-labelledby="first-win-title"
+				aria-labelledby="your-care-path"
 			>
 				<div className="heritage-section-heading-lite">
-					<p className="heritage-kicker">Your first win</p>
-					<h2 id="first-win-title">
-						Every journey starts before you feel ready.
-					</h2>
+					<p className="heritage-kicker">Your care path</p>
+<h2 id="first-win-title">
+	Support starts before the appointment.
+</h2>
 				</div>
 
 				<div className="heritage-step-grid">
-					{firstWinSteps.map((step) => (
+					{clientJourneySteps.map((step) => (
 						<article key={step.number} className="heritage-step">
 							<span>{step.number}</span>
 							<h3>{step.title}</h3>
@@ -290,18 +295,17 @@ function HeritagePublicLanding() {
 
 			<section className="heritage-beginner" aria-labelledby="beginner-title">
 				<div className="heritage-beginner__copy">
-					<p className="heritage-kicker-lite">Before you walk in</p>
-					<h2 id="beginner-title">Start before you feel ready.</h2>
-					<p>
-						New to jiu jitsu? Good. Most people start here before they feel
-						ready. You do not need to know the moves, be in shape, or have the
-						gear figured out. You need one first class and a place that knows
-						how to help beginners begin.
-					</p>
+					<p className="heritage-kicker-lite">Before you book</p>
+<h2 id="beginner-title">Start with the body goal.</h2>
+<p>
+	Whether you want sculpting, lymphatic support, massage, facials, or a
+	natural at-home care plan, the first step is choosing the right ritual
+	for your body, schedule, and location.
+</p>
 				</div>
 
 				<div className="heritage-beginner-grid">
-					{beginnerQuestions.map((item) => (
+					{consultationQuestions.map((item) => (
 						<article key={item.question} className="heritage-beginner-card">
 							<h3>{item.question}</h3>
 							<p>{item.answer}</p>
@@ -315,17 +319,17 @@ function HeritagePublicLanding() {
 
 			<section className="heritage-culture" aria-labelledby="culture-title">
 				<div className="heritage-section-heading">
-					<p className="heritage-kicker">Our culture</p>
-					<h2 id="culture-title">More than a gym.</h2>
+					<p className="heritage-kicker">Our ritual culture</p>
+<h2 id="culture-title">Plant-safe. Body-aware. Heritage-rooted.</h2>
 				</div>
 
 				<div className="heritage-culture-strip">
-					{culturePanels.map((panel) => (
+					{ritualPanels.map((panel) => (
 						<article key={panel.title} className="heritage-culture-panel">
 							<div className="heritage-culture-panel__media">
 								<img
 									src={panel.img}
-									alt=""
+									alt="Raw Body Culture"
 									className="heritage-culture-panel__image"
 									loading="lazy"
 								/>
@@ -342,26 +346,26 @@ function HeritagePublicLanding() {
 			>
 				<div>
 					<p className="heritage-kicker">
-						Demo what's Built behind the journey &rarr;
-					</p>
-					<h2 id="system-title">This software keeps the culture moving.</h2>
-					<p>
-						Trial requests, class schedules, check-ins, billing views, member
-						journeys, announcements, and owner clarity — all connected behind
-						the scenes.
-					</p>
+	Demo what's built behind the booking &rarr;
+</p>
+<h2 id="system-title">This software keeps the body-care business moving.</h2>
+<p>
+	Consultations, service booking, client goals, treatment history,
+	locations, popups, product recommendations, and owner clarity — all
+	connected behind the scenes.
+</p>
 				</div>
 
 				<div className="heritage-system-actions">
 					<Link
-						to="/check-in"
-						className="heritage-button heritage-button--primary"
-					>
-						View check-in flow
-					</Link>
-					<Link to="/owner" className="heritage-button heritage-button--dark">
-						View owner dashboard
-					</Link>
+	to="/website/consultations"
+	className="heritage-button heritage-button--primary"
+>
+	View consultation flow
+</Link>
+<Link to="/owner" className="heritage-button heritage-button--dark">
+	View owner dashboard
+</Link>
 				</div>
 			</section>
 		</main>
