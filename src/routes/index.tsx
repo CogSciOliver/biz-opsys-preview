@@ -150,10 +150,10 @@ function HeritagePublicLanding() {
 					aria-label="Raw Body Essentials home"
 				>
 					<span className="heritage-public__mark">R</span>
-<span>
-	<strong>Raw Body Essentials</strong>
-	<small>Body care · Sculpting · Skin rituals</small>
-</span>
+					<span>
+						<strong>Raw Body Essentials</strong>
+						<small>Body care · Sculpting · Skin rituals</small>
+					</span>
 				</Link>
 
 				<nav
@@ -161,22 +161,21 @@ function HeritagePublicLanding() {
 					aria-label="Public website navigation"
 				>
 					<Link to="/" hash="services">
-	Services
-</Link>
-<Link to="/" hash="about">
-	About
-</Link>
-<Link to="/website/consultations">
-	Consultations
-</Link>
-<Link to="/website/locations">
-	Locations
-</Link>
+						Services
+					</Link>
+					<Link to="/" hash="about">
+						About
+					</Link>
+					<Link to="/website/consultations">Consultations</Link>
+					<Link to="/website/locations">Locations</Link>
 				</nav>
 
-				<Link to="/website/consultations" className="heritage-public__trial-link">
-	Book consultation
-</Link>
+				<Link
+					to="/website/consultations"
+					className="heritage-public__trial-link"
+				>
+					Book consultation
+				</Link>
 			</header>
 
 			<section className="heritage-hero" aria-labelledby="heritage-hero-title">
@@ -193,55 +192,56 @@ function HeritagePublicLanding() {
 
 				<div className="heritage-hero__shade" aria-hidden="true" />
 
+				
+
 				<div className="heritage-hero__copy">
+					<p className="heritage-kicker">RAW. ANCESTRAL. MODERN</p>
 					<h1 id="heritage-hero-title" className="heritage-hero-title">
-	<span className="heritage-hero-title__top">Raw</span>
-	<span className="heritage-hero-title__middle">body</span>
-	<span className="heritage-hero-title__bottom">care.</span>
-</h1>
+						<span className="heritage-hero-title__top">Modern Body Care</span>
+						<span className="heritage-hero-title__bottom">
+							Rooted in Heritage
+						</span>
+					</h1>
 
-<p className="heritage-hero__line">
-	Body sculpting. Lymphatic care. <br />
-	Skin rituals. At-home support.
-</p>
+					<p className="heritage-hero__line">
+						Body sculpting, lymphatic care, massage, facials, and natural
+						at-home care. Crafted to support your body, elevate your rituals and
+						honor where we come from. <br />
+					</p>
 
-<p className="heritage-kicker">
-	Modern body care rooted in heritage
-</p>
+					<div className="heritage-hero__actions">
+						<Link
+							to="/website/consultations"
+							className="heritage-button heritage-button--primary"
+						>
+							Book consultation
+						</Link>
+						<Link
+							to="/website/services"
+							className="heritage-button heritage-button--ghost"
+						>
+							Explore treatments
+						</Link>
+					</div>
 
-<div className="heritage-hero__actions">
-	<Link
-		to="/website/consultations"
-		className="heritage-button heritage-button--primary"
-	>
-		Book consultation
-	</Link>
-	<Link
-		to="/website/services"
-		className="heritage-button heritage-button--ghost"
-	>
-		Explore treatments
-	</Link>
-</div>
-
-<div className="heritage-hero__story">
-	<span className="heritage-play" aria-hidden="true" />
-	<span>In studio. In home. In community.</span>
-</div>
+					<div className="heritage-hero__story">
+						<span className="heritage-play" aria-hidden="true" />
+						<span>In studio. In home. In community.</span>
+					</div>
 				</div>
 			</section>
 
 			<section
-	id="services"
-	className="heritage-section heritage-section--paths"
-	aria-labelledby="paths-title"
->
+				id="services"
+				className="heritage-section heritage-section--paths"
+				aria-labelledby="paths-title"
+			>
 				<div className="heritage-section-heading">
 					<p className="heritage-kicker">Choose your ritual</p>
-<h2 id="paths-title">
-	One body. <br />
-	Many ways to support it.
-</h2>
+					<h2 id="paths-title">
+						One body. <br />
+						Many ways to support it.
+					</h2>
 				</div>
 
 				<div className="heritage-path-grid">
@@ -277,9 +277,7 @@ function HeritagePublicLanding() {
 			>
 				<div className="heritage-section-heading-lite">
 					<p className="heritage-kicker">Your care path</p>
-<h2 id="first-win-title">
-	Support starts before the appointment.
-</h2>
+					<h2 id="first-win-title">Support starts before the appointment.</h2>
 				</div>
 
 				<div className="heritage-step-grid">
@@ -296,12 +294,12 @@ function HeritagePublicLanding() {
 			<section className="heritage-beginner" aria-labelledby="beginner-title">
 				<div className="heritage-beginner__copy">
 					<p className="heritage-kicker-lite">Before you book</p>
-<h2 id="beginner-title">Start with the body goal.</h2>
-<p>
-	Whether you want sculpting, lymphatic support, massage, facials, or a
-	natural at-home care plan, the first step is choosing the right ritual
-	for your body, schedule, and location.
-</p>
+					<h2 id="beginner-title">Start with the body goal.</h2>
+					<p>
+						Whether you want sculpting, lymphatic support, massage, facials, or
+						a natural at-home care plan, the first step is choosing the right
+						ritual for your body, schedule, and location.
+					</p>
 				</div>
 
 				<div className="heritage-beginner-grid">
@@ -320,7 +318,7 @@ function HeritagePublicLanding() {
 			<section className="heritage-culture" aria-labelledby="culture-title">
 				<div className="heritage-section-heading">
 					<p className="heritage-kicker">Our ritual culture</p>
-<h2 id="culture-title">Plant-safe. Body-aware. Heritage-rooted.</h2>
+					<h2 id="culture-title">Plant-safe. Body-aware. Heritage-rooted.</h2>
 				</div>
 
 				<div className="heritage-culture-strip">
@@ -346,26 +344,28 @@ function HeritagePublicLanding() {
 			>
 				<div>
 					<p className="heritage-kicker">
-	Demo what's built behind the booking &rarr;
-</p>
-<h2 id="system-title">This software keeps the body-care business moving.</h2>
-<p>
-	Consultations, service booking, client goals, treatment history,
-	locations, popups, product recommendations, and owner clarity — all
-	connected behind the scenes.
-</p>
+						Demo what's built behind the booking &rarr;
+					</p>
+					<h2 id="system-title">
+						This software keeps the body-care business moving.
+					</h2>
+					<p>
+						Consultations, service booking, client goals, treatment history,
+						locations, popups, product recommendations, and owner clarity — all
+						connected behind the scenes.
+					</p>
 				</div>
 
 				<div className="heritage-system-actions">
 					<Link
-	to="/website/consultations"
-	className="heritage-button heritage-button--primary"
->
-	View consultation flow
-</Link>
-<Link to="/owner" className="heritage-button heritage-button--dark">
-	View owner dashboard
-</Link>
+						to="/website/consultations"
+						className="heritage-button heritage-button--primary"
+					>
+						View consultation flow
+					</Link>
+					<Link to="/owner" className="heritage-button heritage-button--dark">
+						View owner dashboard
+					</Link>
 				</div>
 			</section>
 		</main>
