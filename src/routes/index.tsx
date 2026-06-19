@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import "../styles/index.css";
 
 export const Route = createFileRoute("/")({
-	component: HeritagePublicLanding,
+	component: RawBodyPublicLanding,
 });
 
 const servicePaths = [
@@ -140,16 +140,16 @@ const consultationQuestions = [
 	},
 ];
 
-function HeritagePublicLanding() {
+function RawBodyPublicLanding() {
 	return (
-		<main className="heritage-public">
-			<header className="heritage-public__header">
+		<main className="raw-body-public">
+			<header className="raw-body-public__header">
 				<Link
 					to="/"
-					className="heritage-public__brand"
+					className="raw-body-public__brand"
 					aria-label="Raw Body Essentials home"
 				>
-					<span className="heritage-public__mark">R</span>
+					<span className="raw-body-public__mark">R</span>
 					<span>
 						<strong>Raw Body Essentials</strong>
 						<small>Body care · Sculpting · Skin rituals</small>
@@ -157,7 +157,7 @@ function HeritagePublicLanding() {
 				</Link>
 
 				<nav
-					className="heritage-public__nav"
+					className="raw-body-public__nav"
 					aria-label="Public website navigation"
 				>
 					<Link to="/" hash="services">
@@ -172,60 +172,58 @@ function HeritagePublicLanding() {
 
 				<Link
 					to="/website/consultations"
-					className="heritage-public__trial-link"
+					className="raw-body-public__trial-link"
 				>
 					Book consultation
 				</Link>
 			</header>
 
-			<section className="heritage-hero" aria-labelledby="heritage-hero-title">
-				<div className="heritage-hero__reel" aria-hidden="true">
+			<section className="raw-body-hero" aria-labelledby="raw-body-hero-title">
+				<div className="raw-body-hero__reel" aria-hidden="true">
 					{heroImages.map((image, index) => (
 						<img
 							key={image.src}
 							src={image.src}
 							alt={image.alt}
-							className={`heritage-hero__frame heritage-hero__frame--${index + 1}`}
+							className={`raw-body-hero__frame raw-body-hero__frame--${index + 1}`}
 						/>
 					))}
 				</div>
 
-				<div className="heritage-hero__shade" aria-hidden="true" />
+				<div className="raw-body-hero__shade" aria-hidden="true" />
 
-				
-
-				<div className="heritage-hero__copy">
-					<p className="heritage-kicker">RAW. ANCESTRAL. MODERN</p>
-					<h1 id="heritage-hero-title" className="heritage-hero-title">
-						<span className="heritage-hero-title__top">Modern Body Care</span>
-						<span className="heritage-hero-title__bottom">
+				<div className="raw-body-hero__copy">
+					<p className="raw-body-kicker">RAW. ANCESTRAL. MODERN</p>
+					<h1 id="raw-body-hero-title" className="raw-body-hero-title">
+						<span className="raw-body-hero-title__top">Modern Body Care</span>
+						<span className="raw-body-hero-title__bottom">
 							Rooted in Heritage
 						</span>
 					</h1>
 
-					<p className="heritage-hero__line">
+					<p className="raw-body-hero__line">
 						Body sculpting, lymphatic care, massage, facials, and natural
 						at-home care. Crafted to support your body, elevate your rituals and
 						honor where we come from. <br />
 					</p>
 
-					<div className="heritage-hero__actions">
+					<div className="raw-body-hero__actions">
 						<Link
 							to="/website/consultations"
-							className="heritage-button heritage-button--primary"
+							className="raw-body-button raw-body-button--primary"
 						>
 							Book consultation
 						</Link>
 						<Link
 							to="/website/services"
-							className="heritage-button heritage-button--ghost"
+							className="raw-body-button raw-body-button--ghost"
 						>
 							Explore treatments
 						</Link>
 					</div>
 
-					<div className="heritage-hero__story">
-						<span className="heritage-play" aria-hidden="true" />
+					<div className="raw-body-hero__story">
+						<span className="raw-body-play" aria-hidden="true" />
 						<span>In studio. In home. In community.</span>
 					</div>
 				</div>
@@ -233,34 +231,34 @@ function HeritagePublicLanding() {
 
 			<section
 				id="services"
-				className="heritage-section heritage-section--paths"
+				className="raw-body-section raw-body-section--paths"
 				aria-labelledby="paths-title"
 			>
-				<div className="heritage-section-heading">
-					<p className="heritage-kicker">Choose your ritual</p>
+				<div className="raw-body-section-heading">
+					<p className="raw-body-kicker">Choose your ritual</p>
 					<h2 id="paths-title">
 						One body. <br />
 						Many ways to support it.
 					</h2>
 				</div>
 
-				<div className="heritage-path-grid">
+				<div className="raw-body-path-grid">
 					{servicePaths.map((path) => (
 						<Link
 							key={path.title}
 							to={path.serviceURL}
-							className="heritage-path-card"
+							className="raw-body-path-card"
 							aria-label={`${path.title}: ${path.line}`}
 						>
-							<div className="heritage-path-card__media">
+							<div className="raw-body-path-card__media">
 								<img
 									src={path.img}
 									alt=""
-									className="heritage-path-card__image"
+									className="raw-body-path-card__image"
 									loading="lazy"
 								/>
 							</div>
-							<div className="heritage-path-card__body">
+							<div className="raw-body-path-card__body">
 								<h3>{path.title}</h3>
 								<p>{path.line}</p>
 								<strong>{path.cta}</strong>
@@ -272,17 +270,17 @@ function HeritagePublicLanding() {
 
 			<section
 				id="about"
-				className="heritage-first-win"
+				className="raw-body-first-win"
 				aria-labelledby="your-care-path"
 			>
-				<div className="heritage-section-heading-lite">
-					<p className="heritage-kicker">Your care path</p>
+				<div className="raw-body-section-heading-lite">
+					<p className="raw-body-kicker">Your care path</p>
 					<h2 id="first-win-title">Support starts before the appointment.</h2>
 				</div>
 
-				<div className="heritage-step-grid">
+				<div className="raw-body-step-grid">
 					{clientJourneySteps.map((step) => (
-						<article key={step.number} className="heritage-step">
+						<article key={step.number} className="raw-body-step">
 							<span>{step.number}</span>
 							<h3>{step.title}</h3>
 							<p>{step.line}</p>
@@ -291,9 +289,9 @@ function HeritagePublicLanding() {
 				</div>
 			</section>
 
-			<section className="heritage-beginner" aria-labelledby="beginner-title">
-				<div className="heritage-beginner__copy">
-					<p className="heritage-kicker-lite">Before you book</p>
+			<section className="raw-body-beginner" aria-labelledby="beginner-title">
+				<div className="raw-body-beginner__copy">
+					<p className="raw-body-kicker-lite">Before you book</p>
 					<h2 id="beginner-title">Start with the body goal.</h2>
 					<p>
 						Whether you want sculpting, lymphatic support, massage, facials, or
@@ -302,12 +300,12 @@ function HeritagePublicLanding() {
 					</p>
 				</div>
 
-				<div className="heritage-beginner-grid">
+				<div className="raw-body-beginner-grid">
 					{consultationQuestions.map((item) => (
-						<article key={item.question} className="heritage-beginner-card">
+						<article key={item.question} className="raw-body-beginner-card">
 							<h3>{item.question}</h3>
 							<p>{item.answer}</p>
-							<Link to={item.to} className="heritage-beginner-card__link">
+							<Link to={item.to} className="raw-body-beginner-card__link">
 								{item.cta}
 							</Link>
 						</article>
@@ -315,20 +313,20 @@ function HeritagePublicLanding() {
 				</div>
 			</section>
 
-			<section className="heritage-culture" aria-labelledby="culture-title">
-				<div className="heritage-section-heading">
-					<p className="heritage-kicker">Our ritual culture</p>
+			<section className="raw-body-culture" aria-labelledby="culture-title">
+				<div className="raw-body-section-heading">
+					<p className="raw-body-kicker">Our ritual culture</p>
 					<h2 id="culture-title">Plant-safe. Body-aware. Heritage-rooted.</h2>
 				</div>
 
-				<div className="heritage-culture-strip">
+				<div className="raw-body-culture-strip">
 					{ritualPanels.map((panel) => (
-						<article key={panel.title} className="heritage-culture-panel">
-							<div className="heritage-culture-panel__media">
+						<article key={panel.title} className="raw-body-culture-panel">
+							<div className="raw-body-culture-panel__media">
 								<img
 									src={panel.img}
 									alt="Raw Body Culture"
-									className="heritage-culture-panel__image"
+									className="raw-body-culture-panel__image"
 									loading="lazy"
 								/>
 							</div>
@@ -339,11 +337,11 @@ function HeritagePublicLanding() {
 			</section>
 
 			<section
-				className="heritage-system-bridge"
+				className="raw-body-system-bridge"
 				aria-labelledby="system-title"
 			>
 				<div>
-					<p className="heritage-kicker">
+					<p className="raw-body-kicker">
 						Demo what's built behind the booking &rarr;
 					</p>
 					<h2 id="system-title">
@@ -356,14 +354,14 @@ function HeritagePublicLanding() {
 					</p>
 				</div>
 
-				<div className="heritage-system-actions">
+				<div className="raw-body-system-actions">
 					<Link
 						to="/website/consultations"
-						className="heritage-button heritage-button--primary"
+						className="raw-body-button raw-body-button--primary"
 					>
 						View consultation flow
 					</Link>
-					<Link to="/owner" className="heritage-button heritage-button--dark">
+					<Link to="/owner" className="raw-body-button raw-body-button--dark">
 						View owner dashboard
 					</Link>
 				</div>

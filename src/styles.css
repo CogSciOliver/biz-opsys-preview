@@ -200,7 +200,7 @@ h5,
 h6 {
 	@apply text-base font-semibold tracking-wider ;
 }
-.heritage-public {
-	--heritage-display: "Teko", Impact, "Arial Black", sans-serif;
+.raw-body-public {
+	--raw-body-display: "Teko", Impact, "Arial Black", sans-serif;
 }
 }
