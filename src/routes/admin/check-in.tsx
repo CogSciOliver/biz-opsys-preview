@@ -4,7 +4,11 @@ import { CheckInKiosk } from "../../components/CheckInKiosk";
 import { DashboardCard } from "../../components/DashboardCard";
 import { MemberList } from "../../components/MemberList";
 import { TrialLeadList } from "../../components/TrialLeadList";
-import { demoClasses, demoMembers, demoTrialLeads } from "../../data/demoBusiness";
+import {
+	demoClasses,
+	demoMembers,
+	demoTrialLeads,
+} from "../../data/demoBusiness";
 
 export const Route = createFileRoute("/admin/check-in")({
 	component: StaffCheckInPage,

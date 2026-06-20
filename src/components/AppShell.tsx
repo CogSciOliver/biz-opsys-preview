@@ -1,6 +1,4 @@
-
-
-			import { Link } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { RoleNav, type RoleNavVariant } from "./RoleNav";
 import { ThemeToggle } from "./ThemeToggle";
@@ -16,7 +14,10 @@ export function AppShell({ children, variant = "public" }: AppShellProps) {
 	return (
 		<div className="shell">
 			<div className="notice">
-				<p>Now booking in Long Island, NYC, Dallas, Austin, & Touring Popups &rarrow;</p>
+				<p>
+					Now booking in Long Island, NYC, Dallas, Austin, & Touring Popups
+					&rarrow;
+				</p>
 			</div>
 
 			<header className="app-header">

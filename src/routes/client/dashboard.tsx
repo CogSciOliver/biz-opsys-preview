@@ -4,7 +4,11 @@ import { ClassScheduleList } from "../../components/ClassScheduleList";
 import { CommunicationPreview } from "../../components/CommunicationPreview";
 import { DashboardCard } from "../../components/DashboardCard";
 import { MemberStatusBadge } from "../../components/MemberStatusBadge";
-import { demoClasses, demoMembers, demoMessages } from "../../data/demoBusiness";
+import {
+	demoClasses,
+	demoMembers,
+	demoMessages,
+} from "../../data/demoBusiness";
 
 export const Route = createFileRoute("/client/dashboard")({
 	component: MemberDashboardPage,
