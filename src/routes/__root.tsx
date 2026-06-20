@@ -49,7 +49,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			<body>
 				<ClerkProvider>
 					<TooltipProvider>{children}</TooltipProvider>
-					<TanStackDevtools
+					{/* <TanStackDevtools
 						config={{
 							position: "bottom-right",
 						}}
@@ -60,7 +60,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 							},
 							TanStackQueryDevtools,
 						]}
-					/>
+					/> */}
 				</ClerkProvider>
 				<Scripts />
 			</body>
