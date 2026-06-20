@@ -269,12 +269,12 @@ function RawBodyPublicLanding() {
 
 			<section
 				id="about"
-				className="raw-body-first-win"
+				className="raw-body-care"
 				aria-labelledby="your-care-path"
 			>
 				<div className="raw-body-section-heading-lite">
 					<p className="raw-body-kicker">Your care path</p>
-					<h2 id="first-win-title">Support starts before the appointment.</h2>
+					<h2 id="care-title">Support starts before the appointment.</h2>
 				</div>
 
 				<div className="raw-body-step-grid">
