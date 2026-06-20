@@ -1,187 +1,222 @@
 export const demoBusiness = {
-	name: "Raw Body Esstentials",
-	shortName: "Raw Body",
-	location: "Burleson, Texas",
-	phone: "(817) 555-0198",
-	email: "hello@rawbodyessentials.com",
-	website: "rawbodyessentials.com",
-	tagline: "Whole-family jiu jitsu in a welcoming, disciplined gym.",
-	heroTitle: "A modern operating system for a family-friendly jiu jitsu gym.",
-	heroText:
-		"Public website, trial signups, member tools, staff check-in, billing visibility, communications, and owner reporting in one branded Heritage experience.",
-	stats: [
-		{ label: "Active students", value: "184" },
-		{ label: "Weekly classes", value: "32" },
-		{ label: "Trial leads this month", value: "27" },
-		{ label: "Member retention", value: "91%" },
-	],
+	name: "Raw Body Essentials",
+	location: "Long Island · NYC · Dallas · Austin",
+	tagline: "Body care, sculpting, skin rituals, and wellness support.",
+	heroTitle: "A modern operating system for a body treatment studio.",
+	heroDescription:
+		"Public website, consultation requests, client tools, appointment intake, product guidance, communications, and admin reporting in one branded Raw Body experience.",
 };
 
-export const demoClasses = [
+export const serviceCategories = [
 	{
-		id: "kids-foundations",
-		name: "Kids Foundations",
-		audience: "Ages 5-8",
-		days: "Mon / Wed",
-		time: "4:30 PM",
-		level: "Beginner",
-		spots: 8,
+		id: "body-treatment",
+		name: "Body Treatment Studio",
+		description:
+			"Body sculpting, lymphatic care, massage, facials, consultations, and natural at-home care.",
 	},
 	{
-		id: "family-jiujitsu",
-		name: "Family Jiu Jitsu",
-		audience: "Parents + kids",
-		days: "Tuesday",
-		time: "6:00 PM",
-		level: "All levels",
-		spots: 21,
+		id: "consultation-first",
+		name: "Consultation-First Booking",
+		description:
+			"Help clients choose the right service, location, and ritual before confirming care.",
 	},
 	{
-		id: "adult-fundamentals",
-		name: "Adult Fundamentals",
-		audience: "Adults",
-		days: "Mon / Thu",
-		time: "7:00 PM",
-		level: "Beginner",
-		spots: 10,
-	},
-	{
-		id: "competition-team",
-		name: "Competition Team",
-		audience: "Advanced students",
-		days: "Friday",
-		time: "6:30 PM",
-		level: "Advanced",
-		spots: 4,
+		id: "product-care",
+		name: "At-Home Product Support",
+		description:
+			"Natural body, hair, skin, nail, and tool recommendations connected to client goals.",
 	},
 ];
 
-export const demoTrialLeads = [
+export const servicePaths = [
 	{
-		id: "lead-001",
-		name: "Maya Thompson",
-		interest: "Family membership",
-		status: "Trial booked",
-		nextStep: "Confirm waiver before Tuesday class",
+		id: "body-sculpting",
+		title: "Body Sculpting",
+		line: "Non-invasive support for shape, tone, and body goals.",
+		href: "/website/services/body-sculpting",
 	},
 	{
-		id: "lead-002",
-		name: "Jordan Lee",
-		interest: "Adult fundamentals",
-		status: "Needs follow-up",
-		nextStep: "Send beginner class schedule",
+		id: "lymphatic-sculpting",
+		title: "Lymphatic Sculpting",
+		line: "Hands-on care for flow, recovery, and a lighter body feel.",
+		href: "/website/services/lymphatic-sculpting",
 	},
 	{
-		id: "lead-003",
-		name: "The Ramirez Family",
-		interest: "Kids + parent classes",
-		status: "New inquiry",
-		nextStep: "Invite to Saturday intro session",
-	},
-];
-
-export const demoMembers = [
-	{
-		id: "mem-001",
-		name: "Ari Johnson",
-		plan: "Family Unlimited",
-		status: "Active",
-		lastCheckIn: "Today, 4:28 PM",
-		belt: "Grey / White",
+		id: "massage",
+		title: "Massage",
+		line: "Restorative bodywork for tension, calm, and release.",
+		href: "/website/services/massage",
 	},
 	{
-		id: "mem-002",
-		name: "Chris Miller",
-		plan: "Adult Unlimited",
-		status: "Active",
-		lastCheckIn: "Yesterday, 7:02 PM",
-		belt: "Blue",
-	},
-	{
-		id: "mem-003",
-		name: "Sam Rivera",
-		plan: "Kids 2x Weekly",
-		status: "Payment review",
-		lastCheckIn: "Monday, 4:31 PM",
-		belt: "White",
+		id: "facials",
+		title: "Facials",
+		line: "Plant-forward skin rituals for glow, clarity, and care.",
+		href: "/website/services/facials",
 	},
 ];
 
-export const demoPayments = [
+export const consultationOptions = [
 	{
-		id: "pay-001",
-		member: "Ari Johnson",
-		plan: "Family Unlimited",
-		amount: "$219",
-		status: "Paid",
-		date: "June 1",
+		id: "phone",
+		title: "Phone Consultation",
+		description:
+			"Talk through your body goals, schedule, location, and treatment questions before choosing a service.",
 	},
 	{
-		id: "pay-002",
-		member: "Chris Miller",
-		plan: "Adult Unlimited",
-		amount: "$159",
-		status: "Paid",
-		date: "June 1",
+		id: "text",
+		title: "Text Consultation",
+		description:
+			"Quick support for simple questions, product guidance, service fit, and next-step booking.",
 	},
 	{
-		id: "pay-003",
-		member: "Sam Rivera",
-		plan: "Kids 2x Weekly",
-		amount: "$119",
-		status: "Needs review",
-		date: "June 3",
+		id: "zoom",
+		title: "Zoom Consultation",
+		description:
+			"A face-to-face planning session for treatment goals, at-home care, and multi-service support.",
+	},
+	{
+		id: "in-person",
+		title: "In-Person Consultation",
+		description:
+			"Meet in studio or at a popup location to choose the right body-care path before treatment.",
 	},
 ];
 
-export const demoMessages = [
+export const locations = [
 	{
-		id: "msg-001",
-		title: "Welcome to Heritage",
-		audience: "New trial families",
-		status: "Draft",
+		id: "long-island",
+		title: "Long Island",
+		status: "Home base",
+		description:
+			"Body care, sculpting, lymphatic work, facials, consultations, and product support by appointment.",
 	},
 	{
-		id: "msg-002",
-		title: "Belt testing reminder",
-		audience: "Eligible students",
-		status: "Scheduled",
+		id: "nyc",
+		title: "New York City",
+		status: "Popup / mobile",
+		description:
+			"Rotating care days for consultations, treatments, and client follow-up when dates are open.",
 	},
 	{
-		id: "msg-003",
-		title: "Summer family training week",
-		audience: "All members",
+		id: "dallas",
+		title: "Dallas",
+		status: "Popup / touring",
+		description:
+			"Texas-based booking windows for body goals consultations, sculpting, massage, and care planning.",
+	},
+	{
+		id: "austin",
+		title: "Austin",
+		status: "Popup / touring",
+		description:
+			"Seasonal popup care for clients who want treatment planning, bodywork, and at-home ritual support.",
+	},
+];
+
+export const productCategories = [
+	{
+		id: "body-oils",
+		title: "Body Oils",
+		kicker: "Daily ritual",
+		description:
+			"Plant-forward oils for body care, massage prep, glow, moisture, and between-session support.",
+	},
+	{
+		id: "body-tools",
+		title: "Body Tools",
+		kicker: "At-home care",
+		description:
+			"Tools for simple daily rituals, body awareness, soft-tissue support, and maintenance between appointments.",
+	},
+	{
+		id: "skin-care",
+		title: "Skin Care",
+		kicker: "Facial support",
+		description:
+			"Gentle skin-care products selected around hydration, glow, clarity, and ritual consistency.",
+	},
+	{
+		id: "hair-care",
+		title: "Hair Care",
+		kicker: "Natural care",
+		description:
+			"Hair oils, scalp care, and plant-forward support for textured hair, protective styles, and daily moisture.",
+	},
+];
+
+export const clientMessages = [
+	{
+		id: "welcome",
+		title: "Welcome to Raw Body",
+		body: "Your care path starts with your body goal, your location, and the support rhythm that fits your life.",
+	},
+	{
+		id: "consult-first",
+		title: "Consultation First",
+		body: "Book a phone, text, Zoom, or in-person consultation before choosing sculpting, lymphatic care, massage, facials, or products.",
+	},
+	{
+		id: "between-visits",
+		title: "Care Between Visits",
+		body: "At-home products and tools can help keep the ritual simple and repeatable between appointments.",
+	},
+];
+
+export const adminMetrics = [
+	{
+		label: "Consult requests",
+		value: "18",
+		detail: "New requests this week",
+	},
+	{
+		label: "Popup interest",
+		value: "42",
+		detail: "Across NYC, Dallas, and Austin",
+	},
+	{
+		label: "Product follows",
+		value: "27",
+		detail: "Clients waiting for ritual sets",
+	},
+	{
+		label: "Care plans",
+		value: "11",
+		detail: "Ready for follow-up",
+	},
+];
+
+export const ownerMetrics = adminMetrics;
+
+export const bookingQueue = [
+	{
+		client: "Maya R.",
+		service: "Lymphatic Sculpting",
+		location: "Long Island",
+		status: "Needs confirmation",
+	},
+	{
+		client: "Ana C.",
+		service: "Body Goals Consultation",
+		location: "Zoom",
 		status: "Ready",
 	},
-];
-
-export const demoEvents = [
 	{
-		id: "evt-001",
-		name: "Saturday Open Mat",
-		date: "June 8",
-		time: "10:00 AM",
-		type: "Community",
+		client: "Janelle T.",
+		service: "Facial + Product Guidance",
+		location: "NYC Popup",
+		status: "Popup interest",
 	},
 	{
-		id: "evt-002",
-		name: "Family Intro Day",
-		date: "June 15",
-		time: "11:30 AM",
-		type: "Lead generation",
-	},
-	{
-		id: "evt-003",
-		name: "Belt Testing",
-		date: "June 22",
-		time: "9:00 AM",
-		type: "Member milestone",
+		client: "Rosa M.",
+		service: "Massage",
+		location: "Dallas Popup",
+		status: "Waitlist",
 	},
 ];
 
-export const ownerMetrics = [
-	{ label: "Monthly recurring revenue", value: "$83.4k", trend: "+8.2%" },
-	{ label: "Trial conversion", value: "72%", trend: "+4.5%" },
-	{ label: "Past-due accounts", value: "7", trend: "-3 this week" },
-	{ label: "Average attendance", value: "74%", trend: "+6.1%" },
+export const adminTasks = [
+	"Confirm Long Island appointment windows",
+	"Review NYC popup interest list",
+	"Prepare product recommendations for consultations",
+	"Follow up with clients waiting on service fit",
 ];

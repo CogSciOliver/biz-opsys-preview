@@ -9,37 +9,38 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as WebsiteRouteImport } from './routes/website'
 import { Route as StyleGuideRouteImport } from './routes/style-guide'
 import { Route as StartDemoRouteImport } from './routes/start-demo'
-import { Route as JoinRouteImport } from './routes/join'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as WebsiteScheduleRouteImport } from './routes/website.schedule'
-import { Route as WebsiteMembershipsRouteImport } from './routes/website.memberships'
-import { Route as WebsiteEventsRouteImport } from './routes/website.events'
-import { Route as StaffSettingsRouteImport } from './routes/staff.settings'
-import { Route as StaffMembersRouteImport } from './routes/staff.members'
-import { Route as StaffDashboardRouteImport } from './routes/staff.dashboard'
-import { Route as StaffCheckInRouteImport } from './routes/staff.check-in'
-import { Route as StaffAnnouncementsRouteImport } from './routes/staff.announcements'
-import { Route as OwnerSettingsRouteImport } from './routes/owner.settings'
-import { Route as OwnerRevenueRouteImport } from './routes/owner.revenue'
-import { Route as OwnerRetentionRouteImport } from './routes/owner.retention'
-import { Route as OwnerOverviewRouteImport } from './routes/owner.overview'
-import { Route as MemberDashboardRouteImport } from './routes/member.dashboard'
-import { Route as MemberClassesRouteImport } from './routes/member.classes'
-import { Route as MemberBillingRouteImport } from './routes/member.billing'
+import { Route as ClientIndexRouteImport } from './routes/client/index'
+import { Route as AdminIndexRouteImport } from './routes/admin/index'
+import { Route as WebsiteServicesRouteImport } from './routes/website/services'
+import { Route as WebsiteProductsRouteImport } from './routes/website/products'
+import { Route as WebsiteMembershipsRouteImport } from './routes/website/memberships'
+import { Route as WebsiteLocationsRouteImport } from './routes/website/locations'
+import { Route as WebsiteJoinRouteImport } from './routes/website/join'
+import { Route as WebsiteEventsRouteImport } from './routes/website/events'
+import { Route as WebsiteConsultationsRouteImport } from './routes/website/consultations'
+import { Route as WebsiteBookRouteImport } from './routes/website/book'
 import { Route as DemoClerkRouteImport } from './routes/demo/clerk'
-import { Route as StaffCreateScheduleRouteImport } from './routes/staff.create.schedule'
-import { Route as StaffCreateMembershipRouteImport } from './routes/staff.create.membership'
-import { Route as StaffCreateEventRouteImport } from './routes/staff.create.event'
-import { Route as StaffCreateClassesRouteImport } from './routes/staff.create.classes'
+import { Route as ClientScheduleRouteImport } from './routes/client/schedule'
+import { Route as ClientDashboardRouteImport } from './routes/client/dashboard'
+import { Route as ClientBillingRouteImport } from './routes/client/billing'
+import { Route as AdminViewMembersRouteImport } from './routes/admin/view-members'
+import { Route as AdminSettingsRouteImport } from './routes/admin/settings'
+import { Route as AdminDashboardRouteImport } from './routes/admin/dashboard'
+import { Route as AdminCheckInRouteImport } from './routes/admin/check-in'
+import { Route as AdminAnnouncementsRouteImport } from './routes/admin/announcements'
+import { Route as WebsiteServicesServiceIdRouteImport } from './routes/website/services.$serviceId'
+import { Route as OwnerOwnerSettingsRouteImport } from './routes/owner/owner.settings'
+import { Route as OwnerOwnerRevenueRouteImport } from './routes/owner/owner.revenue'
+import { Route as OwnerOwnerRetentionRouteImport } from './routes/owner/owner.retention'
+import { Route as OwnerOwnerOverviewRouteImport } from './routes/owner/owner.overview'
+import { Route as AdminCreateCreateScheduleRouteImport } from './routes/admin/create/create.schedule'
+import { Route as AdminCreateCreateEventRouteImport } from './routes/admin/create/create.event'
+import { Route as AdminCreateCreateClientMembershipRouteImport } from './routes/admin/create/create.client-membership'
+import { Route as AdminCreateCreateBookingRouteImport } from './routes/admin/create/create.booking'
 
-const WebsiteRoute = WebsiteRouteImport.update({
-  id: '/website',
-  path: '/website',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const StyleGuideRoute = StyleGuideRouteImport.update({
   id: '/style-guide',
   path: '/style-guide',
@@ -50,89 +51,59 @@ const StartDemoRoute = StartDemoRouteImport.update({
   path: '/start-demo',
   getParentRoute: () => rootRouteImport,
 } as any)
-const JoinRoute = JoinRouteImport.update({
-  id: '/join',
-  path: '/join',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WebsiteScheduleRoute = WebsiteScheduleRouteImport.update({
-  id: '/schedule',
-  path: '/schedule',
-  getParentRoute: () => WebsiteRoute,
+const ClientIndexRoute = ClientIndexRouteImport.update({
+  id: '/client/',
+  path: '/client/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/admin/',
+  path: '/admin/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WebsiteServicesRoute = WebsiteServicesRouteImport.update({
+  id: '/website/services',
+  path: '/website/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WebsiteProductsRoute = WebsiteProductsRouteImport.update({
+  id: '/website/products',
+  path: '/website/products',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const WebsiteMembershipsRoute = WebsiteMembershipsRouteImport.update({
-  id: '/memberships',
-  path: '/memberships',
-  getParentRoute: () => WebsiteRoute,
+  id: '/website/memberships',
+  path: '/website/memberships',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WebsiteLocationsRoute = WebsiteLocationsRouteImport.update({
+  id: '/website/locations',
+  path: '/website/locations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WebsiteJoinRoute = WebsiteJoinRouteImport.update({
+  id: '/website/join',
+  path: '/website/join',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const WebsiteEventsRoute = WebsiteEventsRouteImport.update({
-  id: '/events',
-  path: '/events',
-  getParentRoute: () => WebsiteRoute,
-} as any)
-const StaffSettingsRoute = StaffSettingsRouteImport.update({
-  id: '/staff/settings',
-  path: '/staff/settings',
+  id: '/website/events',
+  path: '/website/events',
   getParentRoute: () => rootRouteImport,
 } as any)
-const StaffMembersRoute = StaffMembersRouteImport.update({
-  id: '/staff/members',
-  path: '/staff/members',
+const WebsiteConsultationsRoute = WebsiteConsultationsRouteImport.update({
+  id: '/website/consultations',
+  path: '/website/consultations',
   getParentRoute: () => rootRouteImport,
 } as any)
-const StaffDashboardRoute = StaffDashboardRouteImport.update({
-  id: '/staff/dashboard',
-  path: '/staff/dashboard',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const StaffCheckInRoute = StaffCheckInRouteImport.update({
-  id: '/staff/check-in',
-  path: '/staff/check-in',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const StaffAnnouncementsRoute = StaffAnnouncementsRouteImport.update({
-  id: '/staff/announcements',
-  path: '/staff/announcements',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OwnerSettingsRoute = OwnerSettingsRouteImport.update({
-  id: '/owner/settings',
-  path: '/owner/settings',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OwnerRevenueRoute = OwnerRevenueRouteImport.update({
-  id: '/owner/revenue',
-  path: '/owner/revenue',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OwnerRetentionRoute = OwnerRetentionRouteImport.update({
-  id: '/owner/retention',
-  path: '/owner/retention',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OwnerOverviewRoute = OwnerOverviewRouteImport.update({
-  id: '/owner/overview',
-  path: '/owner/overview',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MemberDashboardRoute = MemberDashboardRouteImport.update({
-  id: '/member/dashboard',
-  path: '/member/dashboard',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MemberClassesRoute = MemberClassesRouteImport.update({
-  id: '/member/classes',
-  path: '/member/classes',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MemberBillingRoute = MemberBillingRouteImport.update({
-  id: '/member/billing',
-  path: '/member/billing',
+const WebsiteBookRoute = WebsiteBookRouteImport.update({
+  id: '/website/book',
+  path: '/website/book',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DemoClerkRoute = DemoClerkRouteImport.update({
@@ -140,227 +111,333 @@ const DemoClerkRoute = DemoClerkRouteImport.update({
   path: '/demo/clerk',
   getParentRoute: () => rootRouteImport,
 } as any)
-const StaffCreateScheduleRoute = StaffCreateScheduleRouteImport.update({
-  id: '/staff/create/schedule',
-  path: '/staff/create/schedule',
+const ClientScheduleRoute = ClientScheduleRouteImport.update({
+  id: '/client/schedule',
+  path: '/client/schedule',
   getParentRoute: () => rootRouteImport,
 } as any)
-const StaffCreateMembershipRoute = StaffCreateMembershipRouteImport.update({
-  id: '/staff/create/membership',
-  path: '/staff/create/membership',
+const ClientDashboardRoute = ClientDashboardRouteImport.update({
+  id: '/client/dashboard',
+  path: '/client/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
-const StaffCreateEventRoute = StaffCreateEventRouteImport.update({
-  id: '/staff/create/event',
-  path: '/staff/create/event',
+const ClientBillingRoute = ClientBillingRouteImport.update({
+  id: '/client/billing',
+  path: '/client/billing',
   getParentRoute: () => rootRouteImport,
 } as any)
-const StaffCreateClassesRoute = StaffCreateClassesRouteImport.update({
-  id: '/staff/create/classes',
-  path: '/staff/create/classes',
+const AdminViewMembersRoute = AdminViewMembersRouteImport.update({
+  id: '/admin/view-members',
+  path: '/admin/view-members',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminSettingsRoute = AdminSettingsRouteImport.update({
+  id: '/admin/settings',
+  path: '/admin/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminDashboardRoute = AdminDashboardRouteImport.update({
+  id: '/admin/dashboard',
+  path: '/admin/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminCheckInRoute = AdminCheckInRouteImport.update({
+  id: '/admin/check-in',
+  path: '/admin/check-in',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminAnnouncementsRoute = AdminAnnouncementsRouteImport.update({
+  id: '/admin/announcements',
+  path: '/admin/announcements',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WebsiteServicesServiceIdRoute =
+  WebsiteServicesServiceIdRouteImport.update({
+    id: '/$serviceId',
+    path: '/$serviceId',
+    getParentRoute: () => WebsiteServicesRoute,
+  } as any)
+const OwnerOwnerSettingsRoute = OwnerOwnerSettingsRouteImport.update({
+  id: '/owner/owner/settings',
+  path: '/owner/owner/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OwnerOwnerRevenueRoute = OwnerOwnerRevenueRouteImport.update({
+  id: '/owner/owner/revenue',
+  path: '/owner/owner/revenue',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OwnerOwnerRetentionRoute = OwnerOwnerRetentionRouteImport.update({
+  id: '/owner/owner/retention',
+  path: '/owner/owner/retention',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OwnerOwnerOverviewRoute = OwnerOwnerOverviewRouteImport.update({
+  id: '/owner/owner/overview',
+  path: '/owner/owner/overview',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminCreateCreateScheduleRoute =
+  AdminCreateCreateScheduleRouteImport.update({
+    id: '/admin/create/create/schedule',
+    path: '/admin/create/create/schedule',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AdminCreateCreateEventRoute = AdminCreateCreateEventRouteImport.update({
+  id: '/admin/create/create/event',
+  path: '/admin/create/create/event',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminCreateCreateClientMembershipRoute =
+  AdminCreateCreateClientMembershipRouteImport.update({
+    id: '/admin/create/create/client-membership',
+    path: '/admin/create/create/client-membership',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AdminCreateCreateBookingRoute =
+  AdminCreateCreateBookingRouteImport.update({
+    id: '/admin/create/create/booking',
+    path: '/admin/create/create/booking',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/join': typeof JoinRoute
   '/start-demo': typeof StartDemoRoute
   '/style-guide': typeof StyleGuideRoute
-  '/website': typeof WebsiteRouteWithChildren
+  '/admin/announcements': typeof AdminAnnouncementsRoute
+  '/admin/check-in': typeof AdminCheckInRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/admin/view-members': typeof AdminViewMembersRoute
+  '/client/billing': typeof ClientBillingRoute
+  '/client/dashboard': typeof ClientDashboardRoute
+  '/client/schedule': typeof ClientScheduleRoute
   '/demo/clerk': typeof DemoClerkRoute
-  '/member/billing': typeof MemberBillingRoute
-  '/member/classes': typeof MemberClassesRoute
-  '/member/dashboard': typeof MemberDashboardRoute
-  '/owner/overview': typeof OwnerOverviewRoute
-  '/owner/retention': typeof OwnerRetentionRoute
-  '/owner/revenue': typeof OwnerRevenueRoute
-  '/owner/settings': typeof OwnerSettingsRoute
-  '/staff/announcements': typeof StaffAnnouncementsRoute
-  '/staff/check-in': typeof StaffCheckInRoute
-  '/staff/dashboard': typeof StaffDashboardRoute
-  '/staff/members': typeof StaffMembersRoute
-  '/staff/settings': typeof StaffSettingsRoute
+  '/website/book': typeof WebsiteBookRoute
+  '/website/consultations': typeof WebsiteConsultationsRoute
   '/website/events': typeof WebsiteEventsRoute
+  '/website/join': typeof WebsiteJoinRoute
+  '/website/locations': typeof WebsiteLocationsRoute
   '/website/memberships': typeof WebsiteMembershipsRoute
-  '/website/schedule': typeof WebsiteScheduleRoute
-  '/staff/create/classes': typeof StaffCreateClassesRoute
-  '/staff/create/event': typeof StaffCreateEventRoute
-  '/staff/create/membership': typeof StaffCreateMembershipRoute
-  '/staff/create/schedule': typeof StaffCreateScheduleRoute
+  '/website/products': typeof WebsiteProductsRoute
+  '/website/services': typeof WebsiteServicesRouteWithChildren
+  '/admin/': typeof AdminIndexRoute
+  '/client/': typeof ClientIndexRoute
+  '/owner/owner/overview': typeof OwnerOwnerOverviewRoute
+  '/owner/owner/retention': typeof OwnerOwnerRetentionRoute
+  '/owner/owner/revenue': typeof OwnerOwnerRevenueRoute
+  '/owner/owner/settings': typeof OwnerOwnerSettingsRoute
+  '/website/services/$serviceId': typeof WebsiteServicesServiceIdRoute
+  '/admin/create/create/booking': typeof AdminCreateCreateBookingRoute
+  '/admin/create/create/client-membership': typeof AdminCreateCreateClientMembershipRoute
+  '/admin/create/create/event': typeof AdminCreateCreateEventRoute
+  '/admin/create/create/schedule': typeof AdminCreateCreateScheduleRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/join': typeof JoinRoute
   '/start-demo': typeof StartDemoRoute
   '/style-guide': typeof StyleGuideRoute
-  '/website': typeof WebsiteRouteWithChildren
+  '/admin/announcements': typeof AdminAnnouncementsRoute
+  '/admin/check-in': typeof AdminCheckInRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/admin/view-members': typeof AdminViewMembersRoute
+  '/client/billing': typeof ClientBillingRoute
+  '/client/dashboard': typeof ClientDashboardRoute
+  '/client/schedule': typeof ClientScheduleRoute
   '/demo/clerk': typeof DemoClerkRoute
-  '/member/billing': typeof MemberBillingRoute
-  '/member/classes': typeof MemberClassesRoute
-  '/member/dashboard': typeof MemberDashboardRoute
-  '/owner/overview': typeof OwnerOverviewRoute
-  '/owner/retention': typeof OwnerRetentionRoute
-  '/owner/revenue': typeof OwnerRevenueRoute
-  '/owner/settings': typeof OwnerSettingsRoute
-  '/staff/announcements': typeof StaffAnnouncementsRoute
-  '/staff/check-in': typeof StaffCheckInRoute
-  '/staff/dashboard': typeof StaffDashboardRoute
-  '/staff/members': typeof StaffMembersRoute
-  '/staff/settings': typeof StaffSettingsRoute
+  '/website/book': typeof WebsiteBookRoute
+  '/website/consultations': typeof WebsiteConsultationsRoute
   '/website/events': typeof WebsiteEventsRoute
+  '/website/join': typeof WebsiteJoinRoute
+  '/website/locations': typeof WebsiteLocationsRoute
   '/website/memberships': typeof WebsiteMembershipsRoute
-  '/website/schedule': typeof WebsiteScheduleRoute
-  '/staff/create/classes': typeof StaffCreateClassesRoute
-  '/staff/create/event': typeof StaffCreateEventRoute
-  '/staff/create/membership': typeof StaffCreateMembershipRoute
-  '/staff/create/schedule': typeof StaffCreateScheduleRoute
+  '/website/products': typeof WebsiteProductsRoute
+  '/website/services': typeof WebsiteServicesRouteWithChildren
+  '/admin': typeof AdminIndexRoute
+  '/client': typeof ClientIndexRoute
+  '/owner/owner/overview': typeof OwnerOwnerOverviewRoute
+  '/owner/owner/retention': typeof OwnerOwnerRetentionRoute
+  '/owner/owner/revenue': typeof OwnerOwnerRevenueRoute
+  '/owner/owner/settings': typeof OwnerOwnerSettingsRoute
+  '/website/services/$serviceId': typeof WebsiteServicesServiceIdRoute
+  '/admin/create/create/booking': typeof AdminCreateCreateBookingRoute
+  '/admin/create/create/client-membership': typeof AdminCreateCreateClientMembershipRoute
+  '/admin/create/create/event': typeof AdminCreateCreateEventRoute
+  '/admin/create/create/schedule': typeof AdminCreateCreateScheduleRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/join': typeof JoinRoute
   '/start-demo': typeof StartDemoRoute
   '/style-guide': typeof StyleGuideRoute
-  '/website': typeof WebsiteRouteWithChildren
+  '/admin/announcements': typeof AdminAnnouncementsRoute
+  '/admin/check-in': typeof AdminCheckInRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/admin/view-members': typeof AdminViewMembersRoute
+  '/client/billing': typeof ClientBillingRoute
+  '/client/dashboard': typeof ClientDashboardRoute
+  '/client/schedule': typeof ClientScheduleRoute
   '/demo/clerk': typeof DemoClerkRoute
-  '/member/billing': typeof MemberBillingRoute
-  '/member/classes': typeof MemberClassesRoute
-  '/member/dashboard': typeof MemberDashboardRoute
-  '/owner/overview': typeof OwnerOverviewRoute
-  '/owner/retention': typeof OwnerRetentionRoute
-  '/owner/revenue': typeof OwnerRevenueRoute
-  '/owner/settings': typeof OwnerSettingsRoute
-  '/staff/announcements': typeof StaffAnnouncementsRoute
-  '/staff/check-in': typeof StaffCheckInRoute
-  '/staff/dashboard': typeof StaffDashboardRoute
-  '/staff/members': typeof StaffMembersRoute
-  '/staff/settings': typeof StaffSettingsRoute
+  '/website/book': typeof WebsiteBookRoute
+  '/website/consultations': typeof WebsiteConsultationsRoute
   '/website/events': typeof WebsiteEventsRoute
+  '/website/join': typeof WebsiteJoinRoute
+  '/website/locations': typeof WebsiteLocationsRoute
   '/website/memberships': typeof WebsiteMembershipsRoute
-  '/website/schedule': typeof WebsiteScheduleRoute
-  '/staff/create/classes': typeof StaffCreateClassesRoute
-  '/staff/create/event': typeof StaffCreateEventRoute
-  '/staff/create/membership': typeof StaffCreateMembershipRoute
-  '/staff/create/schedule': typeof StaffCreateScheduleRoute
+  '/website/products': typeof WebsiteProductsRoute
+  '/website/services': typeof WebsiteServicesRouteWithChildren
+  '/admin/': typeof AdminIndexRoute
+  '/client/': typeof ClientIndexRoute
+  '/owner/owner/overview': typeof OwnerOwnerOverviewRoute
+  '/owner/owner/retention': typeof OwnerOwnerRetentionRoute
+  '/owner/owner/revenue': typeof OwnerOwnerRevenueRoute
+  '/owner/owner/settings': typeof OwnerOwnerSettingsRoute
+  '/website/services/$serviceId': typeof WebsiteServicesServiceIdRoute
+  '/admin/create/create/booking': typeof AdminCreateCreateBookingRoute
+  '/admin/create/create/client-membership': typeof AdminCreateCreateClientMembershipRoute
+  '/admin/create/create/event': typeof AdminCreateCreateEventRoute
+  '/admin/create/create/schedule': typeof AdminCreateCreateScheduleRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/join'
     | '/start-demo'
     | '/style-guide'
-    | '/website'
+    | '/admin/announcements'
+    | '/admin/check-in'
+    | '/admin/dashboard'
+    | '/admin/settings'
+    | '/admin/view-members'
+    | '/client/billing'
+    | '/client/dashboard'
+    | '/client/schedule'
     | '/demo/clerk'
-    | '/member/billing'
-    | '/member/classes'
-    | '/member/dashboard'
-    | '/owner/overview'
-    | '/owner/retention'
-    | '/owner/revenue'
-    | '/owner/settings'
-    | '/staff/announcements'
-    | '/staff/check-in'
-    | '/staff/dashboard'
-    | '/staff/members'
-    | '/staff/settings'
+    | '/website/book'
+    | '/website/consultations'
     | '/website/events'
+    | '/website/join'
+    | '/website/locations'
     | '/website/memberships'
-    | '/website/schedule'
-    | '/staff/create/classes'
-    | '/staff/create/event'
-    | '/staff/create/membership'
-    | '/staff/create/schedule'
+    | '/website/products'
+    | '/website/services'
+    | '/admin/'
+    | '/client/'
+    | '/owner/owner/overview'
+    | '/owner/owner/retention'
+    | '/owner/owner/revenue'
+    | '/owner/owner/settings'
+    | '/website/services/$serviceId'
+    | '/admin/create/create/booking'
+    | '/admin/create/create/client-membership'
+    | '/admin/create/create/event'
+    | '/admin/create/create/schedule'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/join'
     | '/start-demo'
     | '/style-guide'
-    | '/website'
+    | '/admin/announcements'
+    | '/admin/check-in'
+    | '/admin/dashboard'
+    | '/admin/settings'
+    | '/admin/view-members'
+    | '/client/billing'
+    | '/client/dashboard'
+    | '/client/schedule'
     | '/demo/clerk'
-    | '/member/billing'
-    | '/member/classes'
-    | '/member/dashboard'
-    | '/owner/overview'
-    | '/owner/retention'
-    | '/owner/revenue'
-    | '/owner/settings'
-    | '/staff/announcements'
-    | '/staff/check-in'
-    | '/staff/dashboard'
-    | '/staff/members'
-    | '/staff/settings'
+    | '/website/book'
+    | '/website/consultations'
     | '/website/events'
+    | '/website/join'
+    | '/website/locations'
     | '/website/memberships'
-    | '/website/schedule'
-    | '/staff/create/classes'
-    | '/staff/create/event'
-    | '/staff/create/membership'
-    | '/staff/create/schedule'
+    | '/website/products'
+    | '/website/services'
+    | '/admin'
+    | '/client'
+    | '/owner/owner/overview'
+    | '/owner/owner/retention'
+    | '/owner/owner/revenue'
+    | '/owner/owner/settings'
+    | '/website/services/$serviceId'
+    | '/admin/create/create/booking'
+    | '/admin/create/create/client-membership'
+    | '/admin/create/create/event'
+    | '/admin/create/create/schedule'
   id:
     | '__root__'
     | '/'
-    | '/join'
     | '/start-demo'
     | '/style-guide'
-    | '/website'
+    | '/admin/announcements'
+    | '/admin/check-in'
+    | '/admin/dashboard'
+    | '/admin/settings'
+    | '/admin/view-members'
+    | '/client/billing'
+    | '/client/dashboard'
+    | '/client/schedule'
     | '/demo/clerk'
-    | '/member/billing'
-    | '/member/classes'
-    | '/member/dashboard'
-    | '/owner/overview'
-    | '/owner/retention'
-    | '/owner/revenue'
-    | '/owner/settings'
-    | '/staff/announcements'
-    | '/staff/check-in'
-    | '/staff/dashboard'
-    | '/staff/members'
-    | '/staff/settings'
+    | '/website/book'
+    | '/website/consultations'
     | '/website/events'
+    | '/website/join'
+    | '/website/locations'
     | '/website/memberships'
-    | '/website/schedule'
-    | '/staff/create/classes'
-    | '/staff/create/event'
-    | '/staff/create/membership'
-    | '/staff/create/schedule'
+    | '/website/products'
+    | '/website/services'
+    | '/admin/'
+    | '/client/'
+    | '/owner/owner/overview'
+    | '/owner/owner/retention'
+    | '/owner/owner/revenue'
+    | '/owner/owner/settings'
+    | '/website/services/$serviceId'
+    | '/admin/create/create/booking'
+    | '/admin/create/create/client-membership'
+    | '/admin/create/create/event'
+    | '/admin/create/create/schedule'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  JoinRoute: typeof JoinRoute
   StartDemoRoute: typeof StartDemoRoute
   StyleGuideRoute: typeof StyleGuideRoute
-  WebsiteRoute: typeof WebsiteRouteWithChildren
+  AdminAnnouncementsRoute: typeof AdminAnnouncementsRoute
+  AdminCheckInRoute: typeof AdminCheckInRoute
+  AdminDashboardRoute: typeof AdminDashboardRoute
+  AdminSettingsRoute: typeof AdminSettingsRoute
+  AdminViewMembersRoute: typeof AdminViewMembersRoute
+  ClientBillingRoute: typeof ClientBillingRoute
+  ClientDashboardRoute: typeof ClientDashboardRoute
+  ClientScheduleRoute: typeof ClientScheduleRoute
   DemoClerkRoute: typeof DemoClerkRoute
-  MemberBillingRoute: typeof MemberBillingRoute
-  MemberClassesRoute: typeof MemberClassesRoute
-  MemberDashboardRoute: typeof MemberDashboardRoute
-  OwnerOverviewRoute: typeof OwnerOverviewRoute
-  OwnerRetentionRoute: typeof OwnerRetentionRoute
-  OwnerRevenueRoute: typeof OwnerRevenueRoute
-  OwnerSettingsRoute: typeof OwnerSettingsRoute
-  StaffAnnouncementsRoute: typeof StaffAnnouncementsRoute
-  StaffCheckInRoute: typeof StaffCheckInRoute
-  StaffDashboardRoute: typeof StaffDashboardRoute
-  StaffMembersRoute: typeof StaffMembersRoute
-  StaffSettingsRoute: typeof StaffSettingsRoute
-  StaffCreateClassesRoute: typeof StaffCreateClassesRoute
-  StaffCreateEventRoute: typeof StaffCreateEventRoute
-  StaffCreateMembershipRoute: typeof StaffCreateMembershipRoute
-  StaffCreateScheduleRoute: typeof StaffCreateScheduleRoute
+  WebsiteBookRoute: typeof WebsiteBookRoute
+  WebsiteConsultationsRoute: typeof WebsiteConsultationsRoute
+  WebsiteEventsRoute: typeof WebsiteEventsRoute
+  WebsiteJoinRoute: typeof WebsiteJoinRoute
+  WebsiteLocationsRoute: typeof WebsiteLocationsRoute
+  WebsiteMembershipsRoute: typeof WebsiteMembershipsRoute
+  WebsiteProductsRoute: typeof WebsiteProductsRoute
+  WebsiteServicesRoute: typeof WebsiteServicesRouteWithChildren
+  AdminIndexRoute: typeof AdminIndexRoute
+  ClientIndexRoute: typeof ClientIndexRoute
+  OwnerOwnerOverviewRoute: typeof OwnerOwnerOverviewRoute
+  OwnerOwnerRetentionRoute: typeof OwnerOwnerRetentionRoute
+  OwnerOwnerRevenueRoute: typeof OwnerOwnerRevenueRoute
+  OwnerOwnerSettingsRoute: typeof OwnerOwnerSettingsRoute
+  AdminCreateCreateBookingRoute: typeof AdminCreateCreateBookingRoute
+  AdminCreateCreateClientMembershipRoute: typeof AdminCreateCreateClientMembershipRoute
+  AdminCreateCreateEventRoute: typeof AdminCreateCreateEventRoute
+  AdminCreateCreateScheduleRoute: typeof AdminCreateCreateScheduleRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/website': {
-      id: '/website'
-      path: '/website'
-      fullPath: '/website'
-      preLoaderRoute: typeof WebsiteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/style-guide': {
       id: '/style-guide'
       path: '/style-guide'
@@ -375,13 +452,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof StartDemoRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/join': {
-      id: '/join'
-      path: '/join'
-      fullPath: '/join'
-      preLoaderRoute: typeof JoinRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -389,109 +459,74 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/website/schedule': {
-      id: '/website/schedule'
-      path: '/schedule'
-      fullPath: '/website/schedule'
-      preLoaderRoute: typeof WebsiteScheduleRouteImport
-      parentRoute: typeof WebsiteRoute
+    '/client/': {
+      id: '/client/'
+      path: '/client'
+      fullPath: '/client/'
+      preLoaderRoute: typeof ClientIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/': {
+      id: '/admin/'
+      path: '/admin'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/website/services': {
+      id: '/website/services'
+      path: '/website/services'
+      fullPath: '/website/services'
+      preLoaderRoute: typeof WebsiteServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/website/products': {
+      id: '/website/products'
+      path: '/website/products'
+      fullPath: '/website/products'
+      preLoaderRoute: typeof WebsiteProductsRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/website/memberships': {
       id: '/website/memberships'
-      path: '/memberships'
+      path: '/website/memberships'
       fullPath: '/website/memberships'
       preLoaderRoute: typeof WebsiteMembershipsRouteImport
-      parentRoute: typeof WebsiteRoute
+      parentRoute: typeof rootRouteImport
+    }
+    '/website/locations': {
+      id: '/website/locations'
+      path: '/website/locations'
+      fullPath: '/website/locations'
+      preLoaderRoute: typeof WebsiteLocationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/website/join': {
+      id: '/website/join'
+      path: '/website/join'
+      fullPath: '/website/join'
+      preLoaderRoute: typeof WebsiteJoinRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/website/events': {
       id: '/website/events'
-      path: '/events'
+      path: '/website/events'
       fullPath: '/website/events'
       preLoaderRoute: typeof WebsiteEventsRouteImport
-      parentRoute: typeof WebsiteRoute
-    }
-    '/staff/settings': {
-      id: '/staff/settings'
-      path: '/staff/settings'
-      fullPath: '/staff/settings'
-      preLoaderRoute: typeof StaffSettingsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/staff/members': {
-      id: '/staff/members'
-      path: '/staff/members'
-      fullPath: '/staff/members'
-      preLoaderRoute: typeof StaffMembersRouteImport
+    '/website/consultations': {
+      id: '/website/consultations'
+      path: '/website/consultations'
+      fullPath: '/website/consultations'
+      preLoaderRoute: typeof WebsiteConsultationsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/staff/dashboard': {
-      id: '/staff/dashboard'
-      path: '/staff/dashboard'
-      fullPath: '/staff/dashboard'
-      preLoaderRoute: typeof StaffDashboardRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/staff/check-in': {
-      id: '/staff/check-in'
-      path: '/staff/check-in'
-      fullPath: '/staff/check-in'
-      preLoaderRoute: typeof StaffCheckInRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/staff/announcements': {
-      id: '/staff/announcements'
-      path: '/staff/announcements'
-      fullPath: '/staff/announcements'
-      preLoaderRoute: typeof StaffAnnouncementsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/owner/settings': {
-      id: '/owner/settings'
-      path: '/owner/settings'
-      fullPath: '/owner/settings'
-      preLoaderRoute: typeof OwnerSettingsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/owner/revenue': {
-      id: '/owner/revenue'
-      path: '/owner/revenue'
-      fullPath: '/owner/revenue'
-      preLoaderRoute: typeof OwnerRevenueRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/owner/retention': {
-      id: '/owner/retention'
-      path: '/owner/retention'
-      fullPath: '/owner/retention'
-      preLoaderRoute: typeof OwnerRetentionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/owner/overview': {
-      id: '/owner/overview'
-      path: '/owner/overview'
-      fullPath: '/owner/overview'
-      preLoaderRoute: typeof OwnerOverviewRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/member/dashboard': {
-      id: '/member/dashboard'
-      path: '/member/dashboard'
-      fullPath: '/member/dashboard'
-      preLoaderRoute: typeof MemberDashboardRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/member/classes': {
-      id: '/member/classes'
-      path: '/member/classes'
-      fullPath: '/member/classes'
-      preLoaderRoute: typeof MemberClassesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/member/billing': {
-      id: '/member/billing'
-      path: '/member/billing'
-      fullPath: '/member/billing'
-      preLoaderRoute: typeof MemberBillingRouteImport
+    '/website/book': {
+      id: '/website/book'
+      path: '/website/book'
+      fullPath: '/website/book'
+      preLoaderRoute: typeof WebsiteBookRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/demo/clerk': {
@@ -501,75 +536,172 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DemoClerkRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/staff/create/schedule': {
-      id: '/staff/create/schedule'
-      path: '/staff/create/schedule'
-      fullPath: '/staff/create/schedule'
-      preLoaderRoute: typeof StaffCreateScheduleRouteImport
+    '/client/schedule': {
+      id: '/client/schedule'
+      path: '/client/schedule'
+      fullPath: '/client/schedule'
+      preLoaderRoute: typeof ClientScheduleRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/staff/create/membership': {
-      id: '/staff/create/membership'
-      path: '/staff/create/membership'
-      fullPath: '/staff/create/membership'
-      preLoaderRoute: typeof StaffCreateMembershipRouteImport
+    '/client/dashboard': {
+      id: '/client/dashboard'
+      path: '/client/dashboard'
+      fullPath: '/client/dashboard'
+      preLoaderRoute: typeof ClientDashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/staff/create/event': {
-      id: '/staff/create/event'
-      path: '/staff/create/event'
-      fullPath: '/staff/create/event'
-      preLoaderRoute: typeof StaffCreateEventRouteImport
+    '/client/billing': {
+      id: '/client/billing'
+      path: '/client/billing'
+      fullPath: '/client/billing'
+      preLoaderRoute: typeof ClientBillingRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/staff/create/classes': {
-      id: '/staff/create/classes'
-      path: '/staff/create/classes'
-      fullPath: '/staff/create/classes'
-      preLoaderRoute: typeof StaffCreateClassesRouteImport
+    '/admin/view-members': {
+      id: '/admin/view-members'
+      path: '/admin/view-members'
+      fullPath: '/admin/view-members'
+      preLoaderRoute: typeof AdminViewMembersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/settings': {
+      id: '/admin/settings'
+      path: '/admin/settings'
+      fullPath: '/admin/settings'
+      preLoaderRoute: typeof AdminSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/dashboard': {
+      id: '/admin/dashboard'
+      path: '/admin/dashboard'
+      fullPath: '/admin/dashboard'
+      preLoaderRoute: typeof AdminDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/check-in': {
+      id: '/admin/check-in'
+      path: '/admin/check-in'
+      fullPath: '/admin/check-in'
+      preLoaderRoute: typeof AdminCheckInRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/announcements': {
+      id: '/admin/announcements'
+      path: '/admin/announcements'
+      fullPath: '/admin/announcements'
+      preLoaderRoute: typeof AdminAnnouncementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/website/services/$serviceId': {
+      id: '/website/services/$serviceId'
+      path: '/$serviceId'
+      fullPath: '/website/services/$serviceId'
+      preLoaderRoute: typeof WebsiteServicesServiceIdRouteImport
+      parentRoute: typeof WebsiteServicesRoute
+    }
+    '/owner/owner/settings': {
+      id: '/owner/owner/settings'
+      path: '/owner/owner/settings'
+      fullPath: '/owner/owner/settings'
+      preLoaderRoute: typeof OwnerOwnerSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/owner/owner/revenue': {
+      id: '/owner/owner/revenue'
+      path: '/owner/owner/revenue'
+      fullPath: '/owner/owner/revenue'
+      preLoaderRoute: typeof OwnerOwnerRevenueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/owner/owner/retention': {
+      id: '/owner/owner/retention'
+      path: '/owner/owner/retention'
+      fullPath: '/owner/owner/retention'
+      preLoaderRoute: typeof OwnerOwnerRetentionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/owner/owner/overview': {
+      id: '/owner/owner/overview'
+      path: '/owner/owner/overview'
+      fullPath: '/owner/owner/overview'
+      preLoaderRoute: typeof OwnerOwnerOverviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/create/create/schedule': {
+      id: '/admin/create/create/schedule'
+      path: '/admin/create/create/schedule'
+      fullPath: '/admin/create/create/schedule'
+      preLoaderRoute: typeof AdminCreateCreateScheduleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/create/create/event': {
+      id: '/admin/create/create/event'
+      path: '/admin/create/create/event'
+      fullPath: '/admin/create/create/event'
+      preLoaderRoute: typeof AdminCreateCreateEventRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/create/create/client-membership': {
+      id: '/admin/create/create/client-membership'
+      path: '/admin/create/create/client-membership'
+      fullPath: '/admin/create/create/client-membership'
+      preLoaderRoute: typeof AdminCreateCreateClientMembershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/create/create/booking': {
+      id: '/admin/create/create/booking'
+      path: '/admin/create/create/booking'
+      fullPath: '/admin/create/create/booking'
+      preLoaderRoute: typeof AdminCreateCreateBookingRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
 }
 
-interface WebsiteRouteChildren {
-  WebsiteEventsRoute: typeof WebsiteEventsRoute
-  WebsiteMembershipsRoute: typeof WebsiteMembershipsRoute
-  WebsiteScheduleRoute: typeof WebsiteScheduleRoute
+interface WebsiteServicesRouteChildren {
+  WebsiteServicesServiceIdRoute: typeof WebsiteServicesServiceIdRoute
 }
 
-const WebsiteRouteChildren: WebsiteRouteChildren = {
-  WebsiteEventsRoute: WebsiteEventsRoute,
-  WebsiteMembershipsRoute: WebsiteMembershipsRoute,
-  WebsiteScheduleRoute: WebsiteScheduleRoute,
+const WebsiteServicesRouteChildren: WebsiteServicesRouteChildren = {
+  WebsiteServicesServiceIdRoute: WebsiteServicesServiceIdRoute,
 }
 
-const WebsiteRouteWithChildren =
-  WebsiteRoute._addFileChildren(WebsiteRouteChildren)
+const WebsiteServicesRouteWithChildren = WebsiteServicesRoute._addFileChildren(
+  WebsiteServicesRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  JoinRoute: JoinRoute,
   StartDemoRoute: StartDemoRoute,
   StyleGuideRoute: StyleGuideRoute,
-  WebsiteRoute: WebsiteRouteWithChildren,
+  AdminAnnouncementsRoute: AdminAnnouncementsRoute,
+  AdminCheckInRoute: AdminCheckInRoute,
+  AdminDashboardRoute: AdminDashboardRoute,
+  AdminSettingsRoute: AdminSettingsRoute,
+  AdminViewMembersRoute: AdminViewMembersRoute,
+  ClientBillingRoute: ClientBillingRoute,
+  ClientDashboardRoute: ClientDashboardRoute,
+  ClientScheduleRoute: ClientScheduleRoute,
   DemoClerkRoute: DemoClerkRoute,
-  MemberBillingRoute: MemberBillingRoute,
-  MemberClassesRoute: MemberClassesRoute,
-  MemberDashboardRoute: MemberDashboardRoute,
-  OwnerOverviewRoute: OwnerOverviewRoute,
-  OwnerRetentionRoute: OwnerRetentionRoute,
-  OwnerRevenueRoute: OwnerRevenueRoute,
-  OwnerSettingsRoute: OwnerSettingsRoute,
-  StaffAnnouncementsRoute: StaffAnnouncementsRoute,
-  StaffCheckInRoute: StaffCheckInRoute,
-  StaffDashboardRoute: StaffDashboardRoute,
-  StaffMembersRoute: StaffMembersRoute,
-  StaffSettingsRoute: StaffSettingsRoute,
-  StaffCreateClassesRoute: StaffCreateClassesRoute,
-  StaffCreateEventRoute: StaffCreateEventRoute,
-  StaffCreateMembershipRoute: StaffCreateMembershipRoute,
-  StaffCreateScheduleRoute: StaffCreateScheduleRoute,
+  WebsiteBookRoute: WebsiteBookRoute,
+  WebsiteConsultationsRoute: WebsiteConsultationsRoute,
+  WebsiteEventsRoute: WebsiteEventsRoute,
+  WebsiteJoinRoute: WebsiteJoinRoute,
+  WebsiteLocationsRoute: WebsiteLocationsRoute,
+  WebsiteMembershipsRoute: WebsiteMembershipsRoute,
+  WebsiteProductsRoute: WebsiteProductsRoute,
+  WebsiteServicesRoute: WebsiteServicesRouteWithChildren,
+  AdminIndexRoute: AdminIndexRoute,
+  ClientIndexRoute: ClientIndexRoute,
+  OwnerOwnerOverviewRoute: OwnerOwnerOverviewRoute,
+  OwnerOwnerRetentionRoute: OwnerOwnerRetentionRoute,
+  OwnerOwnerRevenueRoute: OwnerOwnerRevenueRoute,
+  OwnerOwnerSettingsRoute: OwnerOwnerSettingsRoute,
+  AdminCreateCreateBookingRoute: AdminCreateCreateBookingRoute,
+  AdminCreateCreateClientMembershipRoute:
+    AdminCreateCreateClientMembershipRoute,
+  AdminCreateCreateEventRoute: AdminCreateCreateEventRoute,
+  AdminCreateCreateScheduleRoute: AdminCreateCreateScheduleRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

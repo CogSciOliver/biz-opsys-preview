@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { AppShell } from "../components/AppShell";
-import { BillingSummary } from "../components/BillingSummary";
-import { DashboardCard } from "../components/DashboardCard";
-import { MetricCard } from "../components/MetricCard";
-import { demoPayments, ownerMetrics } from "../data/demoBusiness";
+import { AppShell } from "../../components/AppShell";
+import { BillingSummary } from "../../components/BillingSummary";
+import { DashboardCard } from "../../components/DashboardCard";
+import { MetricCard } from "../../components/MetricCard";
+import { demoPayments, ownerMetrics } from "../../data/demoBusiness";
 
-export const Route = createFileRoute("/owner/revenue")({
+export const Route = createFileRoute("/owner/owner/revenue")({
 	component: OwnerRevenuePage,
 });
 

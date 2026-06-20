@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { AppShell } from "../components/AppShell";
-import { DashboardCard } from "../components/DashboardCard";
-import { EventList } from "../components/EventList";
-import { demoEvents } from "../data/demoBusiness";
+import { AppShell } from "../../components/AppShell";
+import { DashboardCard } from "../../components/DashboardCard";
+import { EventList } from "../../components/EventList";
+import { demoEvents } from "../../data/demoBusiness";
 
 export const Route = createFileRoute("/website/events")({
 	component: WebsiteEventsPage,

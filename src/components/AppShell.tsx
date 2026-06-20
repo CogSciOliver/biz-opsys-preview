@@ -1,67 +1,67 @@
-import { Link } from "@tanstack/react-router";
+
+
+			import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
-import { demoBusiness } from "../data/demoBusiness";
-import { PrototypeNotice } from "./PrototypeNotice";
-import { RoleNav } from "./RoleNav";
+import { RoleNav, type RoleNavVariant } from "./RoleNav";
 import { ThemeToggle } from "./ThemeToggle";
 
 type AppShellProps = {
 	children: ReactNode;
-	eyebrow?: string;
-	title: string;
-	description?: string;
-	variant?: "public" | "member" | "staff" | "owner";
+	variant?: RoleNavVariant;
 };
 
-export function AppShell({
-	children,
-	eyebrow,
-	title,
-	description,
-	variant = "public",
-}: AppShellProps) {
+export function AppShell({ children, variant = "public" }: AppShellProps) {
+	const isPublic = variant === "public";
+
 	return (
-		<div className={`shell shell--${variant}`}>
-			<PrototypeNotice />
+		<div className="shell">
+			<div className="notice">
+				<p>Now booking in Long Island, NYC, Dallas, Austin, & Touring Popups &rarrow;</p>
+			</div>
 
 			<header className="app-header">
-				<Link to="/" className="brand-lockup">
-					<span className="brand-mark">G</span>
+				<Link to="/" className="brand-lockup" aria-label="Raw Body home">
+					<span className="brand-mark">R</span>
 					<span>
-						<strong>{demoBusiness.name}</strong>
-						<small>{demoBusiness.location}</small>
+						<strong>Raw Body Essentials</strong>
+						<small>Body care · Booking · Client operations</small>
 					</span>
 				</Link>
 
 				<div className="app-header-actions">
-					<Link to="/website">Public View</Link>
-					<span aria-hidden="true">|</span>
-					<Link to="/member/dashboard">Member View</Link>
-					<span aria-hidden="true">|</span>
-					<Link to="/staff/check-in">Staff View</Link>
-					<span aria-hidden="true">|</span>
-					<Link to="/owner/overview">Owner View</Link>
-					<span aria-hidden="true">|</span>
+					{isPublic ? (
+						<>
+							<Link to="/website/services">Services</Link>
+							<Link to="/website/consultations">Consultations</Link>
+							<Link to="/website/locations">Locations</Link>
+							<Link to="/website/products">Products</Link>
+						</>
+					) : (
+						<>
+							<Link to="/client">Client Portal</Link>
+							<Link to="/admin">Admin Dashboard</Link>
+						</>
+					)}
+
 					<ThemeToggle />
 				</div>
 			</header>
 
-			<main className="app-main">
+			<div className="app-main">
 				<aside className="app-sidebar">
-					<p className="sidebar-label">Demo paths</p>
+					<p className="sidebar-label">
+						{variant === "admin"
+							? "Admin Navigation"
+							: variant === "client"
+								? "Client Navigation"
+								: "Public Navigation"}
+					</p>
+
 					<RoleNav variant={variant} />
 				</aside>
 
-				<section className="page-panel">
-					<div className="page-heading">
-						{eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
-						<h1>{title}</h1>
-						{description ? <p>{description}</p> : null}
-					</div>
-
-					{children}
-				</section>
-			</main>
+				<section className="page-panel">{children}</section>
+			</div>
 		</div>
 	);
 }

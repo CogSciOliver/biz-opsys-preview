@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { AppShell } from "../components/AppShell";
-import { BillingSummary } from "../components/BillingSummary";
-import { DashboardCard } from "../components/DashboardCard";
-import { MemberStatusBadge } from "../components/MemberStatusBadge";
-import { demoMembers, demoPayments } from "../data/demoBusiness";
+import { AppShell } from "../../components/AppShell";
+import { BillingSummary } from "../../components/BillingSummary";
+import { DashboardCard } from "../../components/DashboardCard";
+import { MemberStatusBadge } from "../../components/MemberStatusBadge";
+import { demoMembers, demoPayments } from "../../data/demoBusiness";
 
-export const Route = createFileRoute("/member/billing")({
+export const Route = createFileRoute("/client/billing")({
 	component: MemberBillingPage,
 });
 

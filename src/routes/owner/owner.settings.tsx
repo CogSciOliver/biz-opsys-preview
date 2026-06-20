@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { AppShell } from "../components/AppShell";
-import { DashboardCard } from "../components/DashboardCard";
-import { MemberStatusBadge } from "../components/MemberStatusBadge";
-import { demoBusiness } from "../data/demoBusiness";
+import { AppShell } from "../../components/AppShell";
+import { DashboardCard } from "../../components/DashboardCard";
+import { MemberStatusBadge } from "../../components/MemberStatusBadge";
+import { demoBusiness } from "../../data/demoBusiness";
 
 const settingGroups = [
 	{
@@ -31,7 +31,7 @@ const settingGroups = [
 	},
 ];
 
-export const Route = createFileRoute("/owner/settings")({
+export const Route = createFileRoute("/owner/owner/settings")({
 	component: OwnerSettingsPage,
 });
 

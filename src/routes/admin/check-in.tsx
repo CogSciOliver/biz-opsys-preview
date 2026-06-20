@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { AppShell } from "../components/AppShell";
-import { CheckInKiosk } from "../components/CheckInKiosk";
-import { DashboardCard } from "../components/DashboardCard";
-import { MemberList } from "../components/MemberList";
-import { TrialLeadList } from "../components/TrialLeadList";
-import { demoClasses, demoMembers, demoTrialLeads } from "../data/demoBusiness";
+import { AppShell } from "../../components/AppShell";
+import { CheckInKiosk } from "../../components/CheckInKiosk";
+import { DashboardCard } from "../../components/DashboardCard";
+import { MemberList } from "../../components/MemberList";
+import { TrialLeadList } from "../../components/TrialLeadList";
+import { demoClasses, demoMembers, demoTrialLeads } from "../../data/demoBusiness";
 
-export const Route = createFileRoute("/staff/check-in")({
+export const Route = createFileRoute("/admin/check-in")({
 	component: StaffCheckInPage,
 });
 

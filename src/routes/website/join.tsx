@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { AppShell } from "../components/AppShell";
-import { ClassScheduleList } from "../components/ClassScheduleList";
-import { DashboardCard } from "../components/DashboardCard";
-import { TrialLeadCard } from "../components/TrialLeadCard";
-import { demoClasses, demoTrialLeads } from "../data/demoBusiness";
+import { AppShell } from "../../components/AppShell";
+import { ClassScheduleList } from "../../components/ClassScheduleList";
+import { DashboardCard } from "../../components/DashboardCard";
+import { TrialLeadCard } from "../../components/TrialLeadCard";
+import { demoClasses, demoTrialLeads } from "../../data/demoBusiness";
 
-export const Route = createFileRoute("/join")({
+export const Route = createFileRoute("/website/join")({
 	component: JoinPage,
 });
 

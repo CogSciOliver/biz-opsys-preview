@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { AppShell } from "../components/AppShell";
-import { ClassScheduleList } from "../components/ClassScheduleList";
-import { DashboardCard } from "../components/DashboardCard";
-import { demoClasses } from "../data/demoBusiness";
+import { AppShell } from "../../components/AppShell";
+import { ClassScheduleList } from "../../components/ClassScheduleList";
+import { DashboardCard } from "../../components/DashboardCard";
+import { demoClasses } from "../../data/demoBusiness";
 
-export const Route = createFileRoute("/member/classes")({
+export const Route = createFileRoute("/client/schedule")({
 	component: MemberClassesPage,
 });
 

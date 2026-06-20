@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { AppShell } from "../components/AppShell";
-import { DashboardCard } from "../components/DashboardCard";
-import { MemberList } from "../components/MemberList";
-import { MetricCard } from "../components/MetricCard";
-import { demoMembers } from "../data/demoBusiness";
+import { AppShell } from "../../components/AppShell";
+import { DashboardCard } from "../../components/DashboardCard";
+import { MemberList } from "../../components/MemberList";
+import { MetricCard } from "../../components/MetricCard";
+import { demoMembers } from "../../data/demoBusiness";
 
 const retentionMetrics = [
 	{
@@ -23,7 +23,7 @@ const retentionMetrics = [
 	},
 ];
 
-export const Route = createFileRoute("/owner/retention")({
+export const Route = createFileRoute("/owner/owner/retention")({
 	component: OwnerRetentionPage,
 });
 

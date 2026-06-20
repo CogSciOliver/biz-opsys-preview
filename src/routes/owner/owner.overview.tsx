@@ -1,18 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { AppShell } from "../components/AppShell";
-import { BillingSummary } from "../components/BillingSummary";
-import { CommunicationPreview } from "../components/CommunicationPreview";
-import { DashboardCard } from "../components/DashboardCard";
-import { MetricCard } from "../components/MetricCard";
-import { TrialLeadList } from "../components/TrialLeadList";
+import { AppShell } from "../../components/AppShell";
+import { BillingSummary } from "../../components/BillingSummary";
+import { CommunicationPreview } from "../../components/CommunicationPreview";
+import { DashboardCard } from "../../components/DashboardCard";
+import { MetricCard } from "../../components/MetricCard";
+import { TrialLeadList } from "../../components/TrialLeadList";
 import {
 	demoMessages,
 	demoPayments,
 	demoTrialLeads,
 	ownerMetrics,
-} from "../data/demoBusiness";
+} from "../../data/demoBusiness";
 
-export const Route = createFileRoute("/owner/overview")({
+export const Route = createFileRoute("/owner/owner/overview")({
 	component: OwnerOverviewPage,
 });
 

@@ -274,7 +274,7 @@ function RawBodyPublicLanding() {
 			>
 				<div className="raw-body-section-heading-lite">
 					<p className="raw-body-kicker">Your care path</p>
-					<h2 id="care-title">Support starts before the appointment.</h2>
+					<h2 id="your-care-path">Support starts before the appointment.</h2>
 				</div>
 
 				<div className="raw-body-step-grid">
@@ -355,13 +355,14 @@ function RawBodyPublicLanding() {
 
 				<div className="raw-body-system-actions">
 					<Link
-						to="/website/consultations"
+						to="/client"
 						className="raw-body-button raw-body-button--primary"
 					>
-						View consultation flow
+						View client portal
 					</Link>
-					<Link to="/owner" className="raw-body-button raw-body-button--dark">
-						View owner dashboard
+
+					<Link to="/admin" className="raw-body-button raw-body-button--dark">
+						View admin dashboard
 					</Link>
 				</div>
 			</section>

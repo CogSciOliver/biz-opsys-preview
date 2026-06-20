@@ -1,23 +1,83 @@
-.fake-form {
+.raw-body-booking-shell {
+	padding: clamp(2rem, 5vw, 5rem) clamp(1rem, 7vw, 7rem);
+	background: var(--raw-body-paper);
+}
+
+.raw-body-booking-form {
 	display: grid;
-	gap: 0.9rem;
+	gap: 1.5rem;
+	max-width: 68rem;
+	margin: 0 auto;
+	padding: clamp(1.5rem, 4vw, 3rem);
+	background: var(--raw-body-white);
+	border: 1px solid var(--raw-body-stone);
 }
 
-.fake-field {
+.raw-body-booking-form__header {
+	max-width: 48rem;
+}
+
+.raw-body-booking-form__header h2 {
+	margin: 0;
+	color: var(--raw-body-navy);
+	font-family: var(--font-display);
+	font-size: clamp(3rem, 5vw, 5.5rem);
+	font-weight: 500;
+	line-height: 0.9;
+	letter-spacing: -0.07em;
+}
+
+.raw-body-booking-form__header p:last-child {
+	margin: 1rem 0 0;
+	color: var(--raw-body-slate);
+	line-height: 1.55;
+}
+
+.raw-body-field-grid {
 	display: grid;
-	gap: 0.35rem;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
 }
 
-.fake-field .fake-label {
-	font-size: 0.8rem;
-	font-weight: 600;
-	color: var(--muted-foreground);
+.raw-body-field {
+	display: grid;
+	gap: 0.5rem;
 }
 
-.fake-field div {
+.raw-body-field--wide {
+	grid-column: 1 / -1;
+}
+
+.raw-body-field span {
+	color: var(--raw-body-ink);
+	font-size: 0.72rem;
+	font-weight: 900;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+.raw-body-field input,
+.raw-body-field select,
+.raw-body-field textarea {
+	width: 100%;
 	padding: 0.9rem 1rem;
-	background: var(--muted);
-	color: var(--muted-foreground);
-	border: 1px solid var(--border);
+	background: var(--raw-body-paper);
+	color: var(--raw-body-ink);
+	border: 1px solid var(--raw-body-stone);
 	border-radius: var(--radius);
+	font: inherit;
+}
+
+.raw-body-field input:focus,
+.raw-body-field select:focus,
+.raw-body-field textarea:focus {
+	border-color: var(--raw-body-blue);
+	outline: 2px solid var(--raw-body-blue);
+	outline-offset: 2px;
+}
+
+@media (max-width: 760px) {
+	.raw-body-field-grid {
+		grid-template-columns: 1fr;
+	}
 }

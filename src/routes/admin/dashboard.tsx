@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { AppShell } from "../components/AppShell";
-import { DashboardCard } from "../components/DashboardCard";
-import { MemberList } from "../components/MemberList";
-import { MetricCard } from "../components/MetricCard";
-import { TrialLeadList } from "../components/TrialLeadList";
-import { demoClasses, demoMembers, demoTrialLeads } from "../data/demoBusiness";
+import { AppShell } from "../../components/AppShell";
+import { DashboardCard } from "../../components/DashboardCard";
+import { MemberList } from "../../components/MemberList";
+import { MetricCard } from "../../components/MetricCard";
+import { TrialLeadList } from "../../components/TrialLeadList";
+import { demoClasses, demoMembers, demoTrialLeads } from "../../data/demoBusiness";
 
 const staffMetrics = [
 	{ label: "Classes today", value: "6", trend: "2 kids, 3 adults, 1 family" },
@@ -16,7 +16,7 @@ const staffMetrics = [
 	},
 ];
 
-export const Route = createFileRoute("/staff/dashboard")({
+export const Route = createFileRoute("/admin/dashboard")({
 	component: StaffDashboardPage,
 });
 

@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { AppShell } from "../components/AppShell";
-import { DashboardCard } from "../components/DashboardCard";
+import { AppShell } from "../../components/AppShell";
+import { DashboardCard } from "../../components/DashboardCard";
 
 const membershipPlans = [
 	{

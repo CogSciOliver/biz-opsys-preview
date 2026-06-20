@@ -11,6 +11,7 @@
 @import "./styles/stat.css";
 @import "./styles/status.css";
 @import "./styles/raw-body.css";
+@import "./styles/pages.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -163,7 +164,7 @@ a {
 	text-decoration: none;
 }
 
-.prototype-notice {
+.notice {
 	display: flex;
 	gap: 0.75rem;
 	align-items: center;
@@ -174,7 +175,7 @@ a {
 	font-size: 0.85rem;
 }
 
-.prototype-notice span {
+.notice span {
 	color: var(--raw-body-slate);
 }
 
@@ -328,6 +329,7 @@ a {
 }
 
 @media (max-width: 860px) {
+
 	.app-main,
 	.hero-card,
 	.grid,

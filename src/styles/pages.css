@@ -1,0 +1,225 @@
+.raw-body-page {
+	min-height: 100vh;
+	background: var(--raw-body-paper);
+	color: var(--raw-body-ink);
+}
+
+.raw-body-page-hero {
+	padding: clamp(4rem, 8vw, 7rem) clamp(1rem, 7vw, 7rem) clamp(2rem, 4vw, 4rem);
+	background: var(--raw-body-white);
+	border-bottom: 1px solid var(--raw-body-stone);
+}
+
+.raw-body-page-hero h1 {
+	max-width: 64rem;
+	margin: 0;
+	font-family: var(--font-display);
+	font-size: clamp(4rem, 8vw, 8rem);
+	font-weight: 500;
+	line-height: 0.88;
+	letter-spacing: -0.075em;
+}
+
+.raw-body-page-hero p:last-child {
+	max-width: 42rem;
+	margin: 1.25rem 0 0;
+	color: var(--raw-body-slate);
+	font-size: clamp(1rem, 1.4vw, 1.25rem);
+	line-height: 1.55;
+}
+
+.raw-body-page-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1rem;
+	padding: clamp(2rem, 5vw, 5rem) clamp(1rem, 7vw, 7rem);
+}
+
+.raw-body-page-card {
+	display: grid;
+	align-content: start;
+	min-height: 18rem;
+	padding: 1.4rem;
+	background: var(--raw-body-white);
+	border: 1px solid var(--raw-body-stone);
+}
+
+.raw-body-page-card:hover {
+	border-color: var(--raw-body-blue);
+}
+
+.raw-body-page-card h2 {
+	margin: 0;
+	color: var(--raw-body-navy);
+	font-family: var(--font-display);
+	font-size: clamp(2.4rem, 3vw, 3.4rem);
+	font-weight: 500;
+	line-height: 0.9;
+	letter-spacing: -0.06em;
+}
+
+.raw-body-page-card p {
+	margin: 1rem 0 0;
+	color: var(--raw-body-slate);
+	line-height: 1.5;
+}
+
+.raw-body-page-card strong {
+	margin-top: 1.25rem;
+	color: var(--raw-body-blue);
+	font-size: 0.72rem;
+	font-weight: 900;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+@media (max-width: 980px) {
+	.raw-body-page-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 680px) {
+	.raw-body-page-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.raw-body-page-card {
+		min-height: 14rem;
+	}
+}
+
+.raw-body-detail-hero {
+	display: grid;
+	grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+	gap: clamp(2rem, 5vw, 5rem);
+	align-items: center;
+	padding: clamp(4rem, 8vw, 7rem) clamp(1rem, 7vw, 7rem);
+	background: var(--raw-body-white);
+	border-bottom: 1px solid var(--raw-body-stone);
+}
+
+.raw-body-detail-hero__copy {
+	max-width: 46rem;
+}
+
+.raw-body-detail-hero h1 {
+	margin: 0;
+	color: var(--raw-body-navy);
+	font-family: var(--font-display);
+	font-size: clamp(4.5rem, 8vw, 8.5rem);
+	font-weight: 500;
+	line-height: 0.85;
+	letter-spacing: -0.08em;
+}
+
+.raw-body-detail-hero__copy > p:last-of-type {
+	margin: 1.35rem 0 0;
+	color: var(--raw-body-slate);
+	font-size: clamp(1rem, 1.45vw, 1.25rem);
+	line-height: 1.55;
+}
+
+.raw-body-detail-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.85rem;
+	margin-top: 1.8rem;
+}
+
+.raw-body-detail-hero__media {
+	min-height: clamp(24rem, 44vw, 42rem);
+	overflow: hidden;
+	background: var(--raw-body-stone);
+	border: 1px solid var(--raw-body-stone);
+}
+
+.raw-body-detail-hero__media img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.raw-body-detail-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+	padding: clamp(2rem, 5vw, 5rem) clamp(1rem, 7vw, 7rem);
+}
+
+.raw-body-detail-card {
+	padding: 1.5rem;
+	background: var(--raw-body-white);
+	border: 1px solid var(--raw-body-stone);
+}
+
+.raw-body-detail-card--wide {
+	grid-column: 1 / -1;
+}
+
+.raw-body-detail-card h2 {
+	margin: 0;
+	color: var(--raw-body-navy);
+	font-family: var(--font-display);
+	font-size: clamp(2.5rem, 4vw, 4rem);
+	font-weight: 500;
+	line-height: 0.9;
+	letter-spacing: -0.065em;
+}
+
+.raw-body-detail-card ul,
+.raw-body-detail-card ol {
+	display: grid;
+	gap: 0.65rem;
+	margin: 1.25rem 0 0;
+	padding-left: 1.25rem;
+	color: var(--raw-body-slate);
+	line-height: 1.45;
+}
+
+.raw-body-detail-card p {
+	margin: 1rem 0 0;
+	color: var(--raw-body-slate);
+	line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+	.raw-body-detail-hero,
+	.raw-body-detail-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.raw-body-detail-hero__media {
+		min-height: 24rem;
+	}
+}
+
+.raw-body-page-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.85rem;
+	margin-top: 1.8rem;
+}
+
+.raw-body-page-band {
+	padding: clamp(3.5rem, 7vw, 7rem) clamp(1rem, 5vw, 5rem);
+	background: var(--raw-body-navy);
+	color: var(--raw-body-white);
+}
+
+@media (max-width: 760px) {
+	.raw-body-page-actions {
+		flex-direction: column;
+		align-items: stretch;
+	}
+}
+.raw-body-card-kicker {
+	margin: 0 0 0.85rem;
+	color: var(--raw-body-blue);
+	font-size: 0.72rem;
+	font-weight: 900;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+}

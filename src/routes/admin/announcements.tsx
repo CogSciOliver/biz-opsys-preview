@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { AppShell } from "../components/AppShell";
-import { CommunicationPreview } from "../components/CommunicationPreview";
-import { DashboardCard } from "../components/DashboardCard";
-import { demoMessages } from "../data/demoBusiness";
+import { AppShell } from "../../components/AppShell";
+import { CommunicationPreview } from "../../components/CommunicationPreview";
+import { DashboardCard } from "../../components/DashboardCard";
+import { demoMessages } from "../../data/demoBusiness";
 
-export const Route = createFileRoute("/staff/announcements")({
+export const Route = createFileRoute("/admin/announcements")({
 	component: StaffCommunicationsPage,
 });
 

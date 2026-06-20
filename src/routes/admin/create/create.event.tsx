@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/staff/create/event")({
+export const Route = createFileRoute("/admin/create/create/event")({
 	component: RouteComponent,
 });
 
