@@ -143,16 +143,9 @@ function RawBodyPublicLanding() {
 	return (
 		<main className="raw-body-public">
 			<header className="raw-body-public__header">
-				<Link
-					to="/"
-					className="raw-body-public__brand"
-					aria-label="Raw Body Essentials home"
-				>
-					<span className="raw-body-public__mark">R</span>
-					<span>
-						<strong>Raw Body Essentials</strong>
-						<small>Body care · Sculpting · Skin rituals</small>
-					</span>
+				<Link to="/" className="brand-lockup" aria-label="Raw Body home">
+					<span className="brand-mark">R</span>
+					<span> Raw Body Essentials </span>
 				</Link>
 
 				<nav
@@ -194,10 +187,7 @@ function RawBodyPublicLanding() {
 				<div className="raw-body-hero__copy">
 					<p className="raw-body-kicker">RAW. ANCESTRAL. MODERN</p>
 					<h1 id="raw-body-hero-title" className="raw-body-hero-title">
-						<span className="raw-body-hero-title__top">Modern Body Care</span>
-						<span className="raw-body-hero-title__bottom">
-							Rooted in Arawak Care
-						</span>
+						Modern Body Care <br/> Rooted in Arawak Care
 					</h1>
 
 					<p className="raw-body-hero__line">
@@ -222,8 +212,7 @@ function RawBodyPublicLanding() {
 					</div>
 
 					<div className="raw-body-hero__story">
-						<span className="raw-body-play" aria-hidden="true" />
-						<span>In studio. In home. In community.</span>
+						In studio. In home. In community.
 					</div>
 				</div>
 			</section>

@@ -3,7 +3,6 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/inter";
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
-
 @import "./styles/button.css";
 @import "./styles/form.css";
 @import "./styles/hero.css";
@@ -32,7 +31,6 @@ body {
 /* Raw Body Brand Colors */
 :root {
 	--raw-body-navy: rgb(0, 22, 76);
-	--raw-body-blue: rgb(39, 57, 189);
 	--raw-body-ink: rgb(15, 23, 42);
 	--raw-body-dark: rgb(2, 6, 23);
 
@@ -46,12 +44,13 @@ body {
 	--raw-body-200: rgb(191, 219, 254);
 	--raw-body-300: rgb(96, 165, 250);
 	--raw-body-400: rgb(37, 99, 235);
-	--raw-body-500: rgb(39, 57, 189);
+	--raw-body-500: rgb(0, 54, 142);
 	--raw-body-600: rgb(0, 22, 76);
-	--raw-body-700: rgb(15, 23, 42);
-	--raw-body-800: rgb(2, 6, 23);
+	--raw-body-700: rgb(0, 17, 61);
+	--raw-body-800: rgb(0, 11, 43);
 
 	--radius: 0.2rem;
+	
 }
 
 /* Tailwind/shadcn bridge only */
@@ -135,7 +134,7 @@ body {
 	}
 
 	h1 {
-		@apply text-5xl font-medium tracking-wide;
+		@apply text-5xl;
 	}
 
 	h2 {

@@ -64,14 +64,6 @@
 	line-height: 1.5;
 }
 
-.raw-body-page-card strong {
-	margin-top: 1.25rem;
-	color: var(--raw-body-blue);
-	font-size: 0.72rem;
-	font-weight: 900;
-	letter-spacing: 0.14em;
-	text-transform: uppercase;
-}
 
 @media (max-width: 980px) {
 	.raw-body-page-grid {

@@ -39,10 +39,7 @@ export function AppShell({
 			<header className="app-header">
 				<Link to="/" className="brand-lockup" aria-label="Raw Body home">
 					<span className="brand-mark">R</span>
-					<span>
-						<strong>Raw Body Essentials</strong>
-						<small>Body care · Booking · Client operations</small>
-					</span>
+					<span> Raw Body Essentials </span>
 				</Link>
 
 				<div className="app-header-actions">

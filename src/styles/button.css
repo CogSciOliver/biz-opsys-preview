@@ -13,7 +13,6 @@
 	padding: 0 1rem;
 	border-radius: var(--radius);
 	font-size: 0.75rem;
-	font-weight: 700;
 	letter-spacing: 0.12em;
 	line-height: 1;
 	text-transform: uppercase;
@@ -22,7 +21,7 @@
 
 .button-primary {
 	background: var(--primary);
-	color: var(--lite-text);
+	color: var(--raw-body-100);
 	border: 1px solid var(--primary);
 }
 
@@ -32,13 +31,13 @@
 }
 
 .button-inverse {
-	background: var(--lite-text);
+	background: var(--raw-body-100);
 	color: var(--primary);
 	border: 1px solid var(--lite-text);
 }
 
 .button-inverse:hover {
-	background: var(--lite-text);
+	background: var(--raw-body-100);
 	color: var(--primary);
 }
 
