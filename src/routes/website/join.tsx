@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { AppShell } from "../../components/AppShell";
 import { ClassScheduleList } from "../../components/ClassScheduleList";
 import { DashboardCard } from "../../components/DashboardCard";
@@ -15,35 +15,38 @@ function JoinPage() {
 	return (
 		<AppShell
 			variant="public"
-			eyebrow="Trial class signup"
-			title="Book your first class"
-			description="Without calling the front desk, preview the kind of guided trial flow Heritage could use to turn website visitors into scheduled intro students."
+			eyebrow="Consultation request"
+			title="Start with a body goals consultation"
+			description="Preview the guided request flow Raw Body could use to turn public interest into organized service-fit conversations."
 		>
-			<div className="grid">
-				<DashboardCard eyebrow="Static form preview" title="Trial request">
+			<div className="grid gap-4 md:grid-cols-2">
+				<DashboardCard
+					eyebrow="Static form preview"
+					title="Consultation request"
+				>
 					<div className="fake-form">
 						<div className="fake-field">
 							<span className="fake-label">Name</span>
-							<div>Parent or student name</div>
+							<div>Client name</div>
 						</div>
 						<div className="fake-field">
-							<span className="fake-label">Interested class</span>
+							<span className="fake-label">Service interest</span>
 							<div>
-								Family Jiu Jitsu, Kids Foundations, or Adult Fundamentals
+								Lymphatic Sculpting, Body Sculpting, Massage, or Facials
 							</div>
 						</div>
 						<div className="fake-field">
 							<span className="fake-label">Best contact</span>
-							<div>Phone or email</div>
+							<div>Phone, text, Zoom, or email</div>
 						</div>
 						<div className="fake-field">
-							<span className="fake-label">Preferred first visit</span>
-							<div>Choose from available intro-friendly classes</div>
+							<span className="fake-label">Preferred care window</span>
+							<div>Choose from available consultation and service windows</div>
 						</div>
 					</div>
 				</DashboardCard>
 
-				<DashboardCard eyebrow="Lead preview" title="What staff would see">
+				<DashboardCard eyebrow="Lead preview" title="What admin would see">
 					<ul className="list">
 						<TrialLeadCard lead={featuredLead} />
 						<li>
@@ -57,10 +60,15 @@ function JoinPage() {
 				</DashboardCard>
 			</div>
 
-			<div style={{ marginTop: "1rem" }}>
+			<div className="mt-4">
 				<DashboardCard
-					eyebrow="Available trial-friendly classes"
-					title="Intro-ready schedule"
+					eyebrow="Available care windows"
+					title="Consultation-ready schedule"
+					footer={
+						<Link to="/website/book" className="button-primary">
+							Continue to booking
+						</Link>
+					}
 				>
 					<ClassScheduleList classes={demoClasses.slice(0, 3)} />
 				</DashboardCard>

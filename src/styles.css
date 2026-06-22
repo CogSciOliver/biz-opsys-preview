@@ -293,17 +293,6 @@ a {
 	line-height: 1.65;
 }
 
-.grid {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 1rem;
-}
-
-.grid-3 {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 1rem;
-}
 
 .theme-toggle {
 	display: inline-grid;
@@ -331,9 +320,7 @@ a {
 @media (max-width: 860px) {
 
 	.app-main,
-	.hero-card,
-	.grid,
-	.grid-3 {
+	.hero-card {
 		grid-template-columns: 1fr;
 	}
 

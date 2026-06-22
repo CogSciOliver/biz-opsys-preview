@@ -2,24 +2,24 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { AppShell } from "../../components/AppShell";
 import { DashboardCard } from "../../components/DashboardCard";
 
-const membershipPlans = [
+const carePlans = [
 	{
-		name: "Kids Foundations",
-		price: "$119/mo",
+		name: "Consultation First",
+		price: "$45",
 		description:
-			"For younger students building confidence, mat awareness, listening skills, and beginner jiu jitsu habits.",
+			"A focused planning session to choose service fit, location, goals, and next steps before booking care.",
 	},
 	{
-		name: "Adult Unlimited",
-		price: "$159/mo",
+		name: "Single Treatment",
+		price: "From $125",
 		description:
-			"For adults who want consistent fundamentals, fitness, self-defense, and skill progression.",
+			"Book sculpting, lymphatic care, massage, facial support, or a focused body-care session after intake.",
 	},
 	{
-		name: "Family Unlimited",
-		price: "$219/mo",
+		name: "Rooted Care Plan",
+		price: "Custom",
 		description:
-			"For households training together with one simple membership view and shared family scheduling.",
+			"A multi-step path that connects appointments, at-home products, location planning, and follow-up.",
 	},
 ];
 
@@ -32,19 +32,19 @@ function WebsiteMembershipsPage() {
 		<AppShell
 			variant="public"
 			eyebrow="Public website"
-			title="Memberships"
-			description="A simple public pricing page that helps families understand the best path before they ever talk to staff."
+			title="Care plans"
+			description="A simple public pricing preview that helps clients understand the best path before they choose a service."
 		>
-			<div className="grid-3">
-				{membershipPlans.map((plan) => (
+			<div className="grid gap-4 md:grid-cols-3">
+				{carePlans.map((plan) => (
 					<DashboardCard
 						key={plan.name}
 						eyebrow={plan.name}
 						title={plan.price}
 						description={plan.description}
 						footer={
-							<Link to="/join" className="button-primary">
-								Start with a trial
+							<Link to="/website/join" className="button-primary">
+								Start with consultation
 							</Link>
 						}
 					/>

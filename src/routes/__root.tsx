@@ -7,7 +7,6 @@ import {
 } from "@tanstack/react-router";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import appCss from "../styles.css?url";
-import "../styles/raw-body.css";
 
 interface MyRouterContext {
 	queryClient: QueryClient;
@@ -24,7 +23,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 				content: "width=device-width, initial-scale=1",
 			},
 			{
-				title: "Interactive Business Operating System Prototype",
+				title: "Raw Body Business Operating System Prototype",
 			},
 		],
 		links: [

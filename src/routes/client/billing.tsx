@@ -6,39 +6,39 @@ import { MemberStatusBadge } from "../../components/MemberStatusBadge";
 import { demoMembers, demoPayments } from "../../data/demoBusiness";
 
 export const Route = createFileRoute("/client/billing")({
-	component: MemberBillingPage,
+	component: ClientBillingPage,
 });
 
-function MemberBillingPage() {
-	const member = demoMembers[0];
+function ClientBillingPage() {
+	const client = demoMembers[0];
 
 	return (
 		<AppShell
-			variant="member"
-			eyebrow="Member portal"
+			variant="client"
+			eyebrow="Client portal"
 			title="Billing"
-			description="A member-facing billing view that makes plan status, payment history, and account health clear."
+			description="A client-facing billing view that makes care-plan status, invoices, and account health clear."
 		>
-			<div className="grid">
+			<div className="grid gap-4 md:grid-cols-2">
 				<DashboardCard
-					eyebrow="Current plan"
-					title={member.plan}
-					description={`${member.name} • Last check-in: ${member.lastCheckIn}`}
+					eyebrow="Current care plan"
+					title={client.plan}
+					description={`${client.name} • Latest note: ${client.lastCheckIn}`}
 				>
-					<MemberStatusBadge status={member.status} />
+					<MemberStatusBadge status={client.status} />
 				</DashboardCard>
 
 				<DashboardCard
 					eyebrow="Next payment"
-					title="$219"
-					description="Upcoming family membership renewal preview."
+					title="$275"
+					description="Upcoming care-plan renewal preview."
 				>
 					<MemberStatusBadge status="Scheduled" />
 				</DashboardCard>
 			</div>
 
-			<div style={{ marginTop: "1rem" }}>
-				<DashboardCard eyebrow="Payment history" title="Recent payments">
+			<div className="mt-4">
+				<DashboardCard eyebrow="Payment history" title="Recent invoices">
 					<BillingSummary payments={demoPayments.slice(0, 2)} />
 				</DashboardCard>
 			</div>

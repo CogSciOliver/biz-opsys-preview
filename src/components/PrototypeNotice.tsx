@@ -3,7 +3,7 @@ export function PrototypeNotice() {
 		<div className="notice">
 			<strong>Prototype preview</strong>
 			<span>
-				Static click-through demo. No real billing, auth, member data, or
+				Static click-through demo. No real billing, auth, client records, or
 				messaging is connected.
 			</span>
 		</div>

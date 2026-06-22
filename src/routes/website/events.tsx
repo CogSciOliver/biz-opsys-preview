@@ -13,15 +13,15 @@ function WebsiteEventsPage() {
 		<AppShell
 			variant="public"
 			eyebrow="Public website"
-			title="Events"
-			description="A public events page for open mats, family intro days, belt testing, and community moments."
+			title="Popups and care events"
+			description="A public events page for touring popups, at-home care workshops, consultation windows, and community care moments."
 		>
 			<DashboardCard
-				eyebrow="Upcoming events"
-				title="Give the gym a living calendar"
+				eyebrow="Upcoming popups"
+				title="Give the care business a living calendar"
 				description="Events become part of the sales and retention system instead of being scattered across posts, texts, and memory."
 				footer={
-					<Link to="/join" className="button-primary">
+					<Link to="/website/join" className="button-primary">
 						Ask about visiting
 					</Link>
 				}

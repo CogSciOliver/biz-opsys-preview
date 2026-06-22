@@ -11,35 +11,36 @@ import {
 } from "../../data/demoBusiness";
 
 export const Route = createFileRoute("/admin/check-in")({
-	component: StaffCheckInPage,
+	component: AdminCheckInPage,
 });
 
-function StaffCheckInPage() {
+function AdminCheckInPage() {
 	const activeClass = demoClasses[1];
 
 	return (
 		<AppShell
-			variant="staff"
-			eyebrow="Staff kiosk"
-			title="Check students in fast."
-			description="A front-desk and mat-side preview for attendance, trial visitors, member status, and class capacity."
+			variant="admin"
+			eyebrow="Admin kiosk"
+			title="Check clients in fast."
+			description="A front-desk and treatment-room preview for appointment arrival, consultation visitors, client status, and service capacity."
 		>
-			<p className="button-primary" style={{ marginBottom: "1rem" }}>
-				!!! DEV CREATE: mock check-in workflow with member signed up list,
-				waitlist, and trial lead list.
+			<p className="mb-4 border border-primary bg-primary px-4 py-3 text-sm font-bold uppercase tracking-[0.12em] text-primary-foreground">
+				DEV CREATE: mock check-in workflow with signed-up client list, waitlist,
+				and consultation lead list.
 			</p>
-			<div className="grid">
+
+			<div className="grid gap-4 md:grid-cols-2">
 				<CheckInKiosk activeClass={activeClass} checkedInCount={3} />
 
-				<DashboardCard eyebrow="Member lookup" title="Recent check-ins">
+				<DashboardCard eyebrow="Client lookup" title="Recent check-ins">
 					<MemberList members={demoMembers} />
 				</DashboardCard>
 			</div>
 
-			<div style={{ marginTop: "1rem" }}>
+			<div className="mt-4">
 				<DashboardCard
-					eyebrow="Trial visitors"
-					title="People staff should greet intentionally"
+					eyebrow="Consultation visitors"
+					title="People admin should greet intentionally"
 				>
 					<TrialLeadList leads={demoTrialLeads} showNextStep />
 				</DashboardCard>

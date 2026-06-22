@@ -8,18 +8,18 @@ import { demoMembers } from "../../data/demoBusiness";
 const retentionMetrics = [
 	{
 		label: "Retention",
-		value: "91%",
-		trend: "Strong family membership continuity",
+		value: "86%",
+		trend: "Clients with a next care step or follow-up",
 	},
 	{
-		label: "Attendance risk",
+		label: "Care-plan risk",
 		value: "6",
-		trend: "Members with reduced check-ins",
+		trend: "Clients without a next appointment or product path",
 	},
 	{
-		label: "Milestones",
+		label: "Follow-ups",
 		value: "18",
-		trend: "Students nearing testing readiness",
+		trend: "Consults needing next-step decisions",
 	},
 ];
 
@@ -33,9 +33,9 @@ function OwnerRetentionPage() {
 			variant="owner"
 			eyebrow="Owner dashboard"
 			title="Retention"
-			description="A retention view for attendance signals, churn risk, family engagement, and student milestones."
+			description="A retention view for care-plan signals, follow-up risk, popup interest, product support, and clients who need attention."
 		>
-			<div className="grid-3">
+			<div className="grid gap-4 md:grid-cols-3">
 				{retentionMetrics.map((metric) => (
 					<MetricCard
 						key={metric.label}
@@ -46,11 +46,11 @@ function OwnerRetentionPage() {
 				))}
 			</div>
 
-			<div style={{ marginTop: "1rem" }}>
+			<div className="mt-4">
 				<DashboardCard
-					eyebrow="Member signals"
+					eyebrow="Client signals"
 					title="Who needs attention?"
-					description="A future version could flag attendance drops, billing friction, missed milestones, or trial students who never converted."
+					description="A future version could flag missed follow-ups, billing friction, popup waitlist demand, product gaps, or clients without a next care step."
 				>
 					<MemberList members={demoMembers} showLastCheckIn />
 				</DashboardCard>

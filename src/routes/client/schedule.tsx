@@ -5,24 +5,24 @@ import { DashboardCard } from "../../components/DashboardCard";
 import { demoClasses } from "../../data/demoBusiness";
 
 export const Route = createFileRoute("/client/schedule")({
-	component: MemberClassesPage,
+	component: ClientSchedulePage,
 });
 
-function MemberClassesPage() {
+function ClientSchedulePage() {
 	return (
 		<AppShell
-			variant="member"
-			eyebrow="Member portal"
-			title="My Classes"
-			description="A member schedule view for booked classes, recommended sessions, and family training planning."
+			variant="client"
+			eyebrow="Client portal"
+			title="My Appointments"
+			description="A client schedule view for booked services, recommended sessions, and care planning."
 		>
 			<DashboardCard
-				eyebrow="Class plan"
+				eyebrow="Care plan"
 				title="Recommended this week"
-				description="This preview gives members one place to understand where they fit into the weekly schedule."
+				description="This preview gives clients one place to understand their consultation, appointments, and next care steps."
 				footer={
-					<Link to="/website/schedule" className="button-primary">
-						View full schedule
+					<Link to="/website/book" className="button-primary">
+						Book care
 					</Link>
 				}
 			>

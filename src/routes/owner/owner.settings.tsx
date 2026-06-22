@@ -12,21 +12,21 @@ const settingGroups = [
 		status: "Prototype",
 	},
 	{
-		name: "Trial flow",
+		name: "Consultation flow",
 		description:
-			"Intro-friendly classes, staff notifications, lead stages, and follow-up timing.",
+			"Phone, text, Zoom, in-person, admin notifications, lead stages, and follow-up timing.",
 		status: "Prototype",
 	},
 	{
-		name: "Staff permissions",
+		name: "Admin permissions",
 		description:
-			"Control who can view members, check students in, send messages, and see owner reports.",
+			"Control who can view clients, check appointments in, send messages, and see owner reports.",
 		status: "Future build",
 	},
 	{
-		name: "Class rules",
+		name: "Service rules",
 		description:
-			"Capacity, age groups, belt levels, schedule visibility, and booking rules.",
+			"Capacity, location rules, consultation requirements, popup visibility, pricing notes, and booking limits.",
 		status: "Future build",
 	},
 ];
@@ -41,9 +41,9 @@ function OwnerSettingsPage() {
 			variant="owner"
 			eyebrow="Owner dashboard"
 			title="Settings"
-			description="A future owner control center for business details, staff roles, trial flows, schedule rules, and brand settings."
+			description="A future owner control center for business details, admin roles, consultation flows, service rules, location rules, and brand settings."
 		>
-			<div className="grid">
+			<div className="grid gap-4 md:grid-cols-2">
 				<DashboardCard
 					eyebrow="Business"
 					title={demoBusiness.name}
@@ -53,13 +53,13 @@ function OwnerSettingsPage() {
 				<DashboardCard
 					eyebrow="System mode"
 					title="Static prototype"
-					description="No auth, billing, real member records, or live communications are connected in this preview."
+					description="No auth, billing, real client records, or live communications are connected in this preview."
 				>
 					<MemberStatusBadge status="Demo only" />
 				</DashboardCard>
 			</div>
 
-			<div style={{ marginTop: "1rem" }}>
+			<div className="mt-4">
 				<DashboardCard
 					eyebrow="Configurable areas"
 					title="What the owner could control"

@@ -5,22 +5,22 @@ import { DashboardCard } from "../../components/DashboardCard";
 import { demoMessages } from "../../data/demoBusiness";
 
 export const Route = createFileRoute("/admin/announcements")({
-	component: StaffCommunicationsPage,
+	component: AdminCommunicationsPage,
 });
 
-function StaffCommunicationsPage() {
+function AdminCommunicationsPage() {
 	return (
 		<AppShell
-			variant="staff"
-			eyebrow="Staff tools"
-			title="Announcements"
-			description="A message center preview for trial follow-ups, member reminders, event announcements, and owner-approved broadcasts."
+			variant="admin"
+			eyebrow="Admin tools"
+			title="Messages"
+			description="A message center preview for consultation follow-ups, client reminders, popup announcements, product guidance, and owner-approved broadcasts."
 		>
-			<div className="grid">
+			<div className="grid gap-4 md:grid-cols-2">
 				<DashboardCard
 					eyebrow="Message center"
-					title="Ready-to-send New/Scheduled Announcement"
-					description="Staff can see what needs attention without hunting through texts, inboxes, or social posts."
+					title="Ready-to-send and scheduled messages"
+					description="Admin can see what needs attention without hunting through texts, inboxes, or social posts."
 				>
 					<CommunicationPreview messages={demoMessages} />
 				</DashboardCard>
@@ -28,14 +28,14 @@ function StaffCommunicationsPage() {
 				<DashboardCard
 					eyebrow="Workflow"
 					title="Communication pipeline"
-					description="Draft, approve, schedule, and send messages from the same operating system that tracks classes and members."
+					description="Draft, approve, schedule, and send messages from the same operating system that tracks services and clients."
 				>
 					<ul className="list">
 						<li>
 							<div>
 								<strong>Draft</strong>
 								<br />
-								<span>Staff prepares the message.</span>
+								<span>Admin prepares the message.</span>
 							</div>
 						</li>
 						<li>
@@ -49,7 +49,7 @@ function StaffCommunicationsPage() {
 							<div>
 								<strong>Send</strong>
 								<br />
-								<span>Members receive clear next steps.</span>
+								<span>Clients receive clear next steps.</span>
 							</div>
 						</li>
 					</ul>

@@ -22,9 +22,9 @@ function OwnerOverviewPage() {
 			variant="owner"
 			eyebrow="Owner dashboard"
 			title="Business Health"
-			description="See the business without digging through five systems. This page previews the executive layer: revenue, retention, trial pipeline, billing flags, and communication readiness."
+			description="See the business without digging through five systems. This page previews the executive layer: revenue, retention, consultation pipeline, billing flags, popup demand, and communication readiness."
 		>
-			<div className="grid-3">
+			<div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
 				{ownerMetrics.map((metric) => (
 					<MetricCard
 						key={metric.label}
@@ -35,12 +35,12 @@ function OwnerOverviewPage() {
 				))}
 			</div>
 
-			<div className="grid" style={{ marginTop: "1rem" }}>
+			<div className="mt-4 grid gap-4 md:grid-cols-2">
 				<DashboardCard
 					eyebrow="Billing watchlist"
-					title="Membership revenue"
+					title="Service revenue"
 					footer={
-						<Link to="/owner/revenue" className="button-primary">
+						<Link to="/owner/owner/revenue" className="button-primary">
 							View revenue
 						</Link>
 					}
@@ -48,15 +48,15 @@ function OwnerOverviewPage() {
 					<BillingSummary payments={demoPayments} />
 				</DashboardCard>
 
-				<DashboardCard eyebrow="Sales pipeline" title="Trial leads">
+				<DashboardCard eyebrow="Sales pipeline" title="Consultation leads">
 					<TrialLeadList leads={demoTrialLeads} />
 				</DashboardCard>
 			</div>
 
-			<div style={{ marginTop: "1rem" }}>
+			<div className="mt-4">
 				<DashboardCard
 					eyebrow="Communications"
-					title="Messages ready for staff or owner approval"
+					title="Messages ready for admin or owner approval"
 				>
 					<CommunicationPreview messages={demoMessages} />
 				</DashboardCard>

@@ -15,9 +15,9 @@ function OwnerRevenuePage() {
 			variant="owner"
 			eyebrow="Owner dashboard"
 			title="Revenue"
-			description="A revenue view for membership performance, payment flags, recurring revenue, and plan health."
+			description="A revenue view for service performance, invoice flags, care-plan revenue, product interest, and popup demand."
 		>
-			<div className="grid-3">
+			<div className="grid gap-4 md:grid-cols-3">
 				{ownerMetrics.slice(0, 3).map((metric) => (
 					<MetricCard
 						key={metric.label}
@@ -28,11 +28,11 @@ function OwnerRevenuePage() {
 				))}
 			</div>
 
-			<div style={{ marginTop: "1rem" }}>
+			<div className="mt-4">
 				<DashboardCard
 					eyebrow="Payments"
 					title="Billing watchlist"
-					description="The owner gets a clear view of paid, scheduled, and review-needed membership accounts."
+					description="The owner gets a clear view of paid, scheduled, review-needed, and popup-related revenue."
 				>
 					<BillingSummary payments={demoPayments} />
 				</DashboardCard>

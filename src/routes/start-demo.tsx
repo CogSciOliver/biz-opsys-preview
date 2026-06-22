@@ -14,25 +14,20 @@ function IndexPage() {
 		<AppShell
 			variant="public"
 			eyebrow="Interactive Business Operating System Prototype"
-			title="Heritage Jiu Jitsu demo hub"
-			description="A static click-through preview of what a custom business operating system could feel like for the gym, members, staff, and owner."
+			title="Raw Body Essentials demo hub"
+			description="A static click-through preview of a custom business operating system for public booking, client care, admin operations, and owner reporting."
 		>
 			<div className="hero-card">
 				<div>
 					<p className="card-kicker">Prototype map</p>
 					<h2>{demoBusiness.heroTitle}</h2>
-					<p>
-						This demo connects the public website, trial class signup, member
-						portal, staff tools, check-in flow, billing visibility,
-						communications, and owner reporting into one branded Heritage
-						system.
-					</p>
+					<p>{demoBusiness.heroDescription}</p>
 
 					<div className="hero-actions">
-						<Link to="/website" className="button-inverse">
+						<Link to="/" className="button-inverse">
 							Start with public site
 						</Link>
-						<Link to="/owner/overview" className="button-inverse">
+						<Link to="/owner/owner/overview" className="button-inverse">
 							View owner dashboard
 						</Link>
 					</div>
@@ -41,13 +36,13 @@ function IndexPage() {
 				<HeroStats stats={demoBusiness.stats} />
 			</div>
 
-			<div className="grid" style={{ marginTop: "1rem" }}>
+			<div className="mt-4 grid gap-4 md:grid-cols-2">
 				<DashboardCard
 					eyebrow="Public experience"
-					title="Website, memberships, schedule, and events"
-					description="A polished public-facing experience designed to help families understand the gym and book a first class."
+					title="Services, consultations, products, and locations"
+					description="A polished public-facing experience designed to help clients understand treatments and choose the right starting point."
 					footer={
-						<Link to="/website" className="button-primary">
+						<Link to="/website/services" className="button-primary">
 							Open website preview
 						</Link>
 					}
@@ -55,39 +50,39 @@ function IndexPage() {
 
 				<DashboardCard
 					eyebrow="Lead capture"
-					title="Trial class signup"
-					description="A guided first-class request flow that gives staff clear next steps instead of scattered inquiries."
+					title="Consultation-first booking"
+					description="A guided care request flow that gives admin a clear next step instead of scattered texts and DMs."
 					footer={
-						<Link to="/join" className="button-primary">
-							Open trial flow
+						<Link to="/website/join" className="button-primary">
+							Open consultation flow
 						</Link>
 					}
 				/>
 
 				<DashboardCard
-					eyebrow="Member portal"
-					title="Classes, billing, and announcements"
-					description="A member-facing dashboard for family schedule visibility, membership status, and gym communication."
+					eyebrow="Client portal"
+					title="Appointments, billing, and care plans"
+					description="A client-facing dashboard for service planning, appointment visibility, product recommendations, and account status."
 					footer={
-						<Link to="/member/dashboard" className="button-primary">
-							Open member view
+						<Link to="/client/dashboard" className="button-primary">
+							Open client view
 						</Link>
 					}
 				/>
 
 				<DashboardCard
-					eyebrow="Staff operations"
-					title="Daily dashboard and check-in tools"
-					description="A front-desk and mat-side workflow for class check-in, trial visitors, members, and communications."
+					eyebrow="Admin operations"
+					title="Check-in, clients, messages, and scheduling"
+					description="A daily workflow for appointment check-in, consultation follow-up, client notes, messages, and service windows."
 					footer={
-						<Link to="/staff/dashboard" className="button-primary">
-							Open staff tools
+						<Link to="/admin/dashboard" className="button-primary">
+							Open admin tools
 						</Link>
 					}
 				/>
 			</div>
 
-			<div className="grid-3" style={{ marginTop: "1rem" }}>
+			<div className="mt-4 grid gap-4 md:grid-cols-3">
 				{ownerMetrics.slice(0, 3).map((metric) => (
 					<MetricCard
 						key={metric.label}
@@ -98,13 +93,13 @@ function IndexPage() {
 				))}
 			</div>
 
-			<div style={{ marginTop: "1rem" }}>
+			<div className="mt-4">
 				<DashboardCard
 					eyebrow="Owner layer"
 					title="Revenue, retention, and settings"
-					description="The owner view turns the system into a business dashboard instead of just a website or member portal."
+					description="The owner view turns the system into a business dashboard instead of just a public site or client portal."
 					footer={
-						<Link to="/owner/overview" className="button-primary">
+						<Link to="/owner/owner/overview" className="button-primary">
 							Open owner overview
 						</Link>
 					}

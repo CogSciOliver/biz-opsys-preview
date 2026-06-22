@@ -10,30 +10,34 @@ import {
 	demoTrialLeads,
 } from "../../data/demoBusiness";
 
-const staffMetrics = [
-	{ label: "Classes today", value: "6", trend: "2 kids, 3 adults, 1 family" },
-	{ label: "Trials today", value: "3", trend: "All need welcome follow-up" },
+const adminStats = [
+	{
+		label: "Appointments today",
+		value: "6",
+		trend: "Consults, lymphatic care, sculpting, and facial windows",
+	},
+	{ label: "Consults today", value: "3", trend: "All need prep notes" },
 	{
 		label: "Check-ins",
-		value: "42",
-		trend: "Across afternoon and evening classes",
+		value: "14",
+		trend: "Across studio and popup appointment windows",
 	},
 ];
 
 export const Route = createFileRoute("/admin/dashboard")({
-	component: StaffDashboardPage,
+	component: AdminDashboardPage,
 });
 
-function StaffDashboardPage() {
+function AdminDashboardPage() {
 	return (
 		<AppShell
-			variant="staff"
-			eyebrow="Staff tools"
-			title="Staff Dashboard"
-			description="A daily operations view for classes, leads, attendance, and front-desk priorities."
+			variant="admin"
+			eyebrow="Admin tools"
+			title="Admin Dashboard"
+			description="A daily operations view for appointment windows, consultation leads, client notes, and care priorities."
 		>
-			<div className="grid-3">
-				{staffMetrics.map((metric) => (
+			<div className="grid gap-4 md:grid-cols-3">
+				{adminStats.map((metric) => (
 					<MetricCard
 						key={metric.label}
 						label={metric.label}
@@ -43,25 +47,25 @@ function StaffDashboardPage() {
 				))}
 			</div>
 
-			<div className="grid" style={{ marginTop: "1rem" }}>
+			<div className="mt-4 grid gap-4 md:grid-cols-2">
 				<DashboardCard
-					eyebrow="Next class"
+					eyebrow="Next appointment window"
 					title={demoClasses[0].name}
 					description={`${demoClasses[0].audience} • ${demoClasses[0].time}`}
 					footer={
-						<Link to="/staff/check-in" className="button-primary">
+						<Link to="/admin/check-in" className="button-primary">
 							Open check-in
 						</Link>
 					}
 				/>
 
-				<DashboardCard eyebrow="Trial follow-up" title="Lead queue">
+				<DashboardCard eyebrow="Consultation follow-up" title="Lead queue">
 					<TrialLeadList leads={demoTrialLeads} showNextStep />
 				</DashboardCard>
 			</div>
 
-			<div style={{ marginTop: "1rem" }}>
-				<DashboardCard eyebrow="Member attention" title="Accounts to review">
+			<div className="mt-4">
+				<DashboardCard eyebrow="Client attention" title="Accounts to review">
 					<MemberList members={demoMembers} showLastCheckIn />
 				</DashboardCard>
 			</div>

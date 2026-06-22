@@ -11,51 +11,52 @@ import {
 } from "../../data/demoBusiness";
 
 export const Route = createFileRoute("/client/dashboard")({
-	component: MemberDashboardPage,
+	component: ClientDashboardPage,
 });
 
-function MemberDashboardPage() {
-	const member = demoMembers[0];
+function ClientDashboardPage() {
+	const client = demoMembers[0];
+	const nextService = demoClasses[1];
 
 	return (
 		<AppShell
-			variant="member"
-			eyebrow="Member portal"
-			title="Member Dashboard"
-			description="A member home screen for classes, membership status, announcements, and family training rhythm."
+			variant="client"
+			eyebrow="Client portal"
+			title="Client Dashboard"
+			description="A client home screen for appointments, care-plan status, recommendations, and Raw Body communication."
 		>
-			<div className="grid">
+			<div className="grid gap-4 md:grid-cols-2">
 				<DashboardCard
-					eyebrow="Membership"
-					title={`Welcome back, ${member.name}`}
-					description={`${member.plan} • ${member.belt} belt`}
+					eyebrow="Care plan"
+					title={`Welcome back, ${client.name}`}
+					description={`${client.plan} • ${client.goal}`}
 					footer={
-						<Link to="/member/billing" className="button-primary">
+						<Link to="/client/billing" className="button-primary">
 							View billing
 						</Link>
 					}
 				>
-					<MemberStatusBadge status={member.status} />
+					<MemberStatusBadge status={client.status} />
 				</DashboardCard>
 
 				<DashboardCard
-					eyebrow="Next class"
-					title={demoClasses[1].name}
-					description={`${demoClasses[1].audience} • ${demoClasses[1].days} • ${demoClasses[1].time}`}
+					eyebrow="Next appointment"
+					title={nextService.name}
+					description={`${nextService.audience} • ${nextService.days} • ${nextService.time}`}
 					footer={
-						<Link to="/member/classes" className="button-primary">
-							View my classes
+						<Link to="/client/schedule" className="button-primary">
+							View appointments
 						</Link>
 					}
 				/>
 			</div>
 
-			<div className="grid" style={{ marginTop: "1rem" }}>
-				<DashboardCard eyebrow="Recommended classes" title="This week">
+			<div className="mt-4 grid gap-4 md:grid-cols-2">
+				<DashboardCard eyebrow="Recommended services" title="This care cycle">
 					<ClassScheduleList classes={demoClasses.slice(0, 3)} />
 				</DashboardCard>
 
-				<DashboardCard eyebrow="Announcements" title="From the gym">
+				<DashboardCard eyebrow="Messages" title="From Raw Body">
 					<CommunicationPreview messages={demoMessages.slice(0, 2)} />
 				</DashboardCard>
 			</div>

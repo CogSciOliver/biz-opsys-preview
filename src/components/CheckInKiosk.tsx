@@ -43,10 +43,10 @@ export function CheckInKiosk({
 		setCheckedInTotal(checkedInCount);
 	}, [activeClass, checkedInCount]);
 
-	const isClassFull = openSpots <= 0;
+	const isFull = openSpots <= 0;
 
 	function handleCheckIn() {
-		if (isClassFull) return;
+		if (isFull) return;
 
 		setOpenSpots((current) => current - 1);
 		setCheckedInTotal((current) => current + 1);
@@ -68,17 +68,17 @@ export function CheckInKiosk({
 
 			<CardContent className="mt-6 space-y-4">
 				<div className="grid gap-4 sm:grid-cols-2">
-					<KioskStat value={openSpots} label="Open spots remaining" />
-					<KioskStat value={checkedInTotal} label="Students checked in" />
+					<KioskStat value={openSpots} label="Open appointment spots" />
+					<KioskStat value={checkedInTotal} label="Clients checked in" />
 				</div>
 
 				<button
 					type="button"
 					onClick={handleCheckIn}
-					disabled={isClassFull}
+					disabled={isFull}
 					className="w-full bg-primary px-5 py-4 text-sm font-bold uppercase tracking-[0.12em] text-primary-foreground transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50"
 				>
-					{isClassFull ? "Class full" : "Check in member"}
+					{isFull ? "Fully booked" : "Check in client"}
 				</button>
 			</CardContent>
 		</Card>

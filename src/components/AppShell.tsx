@@ -6,9 +6,25 @@ import { ThemeToggle } from "./ThemeToggle";
 type AppShellProps = {
 	children: ReactNode;
 	variant?: RoleNavVariant;
+	eyebrow?: string;
+	title?: string;
+	description?: string;
 };
 
-export function AppShell({ children, variant = "public" }: AppShellProps) {
+const navigationLabels: Record<RoleNavVariant, string> = {
+	public: "Public Navigation",
+	client: "Client Navigation",
+	admin: "Admin Navigation",
+	owner: "Owner Navigation",
+};
+
+export function AppShell({
+	children,
+	variant = "public",
+	eyebrow,
+	title,
+	description,
+}: AppShellProps) {
 	const isPublic = variant === "public";
 
 	return (
@@ -39,8 +55,9 @@ export function AppShell({ children, variant = "public" }: AppShellProps) {
 						</>
 					) : (
 						<>
-							<Link to="/client">Client Portal</Link>
-							<Link to="/admin">Admin Dashboard</Link>
+							<Link to="/client">Client</Link>
+							<Link to="/admin">Admin</Link>
+							<Link to="/owner/owner/overview">Owner</Link>
 						</>
 					)}
 
@@ -50,18 +67,21 @@ export function AppShell({ children, variant = "public" }: AppShellProps) {
 
 			<div className="app-main">
 				<aside className="app-sidebar">
-					<p className="sidebar-label">
-						{variant === "admin"
-							? "Admin Navigation"
-							: variant === "client"
-								? "Client Navigation"
-								: "Public Navigation"}
-					</p>
-
+					<p className="sidebar-label">{navigationLabels[variant]}</p>
 					<RoleNav variant={variant} />
 				</aside>
 
-				<section className="page-panel">{children}</section>
+				<section className="page-panel">
+					{title ? (
+						<header className="page-heading">
+							{eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
+							<h1>{title}</h1>
+							{description ? <p>{description}</p> : null}
+						</header>
+					) : null}
+
+					{children}
+				</section>
 			</div>
 		</div>
 	);

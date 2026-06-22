@@ -5,24 +5,26 @@ import { MemberList } from "../../components/MemberList";
 import { demoMembers } from "../../data/demoBusiness";
 
 export const Route = createFileRoute("/admin/view-members")({
-	component: StaffMembersPage,
+	component: AdminClientsPage,
 });
 
-function StaffMembersPage() {
+function AdminClientsPage() {
 	return (
 		<AppShell
-			variant="staff"
-			eyebrow="Staff tools"
-			title="Members"
-			description="A staff member directory preview for student lookup, plan status, belt level, and attendance context."
+			variant="admin"
+			eyebrow="Admin tools"
+			title="Clients"
+			description="An admin client directory preview for client lookup, care-plan status, body goals, latest notes, and appointment context."
 		>
-			<p className="button-primary">
-				!!! DEV CREATE: MEMBER SEARCH BY NAME, SORT BY, FILTER BY{" "}
+			<p className="mb-4 border border-primary bg-primary px-4 py-3 text-sm font-bold uppercase tracking-[0.12em] text-primary-foreground">
+				DEV CREATE: client search by name, sort by care plan, filter by status,
+				location, service interest, and latest note.
 			</p>
+
 			<DashboardCard
 				eyebrow="Directory"
-				title="Member profiles"
-				description="In the real system, this would become searchable and filterable. For the prototype, it shows the shape of the staff workflow."
+				title="Client profiles"
+				description="In the real system, this would become searchable and filterable. For the prototype, it shows the shape of the admin workflow."
 			>
 				<MemberList members={demoMembers} showLastCheckIn />
 			</DashboardCard>

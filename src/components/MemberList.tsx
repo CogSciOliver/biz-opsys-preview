@@ -7,7 +7,7 @@ type MemberListProps = {
 		plan: string;
 		status: string;
 		lastCheckIn: string;
-		belt: string;
+		goal?: string;
 	}>;
 	showLastCheckIn?: boolean;
 };
@@ -24,8 +24,8 @@ export function MemberList({
 						<strong>{member.name}</strong>
 						<br />
 						<span>
-							{member.plan} • {member.belt}
-							{showLastCheckIn ? ` • Last check-in: ${member.lastCheckIn}` : ""}
+							{member.plan} • {member.goal}
+							{showLastCheckIn ? ` • Latest note: ${member.lastCheckIn}` : ""}
 						</span>
 					</div>
 					<MemberStatusBadge status={member.status} />

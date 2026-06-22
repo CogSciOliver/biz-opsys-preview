@@ -32,7 +32,7 @@ function StyleGuidePage() {
 		<AppShell
 			variant="owner"
 			eyebrow="Design system"
-			title="Heritage prototype style guide"
+			title="Raw Body prototype style guide"
 			description="A development-only inspection page for the real app components, button treatments, and visual QA."
 		>
 			<div className="hero-card">
@@ -40,15 +40,15 @@ function StyleGuidePage() {
 					<p className="card-kicker">Visual QA & Reference Guide</p>
 					<h2>Check the system before polishing pages.</h2>
 					<p>
-						This page uses the same components and layout classes as the actual
-						prototype pages. No style-guide-only layout system.
+						This page uses the same components and Tailwind layout classes as
+						the actual prototype pages. No style-guide-only layout system.
 					</p>
 
 					<div className="hero-actions">
-						<Link to="/" className="button-inverse">
+						<Link to="/start-demo" className="button-inverse">
 							Demo hub
 						</Link>
-						<Link to="/website" className="button-hollow">
+						<Link to="/" className="button-hollow">
 							Public site
 						</Link>
 					</div>
@@ -57,36 +57,33 @@ function StyleGuidePage() {
 				<HeroStats stats={demoBusiness.stats} />
 			</div>
 
-			<div className="grid" style={{ marginTop: "1rem" }}>
+			<div className="mt-4 grid gap-4 md:grid-cols-2">
 				<DashboardCard
 					eyebrow="Buttons"
 					title="Button Styles"
-					description="Buttons should have no radius, all-caps text, letter spacing, and stable text color on red buttons."
+					description="Buttons should stay sharp, uppercase, findable, and consistent across public, client, admin, and owner flows."
 				>
 					<div className="hero-actions">
-						<Link to="/join" className="button-primary">
+						<Link to="/website/book" className="button-primary">
 							Primary
 						</Link>
-						<Link to="/website" className="button-secondary">
+						<Link to="/website/services" className="button-secondary">
 							Secondary
 						</Link>
-						<Link to="/website/schedule" className="button-outline">
+						<Link to="/client/schedule" className="button-outline">
 							Outline
 						</Link>
-						<Link to="/owner/overview" className="button-ghost">
+						<Link to="/owner/owner/overview" className="button-ghost">
 							Ghost
 						</Link>
-						<Link to="/staff/check-in" className="button-destructive">
+						<Link to="/admin/check-in" className="button-destructive">
 							Destructive
 						</Link>
-						<Link to="/website/events" className="button-link">
+						<Link to="/website/products" className="button-link">
 							Link treatment
 						</Link>
-						<Link to="/join" className="button-inverse">
+						<Link to="/website/consultations" className="button-inverse">
 							Inverse
-						</Link>
-						<Link to="/website" className="button-secondary">
-							Hero secondary
 						</Link>
 						<Link to="/" className="button-hollow">
 							Hollow
@@ -98,7 +95,7 @@ function StyleGuidePage() {
 				<DashboardCard
 					eyebrow="Badges"
 					title="Status Treatments"
-					description="Small status treatments used in cards, lists, billing, leads, and operational views."
+					description="Small status treatments used in cards, lists, billing, consultation leads, and operational views."
 				>
 					<div className="hero-actions">
 						<MemberStatusBadge status="Active" />
@@ -109,18 +106,18 @@ function StyleGuidePage() {
 				</DashboardCard>
 			</div>
 
-			<div style={{ marginTop: "1rem" }}>
+			<div className="mt-4">
 				<div className="hero-card">
 					<div>
 						<p className="card-kicker">Hero buttons</p>
-						<h2>Buttons on red hero panels</h2>
+						<h2>Buttons on royal blue hero panels</h2>
 						<p>
 							These confirm contrast, hover behavior, and color stability on the
-							red Heritage hero treatment.
+							Raw Body brand hero treatment.
 						</p>
 
 						<div className="hero-actions">
-							<Link to="/join" className="button-inverse">
+							<Link to="/website/consultations" className="button-inverse">
 								Inverse
 							</Link>
 
@@ -134,7 +131,7 @@ function StyleGuidePage() {
 				</div>
 			</div>
 
-			<div className="grid-3" style={{ marginTop: "1rem" }}>
+			<div className="mt-4 grid gap-4 md:grid-cols-3">
 				{ownerMetrics.slice(0, 3).map((metric) => (
 					<MetricCard
 						key={metric.label}
@@ -145,45 +142,47 @@ function StyleGuidePage() {
 				))}
 			</div>
 
-			<div className="grid" style={{ marginTop: "1rem" }}>
+			<div className="mt-4 grid gap-4 md:grid-cols-2">
 				<DashboardCard
 					eyebrow="Form preview"
-					title="Fill Out Form"
+					title="Consultation request form"
 					description="These are display-only fields for the static prototype."
 				>
 					<div className="fake-form">
 						<div className="fake-field">
 							<span className="fake-label">Name</span>
-							<div>Parent or student name</div>
+							<div>Client name</div>
 						</div>
 						<div className="fake-field">
-							<span className="fake-label">Interested class</span>
-							<div>Family Jiu Jitsu</div>
+							<span className="fake-label">Service interest</span>
+							<div>
+								Lymphatic Sculpting, Body Sculpting, Massage, or Facials
+							</div>
 						</div>
 						<div className="fake-field">
 							<span className="fake-label">Best contact</span>
-							<div>Phone or email</div>
+							<div>Phone, text, Zoom, or email</div>
 						</div>
 					</div>
 				</DashboardCard>
 
-				<DashboardCard eyebrow="Classes" title="Class Schedules">
+				<DashboardCard eyebrow="Appointments" title="Service Windows">
 					<ClassScheduleList classes={demoClasses} />
 				</DashboardCard>
 			</div>
 
-			<div className="grid" style={{ marginTop: "1rem" }}>
-				<DashboardCard eyebrow="Trial leads" title="TrialLeadList">
+			<div className="mt-4 grid gap-4 md:grid-cols-2">
+				<DashboardCard eyebrow="Consultation leads" title="TrialLeadList">
 					<TrialLeadList leads={demoTrialLeads} showNextStep />
 				</DashboardCard>
 
-				<DashboardCard eyebrow="Events" title="EventList">
+				<DashboardCard eyebrow="Popups" title="EventList">
 					<EventList events={demoEvents} />
 				</DashboardCard>
 			</div>
 
-			<div className="grid" style={{ marginTop: "1rem" }}>
-				<DashboardCard eyebrow="Members" title="MemberList">
+			<div className="mt-4 grid gap-4 md:grid-cols-2">
+				<DashboardCard eyebrow="Clients" title="Client list">
 					<MemberList members={demoMembers} showLastCheckIn />
 				</DashboardCard>
 
@@ -192,12 +191,12 @@ function StyleGuidePage() {
 				</DashboardCard>
 			</div>
 
-			<div className="grid" style={{ marginTop: "1rem" }}>
+			<div className="mt-4 grid gap-4 md:grid-cols-2">
 				<DashboardCard eyebrow="Messages" title="CommunicationPreview">
 					<CommunicationPreview messages={demoMessages} />
 				</DashboardCard>
 
-				<CheckInKiosk activeClass={demoClasses[1]} checkedInCount={14} />
+				<CheckInKiosk activeClass={demoClasses[1]} checkedInCount={3} />
 			</div>
 		</AppShell>
 	);

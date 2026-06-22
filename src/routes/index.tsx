@@ -196,7 +196,7 @@ function RawBodyPublicLanding() {
 					<h1 id="raw-body-hero-title" className="raw-body-hero-title">
 						<span className="raw-body-hero-title__top">Modern Body Care</span>
 						<span className="raw-body-hero-title__bottom">
-							Rooted in Heritage
+							Rooted in Arawak Care
 						</span>
 					</h1>
 
@@ -315,7 +315,7 @@ function RawBodyPublicLanding() {
 			<section className="raw-body-culture" aria-labelledby="culture-title">
 				<div className="raw-body-section-heading">
 					<p className="raw-body-kicker">Our ritual culture</p>
-					<h2 id="culture-title">Plant-safe. Body-aware. Heritage-rooted.</h2>
+					<h2 id="culture-title">Plant-safe. Body-aware. Arawak-rooted.</h2>
 				</div>
 
 				<div className="raw-body-culture-strip">
