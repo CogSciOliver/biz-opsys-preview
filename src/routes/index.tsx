@@ -7,27 +7,27 @@ export const Route = createFileRoute("/")({
 const heroImages = [
 	{
 		src: "/images/site/model-heros/raw-body-essentials-brand-energy-1.jpg",
-		alt: "Raw Body Essentials body care client in a slate and white spa setting",
+		alt: "Raw Body Aesthetics body care client in a slate and white spa setting",
 	},
 	{
 		src: "/images/site/model-heros/raw-body-essentials-brand-energy-2.jpg",
-		alt: "Raw Body Essentials client with natural body oil and botanical care",
+		alt: "Raw Body Aesthetics client with natural body oil and botanical care",
 	},
 	{
 		src: "/images/site/model-heros/raw-body-essentials-brand-energy-3.jpg",
-		alt: "Raw Body Essentials lymphatic sculpting spa editorial",
+		alt: "Raw Body Aesthetics lymphatic sculpting spa editorial",
 	},
 	{
 		src: "/images/site/model-heros/raw-body-essentials-brand-energy-4.jpg",
-		alt: "Raw Body Essentials modern Indigenous woman in body care studio",
+		alt: "Raw Body Aesthetics modern Indigenous woman in body care studio",
 	},
 	{
 		src: "/images/site/model-heros/raw-body-essentials-brand-energy-5.jpg",
-		alt: "Raw Body Essentials plant based skin and body care ritual",
+		alt: "Raw Body Aesthetics plant based skin and body care ritual",
 	},
 	{
 		src: "/images/site/model-heros/raw-body-essentials-brand-energy-6.jpg",
-		alt: "Raw Body Essentials natural body products and at home care tools",
+		alt: "Raw Body Aesthetics natural body products and at home care tools",
 	},
 ];
 
@@ -163,7 +163,7 @@ function RawBodyPublicLanding() {
 			<header className="raw-body-public__header">
 				<Link to="/" className="brand-lockup" aria-label="Raw Body home">
 					<span className="brand-mark">R</span>
-					<span> Raw Body Essentials </span>
+					<span> Raw Body Aesthetics </span>
 				</Link>
 
 				<nav

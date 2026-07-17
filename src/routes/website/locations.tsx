@@ -59,7 +59,7 @@ function LocationsPage() {
 				<p className="raw-body-kicker">Locations</p>
 				<h1>Care where the body already lives.</h1>
 				<p>
-					Raw Body Essentials can support studio care, mobile care, and touring
+					Raw Body Aesthetics can support studio care, mobile care, and touring
 					popup days across Long Island, NYC, Dallas, and Austin.
 				</p>
 

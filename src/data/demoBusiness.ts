@@ -1,5 +1,5 @@
 export const demoBusiness = {
-	name: "Raw Body Essentials",
+	name: "Raw Body Aesthetics",
 	location: "Long Island · NYC · Dallas · Austin · Touring Popups",
 	website: "rawbodyessentials.com",
 	phone: "Consultation-first booking",

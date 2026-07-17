@@ -14,7 +14,7 @@ function IndexPage() {
 		<AppShell
 			variant="public"
 			eyebrow="Interactive Business Operating System Prototype"
-			title="Raw Body Essentials demo hub"
+			title="Raw Body Aesthetics demo hub"
 			description="A static click-through preview of a custom business operating system for public booking, client care, admin operations, and owner reporting."
 		>
 			<div className="hero-card">
