@@ -6,27 +6,27 @@ export const Route = createFileRoute("/")({
 
 const heroImages = [
 	{
-		src: "/images/site/model-heros/raw-body-essentials-brand-energy-1.webp",
+		src: "/images/site/model-heros/raw-body-essentials-brand-energy-1.jpg",
 		alt: "Raw Body Essentials body care client in a slate and white spa setting",
 	},
 	{
-		src: "/images/site/model-heros/raw-body-essentials-brand-energy-2.webp",
+		src: "/images/site/model-heros/raw-body-essentials-brand-energy-2.jpg",
 		alt: "Raw Body Essentials client with natural body oil and botanical care",
 	},
 	{
-		src: "/images/site/product-line-heros/raw-body-essentials-full-product-display-0.webp",
+		src: "/images/site/model-heros/raw-body-essentials-brand-energy-3.jpg",
 		alt: "Raw Body Essentials lymphatic sculpting spa editorial",
 	},
 	{
-		src: "/images/site/model-heros/raw-body-essentials-brand-energy-3.webp",
+		src: "/images/site/model-heros/raw-body-essentials-brand-energy-4.jpg",
 		alt: "Raw Body Essentials modern Indigenous woman in body care studio",
 	},
 	{
-		src: "/images/site/model-heros/raw-body-essentials-brand-energy-4.webp",
+		src: "/images/site/model-heros/raw-body-essentials-brand-energy-5.jpg",
 		alt: "Raw Body Essentials plant based skin and body care ritual",
 	},
 	{
-		src: "/images/site/product-line-heros/raw-body-essentials-full-product-display-1.webp",
+		src: "/images/site/model-heros/raw-body-essentials-brand-energy-6.jpg",
 		alt: "Raw Body Essentials natural body products and at home care tools",
 	},
 ];
@@ -85,29 +85,22 @@ const clientJourneySteps = [
 	},
 ];
 
-const ritualPanels = [
+const consultationTypes = [
 	{
-		title: "Plant-Based Care",
-		img: "public/images/site/culture/raw-body-essentials-plant-based-products.webp",
+		title: "Plan Your External Body Care",
+		line: "Talk through your goals, treatment options, timing, and at-home care before choosing the right next step.",
+		cta: "Plan external care",
+		img: "/images/site/servivces/consultation.webp",
+		bookingURL: "/website/consultations",
 	},
 	{
-		title: "Ancestral Wisdom",
-		img: "public/images/site/culture/raw-body-essentials-arawak-wisdom.webp",
-	},
-	{
-		title: "Body Goals",
-		img: "public/images/site/culture/raw-body-essentials-body-goals.webp",
-	},
-	{
-		title: "Skin Rituals",
-		img: "public/images/site/culture/raw-body-essentials-skin-rituals.webp",
-	},
-	{
-		title: "At-Home Tools",
-		img: "public/images/site/culture/raw-body-essentials-at-home-tools1.webp",
+		title: "Support Your Internal Body Care",
+		line: "Explore herbal tea rituals designed to complement your external care and support your everyday wellness rhythm.",
+		cta: "Explore tea support",
+		img: "/images/site/servivces/tea-ceremony.webp",
+		bookingURL: "/website/consultations",
 	},
 ];
-
 
 const consultationQuestions = [
 	{
@@ -139,6 +132,30 @@ const consultationQuestions = [
 		to: "/website/services",
 	},
 ];
+
+const ritualPanels = [
+	{
+		title: "Plant-Based Care",
+		img: "public/images/site/culture/raw-body-essentials-plant-based-products.webp",
+	},
+	{
+		title: "Ancestral Wisdom",
+		img: "public/images/site/culture/raw-body-essentials-arawak-wisdom.webp",
+	},
+	{
+		title: "Body Goals",
+		img: "public/images/site/culture/raw-body-essentials-body-goals.webp",
+	},
+	{
+		title: "Skin Rituals",
+		img: "public/images/site/culture/raw-body-essentials-skin-rituals.webp",
+	},
+	{
+		title: "At-Home Tools",
+		img: "public/images/site/culture/raw-body-essentials-at-home-tools1.webp",
+	},
+];
+
 
 function RawBodyPublicLanding() {
 	return (
@@ -277,6 +294,55 @@ function RawBodyPublicLanding() {
 					))}
 				</div>
 			</section>
+
+			<section
+	className="raw-body-consultations"
+	aria-labelledby="consultation-types-title"
+>
+	<div className="raw-body-section-heading">
+		<p className="raw-body-kicker">Care inside and out</p>
+
+		<h2 id="consultation-types-title">
+			Choose the support your body needs.
+		</h2>
+
+		<p>
+			Plan your external treatments or explore internal rituals that support
+			your care between appointments.
+		</p>
+	</div>
+
+	<div className="raw-body-consultation-grid">
+		{consultationTypes.map((consultation) => (
+			<Link
+				key={consultation.title}
+				to={consultation.bookingURL}
+				className="raw-body-consultation-card"
+				aria-label={`${consultation.title}: ${consultation.line}`}
+			>
+				<div className="raw-body-consultation-card__media">
+					<img
+						src={consultation.img}
+						alt=""
+						className="raw-body-consultation-card__image"
+						loading="lazy"
+					/>
+
+					<div
+						className="raw-body-consultation-card__shade"
+						aria-hidden="true"
+					/>
+				</div>
+
+				<div className="raw-body-consultation-card__body">
+					<h3>{consultation.title}</h3>
+					<p>{consultation.line}</p>
+					<strong>{consultation.cta}</strong>
+				</div>
+			</Link>
+		))}
+	</div>
+</section>
 
 			<section className="raw-body-beginner" aria-labelledby="beginner-title">
 				<div className="raw-body-beginner__copy">

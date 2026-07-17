@@ -5,7 +5,6 @@ import {
 	HeadContent,
 	Scripts,
 } from "@tanstack/react-router";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import appCss from "../styles.css?url";
 
 interface MyRouterContext {
@@ -44,7 +43,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			</head>
 			<body>
 				<ClerkProvider>
-					<TooltipProvider>{children}</TooltipProvider>
+					{children}
+					{/* <TooltipProvider>{children}</TooltipProvider> */}
 					{/* <TanStackDevtools
 						config={{
 							position: "bottom-right",
