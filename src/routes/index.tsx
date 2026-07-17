@@ -36,28 +36,28 @@ const servicePaths = [
 		title: "Body Sculpting",
 		line: "Non-invasive support for shape, tone, and body goals.",
 		cta: "Explore sculpting",
-		img: "public/images/site/model-details/raw-body-essentials-body-sculpting.webp",
+		img: "/images/site/model-details/raw-body-essentials-body-sculpting.webp",
 		serviceURL: "/website/services/body-sculpting",
 	},
 	{
 		title: "Lymphatic Drainage",
 		line: "Hands-on care for proper flow, recovery, and fluid removal.",
 		cta: "Explore lymphatic care",
-		img: "public/images/site/servivces/lymph/raw-body-essentials-knee-lymph.webp",
+		img: "/images/site/servivces/lymph/raw-body-essentials-knee-lymph.webp",
 		serviceURL: "/website/services/lymphatic-sculpting",
 	},
 	{
 		title: "Massage",
 		line: "Restorative bodywork for tension, calm, and release.",
 		cta: "Explore massage",
-		img: "public/images/site/model-details/raw-body-essentials-massage.webp",
+		img: "/images/site/model-details/raw-body-essentials-massage.webp",
 		serviceURL: "/website/services/massage",
 	},
 	{
 		title: "Facials",
 		line: "Plant-forward skin rituals for glow, clarity, and care.",
 		cta: "Explore facials",
-		img: "public/images/site/model-details/raw-body-essentials-facial.webp",
+		img: "/images/site/model-details/raw-body-essentials-facial.webp",
 		serviceURL: "/website/services/facials",
 	},
 ];
@@ -136,23 +136,23 @@ const consultationQuestions = [
 const ritualPanels = [
 	{
 		title: "Plant-Based Care",
-		img: "public/images/site/culture/raw-body-essentials-plant-based-products.webp",
+		img: "/images/site/culture/raw-body-essentials-plant-based-products.webp",
 	},
 	{
 		title: "Ancestral Wisdom",
-		img: "public/images/site/culture/raw-body-essentials-arawak-wisdom.webp",
+		img: "/images/site/culture/raw-body-essentials-arawak-wisdom.webp",
 	},
 	{
 		title: "Body Goals",
-		img: "public/images/site/culture/raw-body-essentials-body-goals.webp",
+		img: "/images/site/culture/raw-body-essentials-body-goals.webp",
 	},
 	{
 		title: "Skin Rituals",
-		img: "public/images/site/culture/raw-body-essentials-skin-rituals.webp",
+		img: "/images/site/culture/raw-body-essentials-skin-rituals.webp",
 	},
 	{
 		title: "At-Home Tools",
-		img: "public/images/site/culture/raw-body-essentials-at-home-tools1.webp",
+		img: "/images/site/culture/raw-body-essentials-at-home-tools1.webp",
 	},
 ];
 
