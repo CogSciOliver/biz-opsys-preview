@@ -53,10 +53,11 @@ function ConsultationsPage() {
 		<main className="raw-body-page">
 			<section className="raw-body-page-hero">
 				<p className="raw-body-kicker">Consultations</p>
-				<h1>Start with the body goal.</h1>
+				<h1>Start with your body goals.</h1>
+				<br/>
 				<p>
 					Before booking a treatment, choose the consultation style that helps
-					you feel clear. Phone, text, Zoom, or in-person planning can help
+					you feel understood. Phone, text, Zoom, or in-person planning can help
 					match your goals to the right service path.
 				</p>
 

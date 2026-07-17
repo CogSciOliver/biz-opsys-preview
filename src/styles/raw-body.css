@@ -33,7 +33,7 @@
 	font-size: clamp(1.55rem, 2.4vw, 2.25rem);
 	font-weight: 500;
 	line-height: 0.95;
-	letter-spacing: -0.04em;
+	letter-spacing: -0.02em;
 }
 
 .raw-body-public__brand small {
@@ -131,7 +131,7 @@
 
 .raw-body-hero__shade {
 	z-index: 1;
-	background:
+	/* background:
 		linear-gradient(
 			90deg,
 			var(--raw-body-paper) 0%,
@@ -143,7 +143,7 @@
 			var(--raw-body-paper) 0%,
 			transparent 42%,
 			var(--raw-body-paper) 100%
-		);
+		); */
 	pointer-events: none;
 }
 
@@ -204,8 +204,6 @@
 .raw-body-kicker-lite {
 	color: var(--raw-body-white);
 }
-
-
 
 .raw-body-hero__line {
 	max-width: 34rem;
@@ -278,7 +276,7 @@
 	font-size: clamp(3rem, 6vw, 6.4rem);
 	font-weight: 500;
 	line-height: 0.9;
-	letter-spacing: -0.065em;
+	letter-spacing: -0.02em;
 }
 
 .raw-body-section-heading h2 {
@@ -356,7 +354,7 @@
 	font-size: clamp(2rem, 2.5vw, 2.65rem);
 	font-weight: 500;
 	line-height: 0.9;
-	letter-spacing: -0.05em;
+	letter-spacing: -0.02em;
 }
 
 .raw-body-path-card p {
@@ -366,8 +364,6 @@
 	font-weight: 500;
 	line-height: 1.45;
 }
-
-
 
 /* CARE PATH */
 
@@ -407,7 +403,7 @@
 	font-size: clamp(2rem, 2.6vw, 2.75rem);
 	font-weight: 500;
 	line-height: 0.95;
-	letter-spacing: -0.05em;
+	letter-spacing: -0.02em;
 }
 
 .raw-body-step p {
@@ -460,7 +456,7 @@
 	font-size: clamp(2rem, 2.8vw, 3rem);
 	font-weight: 500;
 	line-height: 0.9;
-	letter-spacing: -0.055em;
+	letter-spacing: -0.02em;
 }
 
 .raw-body-beginner-card p {
@@ -475,7 +471,7 @@
 	margin-top: 1rem;
 	color: var(--raw-body-blue);
 	font-size: 0.72rem;
-	
+
 	letter-spacing: 0.14em;
 	text-transform: uppercase;
 }
@@ -524,7 +520,7 @@
 	font-size: clamp(1.7rem, 2vw, 2.2rem);
 	font-weight: 500;
 	line-height: 0.95;
-	letter-spacing: -0.05em;
+	letter-spacing: -0.02em;
 	text-align: center;
 }
 
@@ -635,14 +631,14 @@
 	}
 
 	.raw-body-hero__shade {
-		background:
+		/* background:
 			linear-gradient(
 				180deg,
 				var(--raw-body-paper) 0%,
 				var(--raw-body-paper) 36%,
 				transparent 78%
 			),
-			linear-gradient(0deg, var(--raw-body-paper) 0%, transparent 42%);
+			linear-gradient(0deg, var(--raw-body-paper) 0%, transparent 42%); */
 	}
 
 	.raw-body-hero__frame {

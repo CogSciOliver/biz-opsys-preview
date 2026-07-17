@@ -24,7 +24,7 @@
 	font-size: clamp(3rem, 5vw, 5.5rem);
 	font-weight: 500;
 	line-height: 0.9;
-	letter-spacing: -0.07em;
+	letter-spacing: -0.02em;
 }
 
 .raw-body-booking-form__header p:last-child {

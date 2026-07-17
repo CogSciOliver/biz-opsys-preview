@@ -4,33 +4,60 @@ export const Route = createFileRoute("/")({
 	component: RawBodyPublicLanding,
 });
 
+const heroImages = [
+	{
+		src: "/images/site/model-heros/raw-body-essentials-brand-energy-1.webp",
+		alt: "Raw Body Essentials body care client in a slate and white spa setting",
+	},
+	{
+		src: "/images/site/model-heros/raw-body-essentials-brand-energy-2.webp",
+		alt: "Raw Body Essentials client with natural body oil and botanical care",
+	},
+	{
+		src: "/images/site/product-line-heros/raw-body-essentials-full-product-display-0.webp",
+		alt: "Raw Body Essentials lymphatic sculpting spa editorial",
+	},
+	{
+		src: "/images/site/model-heros/raw-body-essentials-brand-energy-3.webp",
+		alt: "Raw Body Essentials modern Indigenous woman in body care studio",
+	},
+	{
+		src: "/images/site/model-heros/raw-body-essentials-brand-energy-4.webp",
+		alt: "Raw Body Essentials plant based skin and body care ritual",
+	},
+	{
+		src: "/images/site/product-line-heros/raw-body-essentials-full-product-display-1.webp",
+		alt: "Raw Body Essentials natural body products and at home care tools",
+	},
+];
+
 const servicePaths = [
 	{
 		title: "Body Sculpting",
 		line: "Non-invasive support for shape, tone, and body goals.",
 		cta: "Explore sculpting",
-		img: "/images/raw-body/body-sculpting.avif",
+		img: "public/images/site/model-details/raw-body-essentials-body-sculpting.webp",
 		serviceURL: "/website/services/body-sculpting",
 	},
 	{
-		title: "Lymphatic Sculpting",
-		line: "Hands-on care for flow, recovery, and a lighter body feel.",
+		title: "Lymphatic Drainage",
+		line: "Hands-on care for proper flow, recovery, and fluid removal.",
 		cta: "Explore lymphatic care",
-		img: "/images/raw-body/lymphatic-sculpting.avif",
+		img: "public/images/site/servivces/lymph/raw-body-essentials-knee-lymph.webp",
 		serviceURL: "/website/services/lymphatic-sculpting",
 	},
 	{
 		title: "Massage",
 		line: "Restorative bodywork for tension, calm, and release.",
 		cta: "Explore massage",
-		img: "/images/raw-body/massage.avif",
+		img: "public/images/site/model-details/raw-body-essentials-massage.webp",
 		serviceURL: "/website/services/massage",
 	},
 	{
 		title: "Facials",
 		line: "Plant-forward skin rituals for glow, clarity, and care.",
 		cta: "Explore facials",
-		img: "/images/raw-body/facials.avif",
+		img: "public/images/site/model-details/raw-body-essentials-facial.webp",
 		serviceURL: "/website/services/facials",
 	},
 ];
@@ -61,52 +88,26 @@ const clientJourneySteps = [
 const ritualPanels = [
 	{
 		title: "Plant-Based Care",
-		img: "/images/raw-body/plant-based-care.avif",
+		img: "public/images/site/culture/raw-body-essentials-plant-based-products.webp",
 	},
 	{
 		title: "Ancestral Wisdom",
-		img: "/images/raw-body/ancestral-wisdom.avif",
+		img: "public/images/site/culture/raw-body-essentials-arawak-wisdom.webp",
 	},
 	{
 		title: "Body Goals",
-		img: "/images/raw-body/body-goals.avif",
+		img: "public/images/site/culture/raw-body-essentials-body-goals.webp",
 	},
 	{
 		title: "Skin Rituals",
-		img: "/images/raw-body/skin-rituals.avif",
+		img: "public/images/site/culture/raw-body-essentials-skin-rituals.webp",
 	},
 	{
 		title: "At-Home Tools",
-		img: "/images/raw-body/at-home-tools.avif",
+		img: "public/images/site/culture/raw-body-essentials-at-home-tools1.webp",
 	},
 ];
 
-const heroImages = [
-	{
-		src: "/images/raw-body/hero-taino-arawaks.avif",
-		alt: "Raw Body Essentials body care client in a slate and white spa setting",
-	},
-	{
-		src: "/images/raw-body/hero-trinidad-tobago.avif",
-		alt: "Raw Body Essentials client with natural body oil and botanical care",
-	},
-	{
-		src: "/images/raw-body/hero-puerto-rico.avif",
-		alt: "Raw Body Essentials lymphatic sculpting spa editorial",
-	},
-	{
-		src: "/images/raw-body/hero-jamaica.avif",
-		alt: "Raw Body Essentials modern Indigenous woman in body care studio",
-	},
-	{
-		src: "/images/raw-body/hero-panama-mexico.avif",
-		alt: "Raw Body Essentials plant based skin and body care ritual",
-	},
-	{
-		src: "/images/raw-body/hero-products.avif",
-		alt: "Raw Body Essentials natural body products and at home care tools",
-	},
-];
 
 const consultationQuestions = [
 	{
@@ -131,9 +132,9 @@ const consultationQuestions = [
 		to: "/website/products",
 	},
 	{
-		question: "Is this medical treatment?",
+		question: "Is body sculpting safe?",
 		answer:
-			"No. Raw Body Essentials offers body care, beauty, massage, sculpting, and wellness-support services. We keep the language honest and non-medical.",
+			"Yes. Body sculpting is safe when performed by our trained professionals using appropriate FDA approved equipment.",
 		cta: "Explore treatments",
 		to: "/website/services",
 	},
@@ -141,7 +142,6 @@ const consultationQuestions = [
 
 function RawBodyPublicLanding() {
 	return (
-		
 		<main className="raw-body-public">
 			<header className="raw-body-public__header">
 				<Link to="/" className="brand-lockup" aria-label="Raw Body home">
@@ -188,7 +188,7 @@ function RawBodyPublicLanding() {
 				<div className="raw-body-hero__copy">
 					<p className="raw-body-kicker">RAW. ANCESTRAL. MODERN</p>
 					<h1 id="raw-body-hero-title" className="raw-body-hero-title">
-						Modern Body Care <br/> Rooted in Arawak Care
+						Modern Body Care <br /> Rooted in Arawak Care
 					</h1>
 
 					<p className="raw-body-hero__line">
@@ -281,9 +281,9 @@ function RawBodyPublicLanding() {
 			<section className="raw-body-beginner" aria-labelledby="beginner-title">
 				<div className="raw-body-beginner__copy">
 					<p className="raw-body-kicker-lite">Before you book</p>
-					<h2 id="beginner-title">Start with the body goal.</h2>
+					<h2 id="beginner-title">Start with your body goals.</h2>
 					<p>
-						Whether you want sculpting, lymphatic support, massage, facials, or
+						Whether you need lymphatic support, or want sculpting, massage, facials, or
 						a natural at-home care plan, the first step is choosing the right
 						ritual for your body, schedule, and location.
 					</p>
@@ -331,10 +331,10 @@ function RawBodyPublicLanding() {
 			>
 				<div>
 					<p className="raw-body-kicker">
-						Demo what's built behind the booking &rarr;
+						See what's built behind the booking &rarr;
 					</p>
 					<h2 id="system-title">
-						This software keeps the body-care business moving.
+						This software keeps the raw body-care business moving.
 					</h2>
 					<p>
 						Consultations, service booking, client goals, treatment history,
