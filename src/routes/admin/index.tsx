@@ -65,18 +65,18 @@ function AdminPage() {
 	return (
 		<main className="min-h-screen bg-background text-foreground">
 			<section className="border-b border-border bg-card px-4 py-16 md:px-12 lg:px-24">
-				<p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">
+				<p className="mb-4 text-xs uppercase tracking-[0.28em] text-accent">
 					Admin Dashboard
 				</p>
 
 				<div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
 					<div>
-						<h1 className="max-w-5xl font-display text-6xl font-medium leading-[0.88] tracking-[-0.075em] text-primary md:text-8xl">
-							Operate the care business.
+						<h1 className="max-w-5xl font-display text-6xl font-medium  tracking-[-0.02em] text-primary md:text-8xl">
+							Operate the business.
 						</h1>
 
 						<p className="mt-6 max-w-2xl text-lg leading-7 text-muted-foreground">
-							A business dashboard for service requests, popup planning, client
+							This business dashboard is for service requests, popup planning, client
 							follow-up, products, and care-plan visibility.
 						</p>
 					</div>
@@ -84,14 +84,14 @@ function AdminPage() {
 					<div className="flex flex-wrap gap-3 lg:justify-end">
 						<Link
 							to="/website/book"
-							className="inline-flex min-h-12 items-center justify-center border border-primary bg-primary px-5 text-xs font-black uppercase tracking-[0.18em] text-primary-foreground"
+							className="inline-flex min-h-12 items-center justify-center border border-primary bg-primary px-5 text-xs  uppercase tracking-[0.18em] text-primary-foreground"
 						>
 							View booking flow
 						</Link>
 
 						<Link
 							to="/client"
-							className="inline-flex min-h-12 items-center justify-center border border-primary px-5 text-xs font-black uppercase tracking-[0.18em] text-primary"
+							className="inline-flex min-h-12 items-center justify-center border border-primary px-5 text-xs  uppercase tracking-[0.18em] text-primary"
 						>
 							Client view
 						</Link>
@@ -105,7 +105,7 @@ function AdminPage() {
 						key={stat.label}
 						className="border border-border bg-card p-5"
 					>
-						<p className="text-xs font-black uppercase tracking-[0.18em] text-accent">
+						<p className="text-xs  uppercase tracking-[0.18em] text-accent">
 							{stat.label}
 						</p>
 						<strong className="mt-4 block font-display text-6xl font-medium leading-none tracking-[-0.08em] text-primary">
@@ -122,7 +122,7 @@ function AdminPage() {
 				<div className="border border-border bg-card p-5 md:p-7">
 					<div className="mb-5 flex flex-wrap items-end justify-between gap-4">
 						<div>
-							<p className="mb-3 text-xs font-black uppercase tracking-[0.18em] text-accent">
+							<p className="mb-3 text-xs uppercase tracking-[0.18em] text-accent">
 								Booking queue
 							</p>
 							<h2 className="font-display text-5xl font-medium leading-[0.9] tracking-[-0.07em] text-primary">
@@ -134,7 +134,7 @@ function AdminPage() {
 					<div className="overflow-x-auto">
 						<table className="w-full min-w-[42rem] border-collapse text-left">
 							<thead>
-								<tr className="border-b border-border text-xs font-black uppercase tracking-[0.14em] text-muted-foreground">
+								<tr className="border-b border-border text-xs  uppercase tracking-[0.14em] text-muted-foreground">
 									<th className="py-3 pr-4">Client</th>
 									<th className="py-3 pr-4">Service</th>
 									<th className="py-3 pr-4">Location</th>
@@ -158,7 +158,7 @@ function AdminPage() {
 											{item.location}
 										</td>
 										<td className="py-4 pr-4">
-											<span className="inline-flex border border-accent px-3 py-2 text-xs font-black uppercase tracking-[0.12em] text-accent">
+											<span className="inline-flex bg-cream/50 border border-accent px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-accent">
 												{item.status}
 											</span>
 										</td>
@@ -170,7 +170,7 @@ function AdminPage() {
 				</div>
 
 				<aside className="border border-border bg-card p-5 md:p-7">
-					<p className="mb-4 text-xs font-black uppercase tracking-[0.18em] text-accent">
+					<p className="mb-4 text-xs  uppercase tracking-[0.18em] text-accent">
 						Operator tasks
 					</p>
 
@@ -191,7 +191,7 @@ function AdminPage() {
 
 					<Link
 						to="/website/locations"
-						className="mt-6 inline-flex min-h-12 items-center justify-center border border-primary bg-primary px-5 text-xs font-black uppercase tracking-[0.18em] text-primary-foreground"
+						className="mt-6 inline-flex min-h-12 items-center justify-center border border-primary bg-primary px-5 text-xs uppercase tracking-[0.18em] text-primary-foreground"
 					>
 						Review locations
 					</Link>

@@ -28,19 +28,25 @@ const bookingSteps = [
 		number: "01",
 		title: "Choose support",
 		description:
-			"Start with the service, product question, or body goal you want help planning.",
+			"Start with a service, product question, or body goal you want help planning.",
 	},
 	{
 		number: "02",
 		title: "Choose location",
 		description:
-			"Pick studio care, popup care, or remote consultation depending on what is available.",
+			"Pick studio care, popup care, or at home consultation depending on what is available near you.",
 	},
 	{
 		number: "03",
-		title: "Confirm next step",
+		title: "Submit & confirm",
 		description:
-			"Submit the request so the care path can be confirmed before the appointment.",
+			"Submit your request so our care provider can confirmed with you before your appointment.",
+	},
+	{
+		number: "04",
+		title: "Inform",
+		description:
+			"Complete your intake form. Notifiy your esthetician about any physical or medical concerns.",
 	},
 ];
 
@@ -49,7 +55,8 @@ function BookPage() {
 		<main className="raw-body-page">
 			<section className="raw-body-page-hero">
 				<p className="raw-body-kicker">Book</p>
-				<h1>Start your care request.</h1>
+				<h1>Submit a service request.</h1>
+				<br/>
 				<p>
 					This demo booking flow helps clients choose a service, location, and
 					consultation path before confirming treatment details.
@@ -139,7 +146,7 @@ function BookPage() {
 			<section className="raw-body-page-band" aria-labelledby="booking-flow">
 				<div className="raw-body-section-heading-lite">
 					<p className="raw-body-kicker-lite">Booking rhythm</p>
-					<h2 id="booking-flow">Request first. Confirm with care.</h2>
+					<h2 id="booking-flow">Request & Confirm</h2>
 				</div>
 
 				<div className="raw-body-step-grid">

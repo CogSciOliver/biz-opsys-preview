@@ -19,7 +19,6 @@
 
 .raw-body-booking-form__header h2 {
 	margin: 0;
-	color: var(--raw-body-navy);
 	font-family: var(--font-display);
 	font-size: clamp(3rem, 5vw, 5.5rem);
 	font-weight: 500;
@@ -30,7 +29,7 @@
 .raw-body-booking-form__header p:last-child {
 	margin: 1rem 0 0;
 	color: var(--raw-body-slate);
-	line-height: 1.55;
+	line-height: 1.65;
 }
 
 .raw-body-field-grid {

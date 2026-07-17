@@ -32,7 +32,7 @@
 	font-family: var(--font-display);
 	font-size: clamp(1.55rem, 2.4vw, 2.25rem);
 	font-weight: 500;
-	line-height: 0.95;
+	line-height: 0.9;
 	letter-spacing: -0.02em;
 }
 
@@ -46,18 +46,6 @@
 	text-transform: uppercase;
 }
 
-.raw-body-public__mark {
-	display: grid;
-	width: 2.6rem;
-	height: 2.6rem;
-	place-items: center;
-	color: var(--raw-body-blue);
-	border: 1px solid var(--raw-body-blue);
-	font-family: var(--font-display);
-	font-size: 1.4rem;
-	font-weight: 700;
-	line-height: 1;
-}
 
 .raw-body-public__nav {
 	display: flex;
@@ -210,7 +198,7 @@
 	margin: 1.35rem 0 0;
 	color: var(--raw-body-ink);
 	font-size: clamp(1rem, 1.4vw, 1.2rem);
-	line-height: 1.55;
+	line-height: 1.65;
 }
 
 .raw-body-hero__actions {
@@ -253,6 +241,7 @@
 .raw-body-section,
 .raw-body-care,
 .raw-body-beginner,
+.raw-body-consultations,
 .raw-body-culture,
 .raw-body-system-bridge {
 	padding: clamp(3.5rem, 7vw, 7rem) clamp(1rem, 5vw, 5rem);
@@ -269,6 +258,7 @@
 .raw-body-section-heading-lite h2,
 .raw-body-care h2,
 .raw-body-beginner h2,
+.raw-body-consultations h2,
 .raw-body-culture h2,
 .raw-body-system-bridge h2 {
 	margin: 0;
@@ -277,10 +267,6 @@
 	font-weight: 500;
 	line-height: 0.9;
 	letter-spacing: -0.02em;
-}
-
-.raw-body-section-heading h2 {
-	color: var(--raw-body-ink);
 }
 
 .raw-body-section-heading-lite h2 {
@@ -362,7 +348,7 @@
 	color: var(--raw-body-slate);
 	font-size: 0.95rem;
 	font-weight: 500;
-	line-height: 1.45;
+	line-height: 1.65;
 }
 
 /* CARE PATH */
@@ -410,7 +396,7 @@
 	margin: 0.75rem 0 0;
 	color: var(--raw-body-100);
 	font-weight: 500;
-	line-height: 1.45;
+	line-height: 1.65;
 }
 
 /* CONSULTATION QUESTIONS */
@@ -426,13 +412,14 @@
 
 .raw-body-beginner__copy {
 	max-width: 42rem;
+	text-align: left;
 }
 
 .raw-body-beginner__copy p:last-child {
 	margin: 1rem 0 0;
 	color: var(--raw-body-100);
 	font-size: clamp(1rem, 1.5vw, 1.25rem);
-	line-height: 1.5;
+	line-height: 1.65;
 }
 
 .raw-body-beginner-grid {
@@ -463,7 +450,7 @@
 	margin: 0.85rem 0 0;
 	color: var(--raw-body-slate);
 	font-weight: 500;
-	line-height: 1.45;
+	line-height: 1.65;
 }
 
 .raw-body-beginner-card__link {
@@ -519,7 +506,7 @@
 	font-family: var(--font-display);
 	font-size: clamp(1.7rem, 2vw, 2.2rem);
 	font-weight: 500;
-	line-height: 0.95;
+	line-height: 0.9;
 	letter-spacing: -0.02em;
 	text-align: center;
 }
@@ -546,7 +533,7 @@
 	color: var(--raw-body-slate);
 	font-size: 1rem;
 	font-weight: 500;
-	line-height: 1.55;
+	line-height: 1.65;
 }
 
 .raw-body-system-actions {
@@ -688,33 +675,6 @@
 	}
 }
 
-.raw-body-consultations {
-	padding: clamp(5rem, 10vw, 9rem) clamp(1.25rem, 5vw, 5rem);
-	background: var(--raw-body-paper);
-}
-
-.raw-body-consultations .raw-body-section-heading {
-	max-width: 48rem;
-	margin-bottom: clamp(2.5rem, 5vw, 4rem);
-}
-
-.raw-body-consultations .raw-body-section-heading h2 {
-	margin-bottom: 1rem;
-	color: var(--raw-body-ink);
-	font-size: clamp(2.75rem, 6vw, 5.5rem);
-	font-weight: 500;
-	line-height: 0.96;
-	letter-spacing: -0.035em;
-}
-
-.raw-body-consultations .raw-body-section-heading > p:last-child {
-	max-width: 42rem;
-	margin: 0;
-	color: var(--raw-body-slate);
-	font-size: clamp(1rem, 1.4vw, 1.125rem);
-	line-height: 1.7;
-}
-
 .raw-body-consultation-grid {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -775,8 +735,8 @@
 	color: var(--raw-body-white);
 	font-size: clamp(2.25rem, 4vw, 4rem);
 	font-weight: 500;
-	line-height: 0.98;
-	letter-spacing: -0.03em;
+	line-height: 0.9;
+	letter-spacing: -0.02em;
 }
 
 .raw-body-consultation-card__body p {

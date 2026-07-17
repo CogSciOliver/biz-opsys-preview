@@ -48,7 +48,7 @@ function ServicesPage() {
 		<main className="raw-body-page">
 			<section className="raw-body-page-hero">
 				<p className="raw-body-kicker">Treatments</p>
-				<h1>Choose the support your body is asking for.</h1>
+				<h1>Choose the support your body's asking for.</h1>
 				<p>
 					Explore sculpting, lymphatic care, massage, facials, consultations,
 					and at-home care without medical overpromising or generic spa noise.

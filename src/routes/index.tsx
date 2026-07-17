@@ -175,14 +175,11 @@ function RawBodyPublicLanding() {
 					className="raw-body-public__nav"
 					aria-label="Public website navigation"
 				>
-					<Link to="/" hash="services">
-						Services
-					</Link>
-					<Link to="/" hash="about">
-						About
-					</Link>
-					<Link to="/website/consultations">Consultations</Link>
-					<Link to="/website/locations">Locations</Link>
+					<Link to="/" hash="services">Services</Link>
+					<Link to="/" hash="culture">Culture</Link>
+					<Link to="/" hash="faqs">FAQs</Link>
+					<Link to="/" hash="consultations">Consultations</Link>
+					
 				</nav>
 
 				<Link
@@ -240,8 +237,7 @@ function RawBodyPublicLanding() {
 				</div>
 			</section>
 
-			<section
-				id="services"
+			<section id="services"
 				className="raw-body-section raw-body-section--paths"
 				aria-labelledby="paths-title"
 			>
@@ -279,8 +275,7 @@ function RawBodyPublicLanding() {
 				</div>
 			</section>
 
-			<section
-				id="about"
+			<section id="support"
 				className="raw-body-care"
 				aria-labelledby="your-care-path"
 			>
@@ -300,7 +295,7 @@ function RawBodyPublicLanding() {
 				</div>
 			</section>
 
-			<section
+			<section id="consultations"
 	className="raw-body-consultations"
 	aria-labelledby="consultation-types-title"
 >
@@ -308,9 +303,9 @@ function RawBodyPublicLanding() {
 		<p className="raw-body-kicker">Care inside and out</p>
 
 		<h2 id="consultation-types-title">
-			Choose the support your body needs.
+			Choose the support<br/>your body needs.
 		</h2>
-
+<br/>
 		<p>
 			Plan your external treatments or explore internal rituals that support
 			your care between appointments.
@@ -349,8 +344,8 @@ function RawBodyPublicLanding() {
 	</div>
 </section>
 
-			<section className="raw-body-beginner" aria-labelledby="beginner-title">
-				<div className="raw-body-beginner__copy">
+			<section id="faqs" className="raw-body-beginner" aria-labelledby="beginner-title">
+				<div className="raw-body-section-heading-lite raw-body-beginner__copy">
 					<p className="raw-body-kicker-lite">Before you book</p>
 					<h2 id="beginner-title">Start with your body goals.</h2>
 					<p>
@@ -373,7 +368,7 @@ function RawBodyPublicLanding() {
 				</div>
 			</section>
 
-			<section className="raw-body-culture" aria-labelledby="culture-title">
+			<section id="culture" className="raw-body-culture" aria-labelledby="culture-title">
 				<div className="raw-body-section-heading">
 					<p className="raw-body-kicker">Our ritual culture</p>
 					<h2 id="culture-title">Plant-safe. Body-aware. Arawak-rooted.</h2>
@@ -396,8 +391,7 @@ function RawBodyPublicLanding() {
 				</div>
 			</section>
 
-			<section
-				className="raw-body-system-bridge"
+			<section id="demo" className="raw-body-system-bridge"
 				aria-labelledby="system-title"
 			>
 				<div>

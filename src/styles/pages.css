@@ -16,7 +16,7 @@
 	font-family: var(--font-display);
 	font-size: clamp(4rem, 8vw, 8rem);
 	font-weight: 500;
-	line-height: 0.78;
+	line-height: 0.9;
 	letter-spacing: -0.02em;
 }
 
@@ -25,7 +25,8 @@
 	margin: 1.25rem 0 0;
 	color: var(--raw-body-slate);
 	font-size: clamp(1rem, 1.4vw, 1.25rem);
-	line-height: 1.55;
+	line-height: 1.65;
+	font-weight: 300;
 }
 
 .raw-body-page-grid {
@@ -50,7 +51,6 @@
 
 .raw-body-page-card h2 {
 	margin: 0;
-	color: var(--raw-body-navy);
 	font-family: var(--font-display);
 	font-size: clamp(2.4rem, 3vw, 3.4rem);
 	font-weight: 500;
@@ -61,7 +61,7 @@
 .raw-body-page-card p {
 	margin: 1rem 0 0;
 	color: var(--raw-body-slate);
-	line-height: 1.5;
+	line-height: 1.65;
 }
 
 @media (max-width: 980px) {
@@ -96,11 +96,10 @@
 
 .raw-body-detail-hero h1 {
 	margin: 0;
-	color: var(--raw-body-navy);
 	font-family: var(--font-display);
 	font-size: clamp(4.5rem, 8vw, 8.5rem);
 	font-weight: 500;
-	line-height: 0.85;
+	line-height: 0.9;
 	letter-spacing: -0.02em;
 }
 
@@ -108,7 +107,7 @@
 	margin: 1.35rem 0 0;
 	color: var(--raw-body-slate);
 	font-size: clamp(1rem, 1.45vw, 1.25rem);
-	line-height: 1.55;
+	line-height: 1.65;
 }
 
 .raw-body-detail-actions {
@@ -152,7 +151,6 @@
 
 .raw-body-detail-card h2 {
 	margin: 0;
-	color: var(--raw-body-navy);
 	font-family: var(--font-display);
 	font-size: clamp(2.5rem, 4vw, 4rem);
 	font-weight: 500;
@@ -167,13 +165,13 @@
 	margin: 1.25rem 0 0;
 	padding-left: 1.25rem;
 	color: var(--raw-body-slate);
-	line-height: 1.45;
+	line-height: 1.65;
 }
 
 .raw-body-detail-card p {
 	margin: 1rem 0 0;
 	color: var(--raw-body-slate);
-	line-height: 1.55;
+	line-height: 1.65;
 }
 
 @media (max-width: 900px) {
