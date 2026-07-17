@@ -162,7 +162,12 @@ function RawBodyPublicLanding() {
 		<main className="raw-body-public">
 			<header className="raw-body-public__header">
 				<Link to="/" className="brand-lockup" aria-label="Raw Body home">
-					<span className="brand-mark">R</span>
+					<span className="brand-mark" aria-hidden="true">
+	<img
+		src="/images/logos/offical-raw-body-logo-transparent.webp"
+		alt=""
+	/>
+</span>
 					<span> Raw Body Aesthetics </span>
 				</Link>
 

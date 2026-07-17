@@ -687,6 +687,7 @@
 		opacity: 1;
 	}
 }
+
 .raw-body-consultations {
 	padding: clamp(5rem, 10vw, 9rem) clamp(1.25rem, 5vw, 5rem);
 	background: var(--raw-body-paper);
@@ -750,7 +751,8 @@
 	background:
 		linear-gradient(
 			to top,
-			rgba(2, 6, 23, 0.92) 0%,
+			rgba(196, 188, 185, .6) 0%,
+			/* rgba(2, 6, 23, 0.92) 0%, */
 			rgba(2, 6, 23, 0.5) 42%,
 			rgba(2, 6, 23, 0.08) 72%,
 			rgba(2, 6, 23, 0) 100%
